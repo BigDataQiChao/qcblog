@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="images/icon/chao.ico">
+    <title>修复成功</title>
+</head>
+<body>
+<span>亲，网站修复成功!请等待&nbsp;&nbsp;<h2 style="display: inline-block;"><span id="wait">5</span></h2>&nbsp;&nbsp;秒将跳转到登录页,或者直接选择点击<a href="/signin">重新登录</a>按钮</span>
+</body>
+<script>
+    function TimeLocation(href,elemId){
+        var elem = document.getElementById(elemId);
+        var interval = setInterval(function(){
+            var time = --elem.innerHTML;
+            if(time <= 0) {
+                location.href = href;
+                clearInterval(interval);
+            }
+        },1000);
+    }
+    window.onload=function(){
+        TimeLocation('/signin','wait');
+    }
+</script>
+</html>

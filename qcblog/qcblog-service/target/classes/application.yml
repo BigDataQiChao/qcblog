@@ -1,0 +1,15 @@
+spring:
+  datasource:
+      url: jdbc:mysql://123.206.28.102:3306/qcblogs?characterEncoding=utf-8
+      username: root
+      password: qcbyl0
+      hikari:
+        maximum-pool-size: 30
+        minimum-idle: 10
+  redis:
+      host: 123.206.28.102
+      port: 6379
+      password:
+server:
+  port: 8001
+

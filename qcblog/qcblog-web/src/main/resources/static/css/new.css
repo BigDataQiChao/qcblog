@@ -1,0 +1,32 @@
+ @media(max-width:767px) {
+    div#bs-example-navbar-collapse-1 {
+        position: absolute;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.85);
+        z-index: 999;
+        padding-bottom: .5em;
+        margin-top: 1.2em;
+    }
+ }
+ .login{
+     height: 50px;
+     color: #fff;
+     cursor: pointer;
+     position: fixed;
+     top: 0;
+     right: 50px;
+     line-height: 60px;
+     text-align: center;
+ }
+ @media(max-width:767px) {
+     .login{
+         height: 50px;
+         color: #fff;
+         cursor: pointer;
+         position: fixed;
+         top: 0;
+         right: 75px;
+         line-height: 60px;
+         text-align: right;
+     }
+ }
