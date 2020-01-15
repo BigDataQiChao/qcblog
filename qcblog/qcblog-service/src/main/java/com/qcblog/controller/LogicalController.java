@@ -80,12 +80,14 @@ public class LogicalController {
         String host = request.getHeader("host");
         String language = request.getHeader("accept-language");
         String connection = request.getHeader("connection");
+        String referer = request.getHeader("referer");
         map.put("signinIp", IpUtil.getIpAddr(request));
         map.put("signinOSName", osName);
         map.put("signinCookie", cookie);
         map.put("signinHost", host);
         map.put("signinLanguage", language);
         map.put("signinConnection", connection);
+        map.put("signinReferer", referer);
         return map;
     }
     /**

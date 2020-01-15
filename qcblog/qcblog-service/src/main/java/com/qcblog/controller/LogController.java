@@ -100,12 +100,24 @@ public class LogController {
             return new Result(false, "删除失败");
         }
     }
+
+    /**
+     * 分页查询
+     * @param Signinlog
+     * @param page
+     * @param rows
+     * @return
+     */
     @RequestMapping("/search")
     @ResponseBody
     public PageResult search(@RequestBody Signinlog Signinlog, int page, int rows  ){
         return logService.findPage(Signinlog, page, rows);
     }
 
+    /**
+     * 查询日志总数
+     * @return
+     */
     @RequestMapping("/count")
     @ResponseBody
     public Map countById(){

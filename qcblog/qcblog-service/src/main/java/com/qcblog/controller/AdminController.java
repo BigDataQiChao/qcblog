@@ -114,8 +114,13 @@ public class AdminController {
 			e.printStackTrace();
 			return new Result(false, "修改失败");
 		}
-	}	
-	
+	}
+
+	/**
+	 * 批量删除
+	 * @param ids
+	 * @return
+	 */
 	@RequestMapping("/delete")
 	@ResponseBody
 	public Result delete(Integer[] ids) {
@@ -127,6 +132,14 @@ public class AdminController {
 			return new Result(false, "删除失败");
 		}
 	}
+
+	/**
+	 * 分页查询
+	 * @param admin
+	 * @param page
+	 * @param rows
+	 * @return
+	 */
 	@RequestMapping("/search")
 	@ResponseBody
 	public PageResult search(@RequestBody Admin admin, int page, int rows  ){

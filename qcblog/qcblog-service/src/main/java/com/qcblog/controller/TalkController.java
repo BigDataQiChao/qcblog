@@ -120,12 +120,24 @@ public class TalkController {
             return new Result(false, "删除失败");
         }
     }
+
+    /**
+     * 分页查询
+     * @param talk
+     * @param page
+     * @param rows
+     * @return
+     */
     @RequestMapping("/search")
     @ResponseBody
     public PageResult search(@RequestBody Talk talk, int page, int rows  ){
         return talkService.findPage(talk, page, rows);
     }
 
+    /**
+     * 说说查询总数
+     * @return
+     */
     @RequestMapping("/count")
     @ResponseBody
     public Map countById(){
@@ -134,6 +146,12 @@ public class TalkController {
         map.put("countTalk", countTalk);
         return map;
     }
+
+    /**
+     * 发布说说
+     * @param tktitle
+     * @return
+     */
     @RequestMapping("/up")
     @ResponseBody
     public Result upTalk(@Param("tktitle") String tktitle){
@@ -149,6 +167,11 @@ public class TalkController {
             return new Result(false, "发布失败");
         }
     }
+    /**
+     * 下架说说
+     * @param tktitle
+     * @return
+     */
     @RequestMapping("/down")
     @ResponseBody
     public Result downTalk(@Param("tktitle") String tktitle){

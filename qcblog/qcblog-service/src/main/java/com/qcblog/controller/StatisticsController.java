@@ -14,12 +14,21 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
+/**
+ * 统计报告控制层
+ * @author 赵起超
+ * @Date 2020.1.15
+ */
 @Controller
 public class StatisticsController {
 
     @Autowired
     private StatisticsService statisticsService;
+
+    /**
+     * 数据报告统计
+     * @return
+     */
     @RequestMapping("/statistics")
     @ResponseBody
     public Map signinStatistics(){
@@ -36,6 +45,10 @@ public class StatisticsController {
         return  map;
     }
 
+    /**
+     * 饼图数据回显
+     * @return
+     */
     @RequestMapping("/getPieData")
     @ResponseBody
     public List getBingData(){
@@ -46,6 +59,11 @@ public class StatisticsController {
                 +updateStatistics.getGameNum()+",name:'小程序'}]";
         return JSON.parseArray(data);
     }
+
+    /**
+     * 条形图数据回显
+     * @return
+     */
     @RequestMapping("/getHistogram")
     @ResponseBody
     public List getHistogram(){

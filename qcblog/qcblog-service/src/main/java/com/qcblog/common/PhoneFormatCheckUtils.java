@@ -3,7 +3,11 @@ package com.qcblog.common;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.regex.PatternSyntaxException;
-
+/**
+ * 手机规则验证类
+ * @author 赵起超
+ * @date 2020.01.15
+ */
 public class PhoneFormatCheckUtils {
 
     /** 

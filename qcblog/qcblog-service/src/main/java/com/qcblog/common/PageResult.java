@@ -1,6 +1,8 @@
 package com.qcblog.common;
 /**
  * 分页结果类
+ * @author 赵起超
+ * @date 2020.01.15
  */
 import java.io.Serializable;
 import java.util.List;

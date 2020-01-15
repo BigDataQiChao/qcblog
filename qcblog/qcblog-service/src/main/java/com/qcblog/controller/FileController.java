@@ -25,7 +25,13 @@ public class FileController {
     }
     @Value("img/assets/")
     private String path;
-    
+
+    /**
+     * 上传图片
+     * @param file
+     * @param map
+     * @return
+     */
     @PostMapping("/upload")
     @ResponseBody
     public Result upload(MultipartFile file, Map<String, Object> map) {

@@ -104,7 +104,7 @@ public class ArticleController {
         }
     }
     /**
-     * 单体删除
+     * 单个删除
      * @param id
      * @return
      */
@@ -121,12 +121,24 @@ public class ArticleController {
             return new Result(false, "删除失败");
         }
     }
+
+    /**
+     * 分页查询
+     * @param article
+     * @param page
+     * @param rows
+     * @return
+     */
     @RequestMapping("/search")
     @ResponseBody
     public PageResult search(@RequestBody Article article, int page, int rows  ){
         return articleService.findPage(article, page, rows);
     }
 
+    /**
+     * 查询文章总数
+     * @return
+     */
     @RequestMapping("/count")
     @ResponseBody
     public Map countById(){
@@ -135,6 +147,12 @@ public class ArticleController {
         map.put("countArticle", countArticle);
         return map;
     }
+
+    /**
+     * 发布文章
+     * @param atname
+     * @return
+     */
     @RequestMapping("/up")
     @ResponseBody
     public Result upArticle(@Param("atname") String atname){
@@ -150,6 +168,12 @@ public class ArticleController {
             return new Result(false, "发布失败");
         }
     }
+
+    /**
+     * 下架文章
+     * @param atname
+     * @return
+     */
     @RequestMapping("/down")
     @ResponseBody
     public Result downArticle(@Param("atname") String atname){

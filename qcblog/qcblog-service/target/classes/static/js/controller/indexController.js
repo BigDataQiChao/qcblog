@@ -21,6 +21,7 @@ app.controller('indexController', function ($scope, $http, adminService) {
                 $scope.signinHost = response.signinHost;
                 $scope.signinLanguage = response.signinLanguage;
                 $scope.signinConnection = response.signinConnection;
+                $scope.signinReferer = response.signinReferer;
             }
         );
     };
@@ -40,7 +41,7 @@ app.controller('indexController', function ($scope, $http, adminService) {
             }
         );
     };
-    //获取统计量信息哦
+    //获取统计量信息
     $scope.showStatics = function () {
         adminService.statisAll().success(
             function (response) {

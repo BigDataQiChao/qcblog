@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="img/slider/chao.png" />
+    <title>QiChao's blog</title>
+</head>
+
+<link href="//cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="css/common.css"/>
+<link rel="stylesheet" type="text/css" href="css/article_detail.css"/>
+<link rel="stylesheet" type="text/css" href="css/new.css" />
+<link href="logo.ico" rel="shortcut icon"/>
+<script src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/angularjs/angular.min.js">  </script>
+<script src="js/common.js"></script>
+<script type="text/javascript" src="js/base.js"> </script>
+<script type="text/javascript" src="js/service/articleService.js">  </script>
+<script type="text/javascript" src="js/service/flinkService.js">  </script>
+<script type="text/javascript" src="js/controller/baseController.js">  </script>
+<script type="text/javascript" src="js/controller/articleController.js">  </script>
+<body  ng-app="qcblogs" ng-controller="articleController" ng-init="addNumber();findArticleOne()">
+<div class="w_header">
+    <div class="container">
+        <div class="w_header_top">
+            <a href="#" class="w_logo"></a>
+
+            <nav class="navbar navbar-default" style="background-color: transparent;border-color: transparent;">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+
+                    </div>
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+								<span class="w_header_nav">
+									<ul class="nav navbar-nav">
+										<li><a href="/" class="active">首页</a></li>
+                                        <!--<li><a href="/">学习</a></li>-->
+										<li><a href="/article">文章</a></li>
+										<li><a href="/play">娱乐</a></li>
+										<li><a href="/moodList">说说</a></li>
+										<li><a href="/comment">留言</a></li>
+										<li><a href="/about">关于</a></li>
+
+									</ul>
+
+								</span>
+                    </div>
+                    <div ><span style="color: #FFFFFF;position: absolute;right: 100px;top: 20px;">博客已有{{numbers}}人访问</span></div>
+                    <div class="login" sec:authorize ="!isAuthenticated()"><a th:href="@{/userlogin}" style="color:#fff;">登录</a></div>
+                    <div class="login" sec:authorize ="isAuthenticated()"><a th:href="@{#}" style="color:#fff;">欢迎您，<span sec:authentication="name"></span></a>
+                        <form th:action="@{/signout}" th:method="get" style="background-image: url(img/xin.png);background-size: contain;width: 60px;    position: absolute;right: 0;">
+                            <input th:type="submit" th:value="注销" style="border: none;background-color: transparent;color: #000000"/>
+                        </form>
+                    </div>
+                </div>
+
+            </nav>
+
+
+
+
+        </div>
+    </div>
+</div>
+<div class="w_container">
+    <div class="container">
+        <div class="row w_main_row">
+
+            <ol class="breadcrumb w_breadcrumb">
+                <li><a href="/">首页</a></li>
+                <li><a href="/article">文章页</a></li>
+                <li class="active">文章详情页</li>
+                <span class="w_navbar_tip">愿有人疼你入骨 深情如初 从此不被辜负.</span>
+            </ol>
+
+            <div class="col-lg-9 col-md-9 w_main_left">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <h2 id="title" class="c_titile" >{{articleOne.atname}}</h2>
+                        <p class="box_c"><span class="d_time" >发布时间：{{articleOne.ctime}}</span><span>编辑：<a href="mailto:1416537683@qq.com"><span sec:authentication="name"></span></a></span><span>阅读（{{articleOne.atnumber}}）</span></p>
+                        <ul  class="infos" ng-bind-html="articleOne.atcontent | trustHtml">
+                        </ul>
+                        <div id="content"></div>
+                        <script>
+
+                        </script>
+                        <div class="keybq">
+                            <p><span>关键字</span>：<a class="label label-default">个人博客</a><a class="label label-default">腾讯云</a><a class="label label-default">空间</a></p>
+                        </div>
+
+
+
+                        <div class="nextinfo">
+                            <p class="last">上一篇：<a href="/articles?atname={{preAticle.atname}}">{{preAticle.atname}}</a></p>
+                            <p class="next">下一篇：<a href="/articles?atname={{nextAticle.atname}}">{{nextAticle.atname}}</a></p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <center><div id="cyReward" role="cylabs" data-use="reward" sid="f827565197dda3123fd627dfce77e9e4"></div></center>
+                        <div id="cyEmoji" role="cylabs" data-use="emoji" sid="f827565197dda3123fd627dfce77e9e4"></div>
+                        <script type="text/javascript" charset="utf-8" src="https://changyan.itc.cn/js/lib/jquery.js"></script>
+                        <script type="text/javascript" charset="utf-8" src="https://changyan.sohu.com/js/changyan.labs.https.js?appid=cyunEjeMT"></script>
+                        <!--PC版-->
+                        <div id="SOHUCS" sid="5eab7e4c363e4cb8bed0efa3604e6b42"></div>
+                        <script charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/changyan.js" ></script>
+                        <script type="text/javascript">
+                        window.changyan.api.config({
+                        appid: 'cysPwLFm1',
+                        conf: 'prod_6c6350e206c502f569b865b4bf121e60'
+                        });
+                        </script>
+                        <!-- 多说评论框 start -->
+                        <div class="ds-thread" data-thread-key="testarticle" data-title="我的个人博客之——阿里云空间选择" data-url="http://127.0.0.1:8020/wilco/article_detail.html"></div>
+                        <!-- 多说评论框 end -->
+                        <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+                        <script type="text/javascript">
+                            var duoshuoQuery = {short_name:"wfyvv"};
+                            (function() {
+                                var ds = document.createElement('script');
+                                ds.type = 'text/javascript';ds.async = true;
+                                ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+                                ds.charset = 'UTF-8';
+                                (document.getElementsByTagName('head')[0]
+                                    || document.getElementsByTagName('body')[0]).appendChild(ds);
+                            })();
+                        </script>
+                        <!-- 多说公共JS代码 end -->
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 w_main_right">
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">个人推荐</h3>
+                    </div>
+                    <div class="panel-body">
+                        <ul class="list-unstyled sidebar">
+                            <li>
+                                <a href="https://www.cnblogs.com/bjgua/p/6907661.html">排序算法之冒泡排序 － java实现</a>
+                            </li>
+                            <li>
+                                <a href="https://www.cnblogs.com/huojg-21442/p/7120256.html">web 服务器负载均衡教程，快速搭建高可用服务器集群</a>
+                            </li>
+                            <li>
+                                <a href="https://blog.csdn.net/sinat_40727775/article/details/83789304">使用 redis 和 spring-session 实现 tomcat、glassfish 等 web 服务器集群 session 共享</a>
+                            </li>
+                            <li>
+                                <a href="https://blog.csdn.net/jay_1989/article/details/78410817">Linux+Nginx+Tomcat实现Web服务器的负载均衡集群</a>
+                            </li>
+                            <li>
+                                <a href="https://www.cnblogs.com/clsn/p/8150036.html">mysql 复制（replication）基础概念和应用场景简介</a>
+                            </li>
+                            <li>
+                                <a href="https://blog.csdn.net/zxljsbk/article/details/79770712">Linux下的redis单节点安装和部署（redis-4.0.0.tar.gz）</a>
+                            </li>
+                            <li>
+                                <a href="http://m.nowcoder.com/discuss/180437">京东最新面经</a>
+                            </li>
+                            <li>
+                                <a href="https://leetcode-cn.com/problemset/all/">算法全套面试题</a>
+                            </li>
+                            <li>
+                                <a href="http://m.nowcoder.com/discuss/182504">javaWeb开发面试题</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">友情链接</h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="newContent">
+                            <ul class="list-unstyled sidebar shiplink">
+                                <li><a href="http://dsj.hebeinu.edu.cn/" target="_blank">科研室门户网站</a></li>
+                                <li><a href="https://www.oschina.net/" target="_blank">开源中国</a></li>
+                                <li><a href="http://jwc.hebeinu.edu.cn/webPage/index.html" target="_blank">个人学校教务处</a></li>
+                                <li><a href="https://cloud.tencent.com/" target="_blank">腾讯云</a></li>
+                                <li><a href="http://www.qq.com/" target="_blank">腾讯网</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+<div class="w_foot">
+    <div class="w_foot_copyright">Copyright © 2020-2019, www.zqcgo.cn. All Rights Reserved. </div>
+</div>
+<!--toTop-->
+<div id="shape">
+    <div class="shapeColor">
+        <div class="shapeFly">
+        </div>
+    </div>
+</div>
+</body>
+</html>

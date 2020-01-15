@@ -1,0 +1,61 @@
+@charset "utf-8";
+body{color:#333333;}
+a{color:#7ac9ed;}
+p{margin:5px; padding:3px;}
+#container{
+	margin:0 auto;
+	width:900px;
+	font-family:arial;
+}
+#container h3{font-family:"Microsoft YaHei";}
+
+
+
+.heart {
+	background:url(../img/heart.png);
+	background-position:left;
+	background-repeat:no-repeat;
+	height:50px;
+	width:50px;
+	cursor:pointer;
+	position:absolute;
+	left:-6px;
+	background-size:2900%;
+}
+.heart:hover, .heart:focus{
+	background-position:right;
+}
+
+@-webkit-keyframes heartBlast {
+	0% {
+		background-position:left;
+	}
+	100% {
+		background-position:right;
+	}
+}
+
+@keyframes heartBlast {
+	0% {
+		background-position:left;
+	}
+	100% {
+		background-position:right;
+	}
+}
+
+.heartAnimation {
+	display:inline-block;
+	-webkit-animation-name:heartBlast;
+	animation-name:heartBlast;
+	-webkit-animation-duration:.8s;
+	animation-duration:.8s;
+	-webkit-animation-iteration-count:1;
+	animation-iteration-count:1;
+	-webkit-animation-timing-function:steps(28);
+	animation-timing-function:steps(28);
+	background-position:right;
+}
+.feed p{font-family:"Microsoft YaHei",'Georgia', Times, Times New Roman, serif; font-size:25px;}
+.feed{clear:both; position:absolute;width:100px;right:290px;bottom:-15px;}
+.likeCount{font-family:'Georgia', Times, Times New Roman, serif; margin-left:28px;width:50px;height:47px;line-height:45px;color:#999999}

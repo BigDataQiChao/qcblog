@@ -1,7 +1,11 @@
 package com.qcblog.common;
 
 import java.io.Serializable;
-
+/**
+ * 通用返回值类
+ * @author 赵起超
+ * @date 2020.01.15
+ */
 public class Result implements Serializable{
 
 	private Boolean success;//是否成功

@@ -132,6 +132,12 @@ public class FilnkController {
         map.put("countFlink", countFlink);
         return map;
     }
+
+    /**
+     * 上传友链
+     * @param flname
+     * @return
+     */
     @RequestMapping("/up")
     @ResponseBody
     public Result upFlink(@Param("flname") String flname){
@@ -147,6 +153,12 @@ public class FilnkController {
             return new Result(false, "发布失败");
         }
     }
+
+    /**
+     * 下架友链
+     * @param flname
+     * @return
+     */
     @RequestMapping("/down")
     @ResponseBody
     public Result downFlink(@Param("flname") String flname){

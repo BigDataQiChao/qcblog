@@ -174,11 +174,24 @@ public class UserController {
             return new Result(false, "启用失败");
         }
     }
+
+    /**
+     * 分页查询
+     * @param user
+     * @param page
+     * @param rows
+     * @return
+     */
     @RequestMapping("/search")
     @ResponseBody
     public PageResult search(@RequestBody User user, int page, int rows  ){
         return userService.findPage(user, page, rows);
     }
+
+    /**
+     * 用户查询总数
+     * @return
+     */
     @RequestMapping("/count")
     @ResponseBody
     public Map countById(){

@@ -2,6 +2,11 @@ package com.qcblog.common;
 
 import java.util.Random;
 
+/**
+ * 随机码类
+ * @author 赵起超
+ * @date 2020.01.15
+ */
 public class RandomTest {
 	public String verifyCode() {
 	Random random = new Random();
