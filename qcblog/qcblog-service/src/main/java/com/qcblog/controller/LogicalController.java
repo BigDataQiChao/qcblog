@@ -114,7 +114,7 @@ public class LogicalController {
         return PREFIX+"index";
     }
     /**
-     * 核验页面
+     * 核验成功页面
      * @return
      */
     @GetMapping("/check")

@@ -7,17 +7,14 @@ import java.io.Serializable;
  * @date 2020.01.15
  */
 public class Result implements Serializable{
-
 	private Boolean success;//是否成功
 	private String message;//返回信息
-	
-	
+
 	public Result(Boolean success, String message) {
 		super();
 		this.success = success;
 		this.message = message;
 	}
-	
 	public Boolean getSuccess() {
 		return success;
 	}

@@ -9,6 +9,7 @@ import java.io.File;
  * @date 2019.07.15
  */
 public class UploadUtils {
+
     public final static String IMG_PATH_PREFIX = "img/assets/"; //文件上传路径前缀
 
     /**

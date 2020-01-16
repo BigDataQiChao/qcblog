@@ -12,7 +12,6 @@ import java.io.IOException;
  * @date 2019.07.15
  */
 public class FileUtils {
-
     /**
      * @param file     文件
      * @param path     文件存放路径

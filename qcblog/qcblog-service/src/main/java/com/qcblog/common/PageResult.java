@@ -8,11 +8,8 @@ import java.io.Serializable;
 import java.util.List;
 
 public class PageResult implements Serializable{
-
 	private Long total;//总记录数
 	private List rows;//当前页记录 不知到传入的是什么，不指定泛型
-	
-	
 	public PageResult(Long total, List rows) {
 		super();
 		this.total = total;

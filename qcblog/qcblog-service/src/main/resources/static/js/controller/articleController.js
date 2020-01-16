@@ -12,7 +12,7 @@ app.controller('articleController',function($scope,$controller,$location,adminSe
             }
         );
     };
-    //获取统计量信息哦
+    //获取统计量信息
     $scope.showStatics = function () {
         adminService.statisAll().success(
             function (response) {
