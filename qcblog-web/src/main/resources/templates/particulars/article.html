@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="img/slider/yuan.png"/>
+    <title>IT boyuan - 文 章</title>
+</head>
+
+<link href="//cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="css/common.css"/>
+<link rel="stylesheet" type="text/css" href="css/article.css"/>
+<link rel="stylesheet" type="text/css" href="css/qichao-login.css"/>
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<link rel="stylesheet" type="text/css" href="css/alert.css"/>
+<link rel="stylesheet" href="plugin/adminLTE/AdminLTE.css">
+<link rel="stylesheet" href="plugin/adminLTE/_all-skins.min.css">
+<link href="../logo.ico" rel="shortcut icon"/>
+<script src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/angularjs/angular.min.js"></script>
+<script src="js/common.js"></script>
+<!--分页组件开始-->
+<script src="js/angularjs/pagination.js"></script>
+<link rel="stylesheet" href="js/angularjs/pagination.css">
+<!-- 分页组件结束 -->
+<script type="text/javascript" src="js/base_pagination.js"></script>
+<script type="text/javascript" src="js/service/articleService.js"></script>
+<script type="text/javascript" src="js/service/flinkService.js"></script>
+<script type="text/javascript" src="js/service/userService.js"></script>
+<script type="text/javascript" src="js/controller/baseController.js"></script>
+<script type="text/javascript" src="js/controller/articleController.js"></script>
+<body ng-app="qcblogs" ng-controller="articleController" ng-init="addNumber();findFlinks();findNames()">
+<div class="w_header" th:replace="/page/header :: header">
+</div>
+<div class="w_container">
+    <div class="container">
+        <div class="row w_main_row">
+            <ol class="breadcrumb w_breadcrumb">
+                <li><a href="/">首页</a></li>
+                <li class="active">文章</li>
+                <span class="w_navbar_tip">其实我们可以活得糊涂些，没必要去弄清楚那些为什么。</span>
+            </ol>
+
+            <div class="col-lg-9 col-md-9 w_main_left">
+                <div class="panel panel-default">
+                    <div class="panel-body contentList">
+                        <div style="text-align: center;font-size: 20px;margin: 20px 0;"
+                             sec:authorize="!isAuthenticated()">亲，只有在登录之后才能查看博苑文章哦!
+                        </div>
+                        <div class="panel panel-default w_article_item" sec:authorize="isAuthenticated()">
+                            <div class="panel-body">
+                                <div class="row" ng-repeat="entity in articles" ng-if="entity.status==1"
+                                     style="margin-bottom: 30px;">
+                                    <div class="col-xs-6 col-md-3">
+                                        <a href="/articles?atName={{entity.atname}}" class="thumbnail w_thumbnail">
+                                            <img src="{{entity.atimg}}" alt="...">
+                                        </a>
+                                    </div>
+
+                                    <h4 class="media-heading">
+                                        <a class="title" href="/articles?atname={{entity.atname}}">{{entity.atname}}</a>
+                                        <button data-toggle="modal" data-target="#editModal"
+                                                ng-click="findOne(entity.atname)"
+                                                style="border-radius: 10px;font-family: monospace;">查看详情
+                                        </button>
+                                    </h4>
+                                    <p><a class="label label-default">{{entity.atpre}}</a><a
+                                            class="label label-default">{{entity.atpos}}</a></p>
+                                    <p class="w_list_overview overView" th:utext="${'{{entity.atcontent}}'}"></p>
+                                    <div class="feed">
+                                        <div class="heartAnimation" id="like" rel="like" ng-click="getLike(entity.id)"></div>
+                                        <div class="likeCount" id="likeCount">{{entity.likenumber}}</div>
+                                    </div>
+                                    <p class="count_r"><span class="count" ><i class="glyphicon glyphicon-user"></i><a
+                                            href="#"><span ng-repeat="autorName in userArticles" ng-if="autorName.id == entity.id">{{autorName.username}}</span></a></span> <span
+                                            class="count"><i class="glyphicon glyphicon-eye-open"></i>阅读:{{entity.atnumber}}</span><span
+                                            class="count"><i class="glyphicon glyphicon-time"></i>发表日期:{{entity.ctime}}</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <tm-pagination conf="paginationConf"></tm-pagination>
+                        <div class="modal fade" id="editModal" tabindex="-1" role="dialog"
+                             aria-labelledby="myModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×
+                                        </button>
+                                        <h3 id="myModalLabel">文章信息</h3>
+                                    </div>
+                                    <div class="modal-body">
+                                        <table class="table table-bordered table-striped" width="800px">
+                                            <tr>
+                                                <td>文章名称</td>
+                                                <td><input class="form-control" ng-model="article.atname"
+                                                           placeholder="文章名称"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>文章编号</td>
+                                                <td><input readonly="readonly" class="form-control"
+                                                           ng-model="article.id" placeholder="文章ID"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>最新修改日期</td>
+                                                <td><input readonly="readonly" class="form-control"
+                                                           ng-model="article.utime" placeholder="最新修改日期"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>文章访问量</td>
+                                                <td><input readonly="readonly" class="form-control"
+                                                           ng-model="article.atnumber" placeholder="文章访问量"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>文章前置标签</td>
+                                                <td><input class="form-control" ng-model="article.atpre"
+                                                           placeholder="文章前置标签"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>文章后置标签</td>
+                                                <td><input class="form-control" ng-model="article.atpos"
+                                                           placeholder="文章后置标签"></td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button class="btn btn-success" data-dismiss="modal" aria-hidden="true"
+                                                ng-click="save()">保存
+                                        </button>
+                                        <button class="btn btn-default" data-dismiss="modal" aria-hidden="true">关闭
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 w_main_right">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">最新发布</h3>
+                    </div>
+                    <div class="panel-body" style="padding-bottom: 0px;" ng-repeat="flinknew in flinks"
+                         ng-if="flinknew.fltype=='最新发布'">
+                        <ul class="list-unstyled sidebar" style="margin-top: -15px;" ng-if="flinknew.flstatus==1">
+                            <li>
+                                <a href="{{flinknew.flink}}" target="_blank">{{flinknew.flname}}</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">友情链接</h3>
+                    </div>
+                    <div class="panel-body" style="padding-bottom: 0px;" ng-repeat="flinkOne in flinks"
+                         ng-if="flinkOne.fltype=='友情链接'">
+                        <div class="newContent" style="margin-top: -10px;"
+                             ng-if="flinkOne.flstatus==1">
+                            <ul class="list-unstyled sidebar shiplink">
+                                <li><a href="{{flinkOne.flink}}" target="_blank">{{flinkOne.flname}}</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--footer-->
+<div class="w_foot" th:replace="/page/footer :: footer">
+</div>
+<!--toTop-->
+<script type="text/javascript" src="js/totop.js"></script>
+<script src="js/jquery-1.11.0.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="js/givelike.js"></script>
+<script type="text/javascript" src="js/pages/alert-article.js"></script>
+</body>
+</html>

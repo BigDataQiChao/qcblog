@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="img/slider/yuan.png"/>
+    <title>IT boyuan - 说 说</title>
+    <style>
+        .button {
+            width: 150px;
+            height: 30px;
+            transition: all 0.5s;
+            cursor: pointer;
+            margin: 5px;
+            margin-left: 1007px;
+            color: #0a789b;
+            border-radius: 10px;
+            text-shadow: 0px 0px 1px;
+        }
+
+        .button span {
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+            transition: 0.5s;
+        }
+
+        .button span:after {
+            content: '»';
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            right: -20px;
+            transition: 0.5s;
+        }
+
+        .button:hover span {
+            padding-right: 20px;
+        }
+
+        .button:hover span:after {
+            opacity: 1;
+            right: 0;
+        }
+
+        .content {
+            animation: change 3s linear 0s infinite;
+            text-indent: 28px;
+        }
+
+        @keyframes change {
+
+            0% {
+                color: #a7af0b;
+            }
+
+            50% {
+                color: #d00a17;
+            }
+
+            100% {
+                color: #3466bd;
+            }
+        }
+    </style>
+</head>
+<link href="//cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="css/common.css"/>
+<link rel="stylesheet" type="text/css" href="css/moodList.css"/>
+<link rel="stylesheet" type="text/css" href="css/qichao-login.css"/>
+<link rel="stylesheet" href="plugin/adminLTE/AdminLTE.css">
+<link rel="stylesheet" href="plugin/adminLTE/_all-skins.min.css">
+<link href="logo.ico" rel="shortcut icon"/>
+<script src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/angularjs/angular.min.js"></script>
+<script src="js/common.js"></script>
+<script type="text/javascript" src="js/layui/layui.js"></script>
+<!--分页组件开始-->
+<script src="js/angularjs/pagination.js"></script>
+<link rel="stylesheet" href="js/angularjs/pagination.css">
+<!-- 分页组件结束 -->
+<script type="text/javascript" src="js/base_pagination.js"></script>
+<script type="text/javascript" src="js/service/talkService.js"></script>
+<script type="text/javascript" src="js/service/articleService.js"></script>
+<script type="text/javascript" src="js/service/uploadService.js"></script>
+<script type="text/javascript" src="js/service/userService.js"></script>
+<script type="text/javascript" src="js/controller/baseController.js"></script>
+<script type="text/javascript" src="js/controller/talkController.js"></script>
+<body ng-app="qcblogs" ng-controller="talkController" ng-init="addNumber()">
+<div class="w_header" th:replace="/other/header :: o_header">
+</div>
+<div class="w_container">
+    <div class="container">
+        <div class="row w_main_row">
+            <ol class="breadcrumb w_breadcrumb">
+                <li><a href="/">首页</a></li>
+                <li class="active">说说</li>
+                <span class="w_navbar_tip">愿余生有人陪你烈酒穿肠只笑不哭，可今后无人许我清风明月不再孤苦。</span>
+            </ol>
+
+            <button class="button" data-toggle="modal" data-target="#editModal" style="vertical-align:middle"
+                    ng-click="entity={};"><span>新增MoodTalk</span></button>
+            <div class="bloglist" ng-repeat="entity in talks" ng-if="entity.status==1">
+
+                <ul class="arrow_box" style="height: 200px;">
+                    <div class="sy">
+                        <img alt="" src="{{entity.tkimg}}">
+                        <p style="margin-bottom: -5px;margin-top: 10px;font-weight: 600;font-size: 28px;text-shadow: 2px 1px 2px #8a6d3b;font-family: 楷体;">
+                            {{entity.tktitle}}</p>
+                        <b>
+                            <hr style="margin-top: 0px;margin-bottom: 10px;border: 1px solid #968d8d;">
+                        </b>
+                        <p class="content"> {{entity.tkcontent}}</p>
+                    </div>
+                    <span class="dateview">{{entity.ctime}}</span>
+                </ul>
+
+            </div>
+
+            <tm-pagination conf="paginationConf"></tm-pagination>
+
+        </div>
+    </div>
+</div>
+<!--footer-->
+<div class="w_foot" th:replace="/page/footer :: footer">
+</div>
+<!--totop-->
+<script type="text/javascript" src="js/totop.js"></script>
+<!-- 新增说说窗口 -->
+<div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true" ng-click="entity={}">×</button>
+                <h3 id="myModalLabel">新增说说</h3>
+            </div>
+            <div class="modal-body">
+                <table class="table table-bordered table-striped" width="800px">
+                    <tr>
+                        <td>主题</td>
+                        <td><input class="form-control" placeholder="Title" ng-model="entity.tktitle"></td>
+                    </tr>
+                    <tr>
+                        <td>说说图片</td>
+                        <td>
+                            <input type="file" id="file" name="fileName">
+                            <button ng-click="uploadFile()" id="url">上传</button>
+                            <img alt="" src="{{entity.tkimg}}" style="margin-left: 200px;" width="200px"
+                                 height="100px">
+                    </tr>
+                    <tr>
+                        <td>说说内容</td>
+                        <td><textarea class="form-control" style="width:100%;height: 150px;" placeholder="talkcontent"
+                                      ng-model="entity.tkcontent"> </textarea></td>
+                    </tr>
+                    <tr>
+                        <td>上传日期</td>
+                        <td><input readonly="readonly" class="form-control" placeholder="自动获取当前时间戳"
+                                   ng-model="entity.ctime"></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-success" data-dismiss="modal" aria-hidden="true" ng-click="save()">保存
+                </button>
+                <button class="btn btn-default" data-dismiss="modal" aria-hidden="true">关闭</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

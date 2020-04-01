@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="img/slider/yuan.png"/>
+    <title>IT boyuan - 娱 乐</title>
+</head>
+
+<link href="//cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="css/common.css"/>
+<link rel="stylesheet" type="text/css" href="css/about.css"/>
+<link rel="stylesheet" type="text/css" href="css/qichao-login.css"/>
+<link rel="stylesheet" href="plugin/adminLTE/AdminLTE.css">
+<link rel="stylesheet" href="plugin/adminLTE/_all-skins.min.css">
+<link rel="stylesheet" href="css/clock.css">
+<link href="logo.ico" rel="shortcut icon"/>
+<script src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="plugin/jquery.page.js"></script>
+<script type="text/javascript" src="clock-js/vue.min.js"></script>
+<script src="js/common.js"></script>
+<script type="text/javascript" src="js/angularjs/angular.min.js"></script>
+
+<script type="text/javascript" src="js/base.js"></script>
+<script type="text/javascript" src="js/service/qcblogService.js"></script>
+<script type="text/javascript" src="js/service/flinkService.js"></script>
+<script type="text/javascript" src="js/service/articleService.js"></script>
+<script type="text/javascript" src="js/service/userService.js"></script>
+<script type="text/javascript" src="js/controller/baseController.js"></script>
+<script type="text/javascript" src="js/controller/qcblogController.js"></script>
+<body ng-app="qcblogs" ng-controller="qcblogController" ng-init="addNumber()">
+<div class="w_header" th:replace="/other/header :: o_header">
+</div>
+<div class="w_container">
+    <div class="container">
+        <div class="row w_main_row">
+
+            <ol class="breadcrumb w_breadcrumb">
+                <li><a href="/">首页</a></li>
+                <li class="active">娱乐</li>
+                <span class="w_navbar_tip">每一次轻易的放弃，都是人生的一处败笔。</span>
+            </ol>
+            <div id="clock">
+                <p class="date">{{ date }}</p>
+                <p class="time">{{ time }}</p>
+                <!--<p class="text">数字时钟</p>-->
+            </div>
+            <script>
+                var clock = new Vue({
+                    el: '#clock',
+                    data: {
+                        time: '',
+                        date: ''
+                    }
+                });
+
+                var week = ['星期天', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六'];
+                var timerID = setInterval(updateTime, 1000);
+                updateTime();
+
+                function updateTime() {
+                    var cd = new Date();
+                    clock.time = zeroPadding(cd.getHours(), 2) + ':' + zeroPadding(cd.getMinutes(), 2) + ':' + zeroPadding(cd.getSeconds(), 2);
+                    clock.date = zeroPadding(cd.getFullYear(), 4) + '-' + zeroPadding(cd.getMonth() + 1, 2) + '-' + zeroPadding(cd.getDate(), 2) + ' ' + week[cd.getDay()];
+                };
+
+                function zeroPadding(num, digit) {
+                    var zero = '';
+                    for (var i = 0; i < digit; i++) {
+                        zero += '0';
+                    }
+                    return (zero + num).slice(-digit);
+                }</script>
+            <div style="text-align: center;font-size: 30px;margin: 20px 0;    font-family: monospace;"><b>游戏列表</b></div>
+            <div style="text-align: center;font-size: 20px;margin: 20px 0;" sec:authorize="!isAuthenticated()">
+                很抱歉，只有在登录之后才能显示游戏列表哦
+            </div>
+            <div style="width: 1000px;text-align: center;" sec:authorize="isAuthenticated()">
+                <a href="/play-cards" style="width: 200px;height: 200px;display: inline-block;">
+                    <div style="width:200px;height: 200px;border:1px solid #ccc;float: left;margin: 0 10px;text-align: center;line-height: 200px;background-image: url(img/card.png);background-size: 200px 200px;    border-radius: 15px;"></div>
+                    <span style="display: block;width: 200px;height: 20px;">纸牌游戏</span></a>
+                <a href="/play-frog" style="width: 200px;height: 200px;display: inline-block;">
+                    <div style="width:200px;height: 200px;border:1px solid #ccc;float: left;margin: 0 10px;text-align: center;line-height: 200px;background-image: url(img/frog.png);background-size: 200px 200px;    border-radius: 15px;"></div>
+                    <span style="display: block;width: 200px;height: 20px;">喂饱青蛙</span></a>
+                <a href="/play-cube" style="width: 200px;height: 200px;display: inline-block;">
+                    <div style="width:200px;height: 200px;border:1px solid #ccc;float: left;margin: 0 10px;text-align: center;line-height: 200px;background-image: url(img/gobang.png);background-size: 200px 200px;    border-radius: 15px;"></div>
+                    <span style="display: block;width: 200px;height: 20px;">智力魔方</span></a>
+                <a href="/play-gobang" style="width: 200px;height: 200px;display: inline-block;">
+                    <div style="width:200px;height: 200px;border:1px solid #ccc;float: left;margin: 0 10px;text-align: center;line-height: 200px;background-image: url(img/cube.jpg);background-size: 200px 200px;    border-radius: 15px;"></div>
+                    <span style="display: block;width: 200px;height: 20px;">破五子棋</span></a>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+<!--footer-->
+<div class="w_foot" th:replace="/page/footer :: footer">
+</div>
+<!--toTop-->
+<script type="text/javascript" src="js/totop.js"></script>
+</body>
+</html>
