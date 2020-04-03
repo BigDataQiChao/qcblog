@@ -1,0 +1,24 @@
+spring:
+  ##数据源配置
+  datasource:
+      url: jdbc:mysql://123.206.28.102:3306/qcblogs?characterEncoding=utf-8
+      username: root
+      password: qcbyl0
+      hikari:
+        maximum-pool-size: 30
+        minimum-idle: 10
+  ##Redis缓存配置
+  redis:
+    host: 123.206.28.102
+    port: 6379
+    password: qcblog
+    jedis:
+      pool:
+        max-active: 8
+##驼峰命名规则配置
+mybatis:
+   configuration:
+     map-underscore-to-camel-case: true
+server:
+  port: 80
+

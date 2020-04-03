@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="img/slider/yuan.png"/>
+    <title>IT boyuan - 登录</title>
+    <link rel="stylesheet" type="text/css" href="css/webbase.css"/>
+    <link rel="stylesheet" type="text/css" href="css/pages-login.css"/>
+    <link rel="stylesheet" type="text/css" href="css/alert.css"/>
+    <script type="text/javascript" src="js/angularjs/angular.min.js"></script>
+    <script type="text/javascript" src="js/base.js"></script>
+    <script type="text/javascript" src="js/service/registerService.js"></script>
+    <script type="text/javascript" src="js/controller/baseController.js"></script>
+    <script type="text/javascript" src="js/controller/registerController.js"></script>
+</head>
+
+<body ng-app="qcblogs" ng-controller="registerController" ng-init="ValidateCode()">
+<div class="login-box">
+    <!--head-->
+    <div class="py-container logoArea">
+        <a href="" class="logo"></a>
+    </div>
+    <!--loginArea-->
+    <div class="loginArea">
+        <div class="py-container login">
+            <div class="loginform">
+                <ul class="sui-nav nav-tabs tab-wraped">
+                    <li class="active">
+                        <a href="#profile" data-toggle="tab">
+                            <h3>账号登录</h3>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#index" data-toggle="tab">
+                            <h3>扫码登录</h3>
+                        </a>
+                    </li>
+                </ul>
+                <div class="tab-content tab-wraped">
+                    <div id="index" class="tab-pane">
+                        <p>二维码登录，暂为作者微信</p>
+                        <img src="img/slider/qcblog.png" style="height: 248px;"/>
+                    </div>
+                    <div id="profile" class="tab-pane  active">
+                        <form th:action="@{/userlogin}" method="post" class="sui-form" id="loginform">
+                            <div class="input-prepend"><span class="add-on loginname"></span>
+                                <input id="username" name="username" th:onblur="${'checkuname()'}" type="text"
+                                       placeholder="邮箱/用户名/手机号"
+                                       class="span2 input-xfat">
+                            </div>
+                            <div class="input-prepend"><span class="add-on loginpwd"></span>
+                                <input id="password" name="password" type="password" placeholder="请输入密码"
+                                       class="span2 input-xfat">
+                            </div>
+                            <div class="input-prepend"><span class="add-on loginpwd"></span>
+                                <input id="ImgCode" name="ImgCode" type="text" placeholder="请输入右侧验证码"
+                                       class="span2 input-xfat" style="width: 155px;" ng-mouseleave="checkImgCode()">
+                                <img src="{{imageCode}}"
+                                     style="width: 120px;height: 40px;margin-top: -40px;margin-left: 215px;">
+                            </div>
+                            <button type="button"
+                                    style="width: 125px;height: 25px;margin-left: 225px;border: none;background: none;margin-top: -10px;color:#28a3ef"
+                                    ng-click="ValidateCode()">看不清？换一张
+                            </button>
+                            <div class="setting">
+                                <label class="checkbox inline">
+                                    <input name="remember-me" type="checkbox" id="remember-me">
+                                    <label for="remember-me">记住密码</label>
+                                </label>
+                                <a class="forget" href="/toUpdatePwd">忘记密码</a>
+                            </div>
+                            <div class="logined">
+                                <a class="sui-btn btn-block btn-xlarge btn-danger"
+                                   onclick="document:loginform.submit()">登&nbsp;&nbsp;录</a>
+                            </div>
+                        </form>
+                        <div class="otherlogin">
+                            <div class="types" style="margin-top: -20px;">
+                                <ul>
+                                    <li><img src="img/qq.png" width="35px" height="35px"/></li>
+                                    <li><img src="img/ali.png"/></li>
+                                    <li><img src="img/weixin.png"/></li>
+                                </ul>
+                            </div>
+                            <span class="register"><a href="/register" target="_blank">立即注册</a></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--foot-->
+    <div class="py-container copyright">
+        <ul>
+            <li><a href="/about" target="_blank">关于作者</a></li>
+            <li><a href="/detail" target="_blank">平台推荐</a></li>
+            <li><a href="/pldoc" target="_blank">相关介绍</a></li>
+            <li><a href="/register" target="_blank">用户入驻</a></li>
+            <li><a href="/protocol" target="_blank">管理后台</a></li>
+            <li><a href="/recommend" target="_blank">关于博苑</a></li>
+        </ul>
+        <div class="address">地址：河北省张家口市桥东区南站街道河北北方学院东校区 邮编：075000 电话：157-3369-4654 谷歌邮箱：bigdataqichao@gmail.com</div>
+        <div class="beian">冀ICP备18031401号
+        </div>
+    </div>
+</div>
+
+
+<script type="text/javascript" src="js/plugins/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="js/plugins/jquery.easing/jquery.easing.min.js"></script>
+<script type="text/javascript" src="js/plugins/sui/sui.min.js"></script>
+<script type="text/javascript" src="js/plugins/jquery-placeholder/jquery.placeholder.min.js"></script>
+<script type="text/javascript" src="js/pages/login.js"></script>
+<script type="text/javascript" src="js/pages/alert.js"></script>
+<script>
+    function checkuname() {
+        var username = document.getElementById("username").value;
+        if (username == "") {
+            alert("用户名不能为空!");
+            return false;
+        }
+    }
+    /*function checkcode() {
+        var validateCode = document.getElementById("ImgCode").value;
+        if (validateCode == ""){
+            alert("请输入验证码！");
+            return false;
+        }else{
+            $scope.checkImgCode();
+        }
+    }*/
+</script>
+</body>
+
+</html>

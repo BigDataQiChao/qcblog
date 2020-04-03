@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="img/slider/yuan.png"/>
+    <title>QiChao's blog</title>
+</head>
+<!--<link href="plugin/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="css/common.css"/>
+<link href="logo.ico" rel="shortcut icon"/>
+<script type="text/javascript" src="js/angularjs/angular.min.js"></script>
+<script src="plugin/jquery.min.js"></script>
+<script src="plugin/bootstrap/js/bootstrap.min.js"></script>-->
+<body>
+<div class="w_header" th:fragment="header">
+    <div class="container">
+        <div class="w_header_top">
+            <a href="#" class="w_logo"></a>
+            <nav class="navbar navbar-default" style="background-color: transparent;border-color: transparent;">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                                data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+								<span class="w_header_nav">
+									<ul class="nav navbar-nav">
+										<li><a href="/" class="active">首页</a></li>
+										<li><a href="/learn" class="red">专题</a></li>
+										<li><a href="/article" class="blue">文章</a></li>
+										<li><a href="/moodList" class="white">说说</a></li>
+										<li><a href="/play" class="white">娱乐</a></li>
+										<li><a href="/comment" class="white">评论</a></li>
+										<li><a href="/about" class="white">关于</a></li>
+
+									</ul>
+
+									<div class="w_search hidden-xs">
+										<div class="w_searchbox" sec:authorize="!isAuthenticated()">
+											<input type="text" placeholder="文章检索"/>
+											<button ng-click="searchArticle()">搜索</button>
+										</div>
+                                        <div class="w_searchbox" sec:authorize="isAuthenticated()">
+											<input type="text" placeholder="文章检索" ng-model="searchEntity.atname"/>
+											<button ng-click="reloadList()">搜索</button>
+										</div>
+									</div>
+								</span>
+                    </div>
+                    <div><span style="color: #FFFFFF;position: absolute;left: -100px;top: 20px;">已有{{numbers}}人访问</span>
+                    </div>
+                    <div class="login" sec:authorize="!isAuthenticated()"><a th:href="@{/userlogin}"
+                                                                             style="color:#fff;">登录</a></div>
+                    <li class="dropdown user user-menu" sec:authorize="isAuthenticated()" ng-init="userInfo()">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="color: #f5f5f5">
+                            <img src="{{signinImage}}" class="user-image" alt="User Image">
+                            <span class="hidden-xs">欢迎您，{{signinName}} <span class="caret"></span></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li class="user-header">
+                                <img src="{{signinImage}}" class="img-circle" alt="User Image">
+                                <p style="font-size: 18px;font-family: '微软雅黑';margin:0 auto;margin-bottom: -30px;">昵   称: {{signinName}}</p>
+                                <p style="font-size: 16px;font-family: '微软雅黑';margin:0 auto;margin-bottom: -30px;">访问次数: {{userCount}}</p>
+                                <small style="font-size: 14px">最近登录: {{signinTime}}</small>
+                            </li>
+                            <li class="user-footer">
+                                <div class="pull-left">
+                                    <a href="/personal" class="btn btn-default btn-flat">个人中心</a>
+                                </div>
+                                <div class="pull-right">
+                                    <a href="#" class="btn btn-default btn-flat">
+                                        <form th:action="@{/signout}" th:method="get">
+                                            <input th:type="submit" th:value="注销"
+                                                   style="border:none;background-color: transparent; "/>
+                                        </form>
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                </div>
+            </nav>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="img/slider/yuan.png"/>
+    <title>IT boyuan - 留 言</title>
+</head>
+
+<link href="//cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="css/common.css"/>
+<link rel="stylesheet" type="text/css" href="css/qichao-login.css"/>
+<link rel="stylesheet" href="plugin/adminLTE/AdminLTE.css">
+<link rel="stylesheet" href="plugin/adminLTE/_all-skins.min.css">
+<link href="logo.ico" rel="shortcut icon"/>
+<script src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="plugin/jquery.page.js"></script>
+<script type="text/javascript" src="js/angularjs/angular.min.js"></script>
+<script src="js/common.js"></script>
+<script type="text/javascript" src="js/base.js"></script>
+<script type="text/javascript" src="js/service/qcblogService.js"></script>
+<script type="text/javascript" src="js/service/articleService.js"></script>
+<script type="text/javascript" src="js/service/flinkService.js"></script>
+<script type="text/javascript" src="js/service/userService.js"></script>
+<script type="text/javascript" src="js/controller/baseController.js"></script>
+<script type="text/javascript" src="js/controller/qcblogController.js"></script>
+<body ng-app="qcblogs" ng-controller="qcblogController" ng-init="addNumber()">
+<div class="w_header" th:replace="/other/header :: o_header">
+</div>
+<div class="w_container">
+    <div class="container">
+        <div class="row w_main_row">
+            <ol class="breadcrumb w_breadcrumb">
+                <li><a href="/">首页</a></li>
+                <li class="active">留言</li>
+                <span class="w_navbar_tip">那些令你一下子长大的事情你要永远记得，因为这是对自己负责。</span>
+            </ol>
+
+            <div class="col-lg-9 col-md-9 w_main_left">
+                <!--PC版-->
+                <div id="SOHUCS" sid="5eab7e4c363e4cb8bed0efa3604e6b42"></div>
+                <script charset="utf-8" type="text/javascript"
+                        src="https://changyan.sohu.com/upload/changyan.js"></script>
+                <script type="text/javascript">
+                    window.changyan.api.config({
+                        appid: 'cysPwLFm1',
+                        conf: 'prod_6c6350e206c502f569b865b4bf121e60'
+                    });
+                </script>
+                <!-- 多说评论框 start
+                    <div class="ds-thread" data-thread-key="5eab7e4c363e4cb8bed0efa3604e6b42" data-title="请替换成文章的标题" data-url="请替换成文章的网址"></div>
+                 多说评论框 end
+                 多说公共JS代码 start (一个网页只需插入一次)
+                <script type="text/javascript">
+                var duoshuoQuery = {short_name:"wfyvv"};
+                    (function() {
+                        var ds = document.createElement('script');
+                        ds.type = 'text/javascript';ds.async = true;
+                        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+                        ds.charset = 'UTF-8';
+                        (document.getElementsByTagName('head')[0]
+                         || document.getElementsByTagName('body')[0]).appendChild(ds);
+                    })();
+                    </script>
+                 多说公共JS代码 end -->
+            </div>
+            <div class="col-lg-3 col-md-3 w_main_right">
+                <img src="img/slider/cartoon.png" style="width: 200px;height: 200px"/>
+            </div>
+        </div>
+    </div>
+</div>
+<!--footer-->
+<div class="w_foot" th:replace="/page/footer :: footer">
+</div>
+<!--toTop-->
+<script type="text/javascript" src="js/totop.js"></script>
+</body>
+</html>
