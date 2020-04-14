@@ -1,4 +1,4 @@
-app.controller('articleController', function ($scope, $controller, articleService, flinkService, userService) {
+app.controller('articleController', function ($scope, $controller,$location,articleService, flinkService, uploadService,userService) {
     $controller('baseController', {$scope: $scope});//继承
     //点赞踩功能实现
     $scope.getLike = function (id) {
@@ -9,6 +9,48 @@ app.controller('articleController', function ($scope, $controller, articleServic
                }
           )
     };
+    $scope.findById = function () {
+        var id=$location.search()['id'];
+        if(id==null){
+            return ;
+        }
+        articleService.findById(id).success(
+            function(response) {
+                $scope.toArticeOne = response;
+            }
+        )
+    };
+    //上传图片
+    $scope.uploadFile = function(){
+        uploadService.uploadFile().success(
+            function(response){
+                if(response.success){
+                    $scope.atimg = response.message;
+                }else{
+                    alert(response.message);
+                }
+            }
+        ).error(
+            function(){
+                alert(response.message);
+            }
+        );
+    };
+    //发表文章
+    $scope.addToArticle = function () {
+        if($scope.atimg !=null){
+           $scope.toArticeOne.atimg = $scope.atimg;
+        }else {
+            alert("请上传文章插图！");
+        }
+        $scope.toArticeOne.atcontent = editor.html();
+        articleService.addToArticle($scope.toArticeOne).success(
+            function (response) {
+                alert(response.message);
+            }
+        )
+    };
+
     //点赞状态码
     $scope.findStatus =function () {
         articleService.findStatus().success(
@@ -41,6 +83,30 @@ app.controller('articleController', function ($scope, $controller, articleServic
         flinkService.findFlinks().success(
             function (response) {
                 $scope.flinks = response;
+            }
+        )
+    };
+    //遍历文章类型
+    $scope.findType = function () {
+        articleService.findType().success(
+            function (response) {
+                $scope.types = response;
+            }
+        )
+    };
+    //遍历文章前置标签
+    $scope.findAtPre = function () {
+        articleService.findAtPre().success(
+            function (response) {
+                $scope.atpres = response;
+            }
+        )
+    };
+    //遍历文章后置标签
+    $scope.findAtPos = function () {
+        articleService.findAtPos().success(
+            function (response) {
+                $scope.atpoes = response;
             }
         )
     };
@@ -90,8 +156,6 @@ app.controller('articleController', function ($scope, $controller, articleServic
                         }
                     );
                 }
-                /*
-                      $scope.getNext($scope.entity.atname);*/
             }
         );
     };

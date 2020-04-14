@@ -33,13 +33,21 @@
         <div class="row w_main_row">
             <ol class="breadcrumb w_breadcrumb">
                 <li><a href="/">首页</a></li>
-                <li class="active">留言</li>
+                <li class="active"><i class="glyphicon glyphicon-signal"></i>&nbsp;留言</li>
                 <span class="w_navbar_tip">那些令你一下子长大的事情你要永远记得，因为这是对自己负责。</span>
             </ol>
 
             <div class="col-lg-9 col-md-9 w_main_left">
                 <!--PC版-->
-                <div id="SOHUCS" sid="5eab7e4c363e4cb8bed0efa3604e6b42"></div>
+                <div id="SOHUCS"  sid="5eab7e4c363e4cb8bed0efa3604e6b42"></div>
+                <script charset="utf-8" type="text/javascript" src="https://cy-cdn.kuaizhan.com/upload/changyan.js" ></script>
+                <script type="text/javascript">
+                    window.changyan.api.config({
+                        appid: 'cyuLH2Djf',
+                        conf: 'prod_561253e9f617b6e496360bb132f5533b'
+                    });
+                </script>
+                <!--<div id="SOHUCS" sid="5eab7e4c363e4cb8bed0efa3604e6b42"></div>
                 <script charset="utf-8" type="text/javascript"
                         src="https://changyan.sohu.com/upload/changyan.js"></script>
                 <script type="text/javascript">
@@ -47,26 +55,18 @@
                         appid: 'cysPwLFm1',
                         conf: 'prod_6c6350e206c502f569b865b4bf121e60'
                     });
-                </script>
-                <!-- 多说评论框 start
-                    <div class="ds-thread" data-thread-key="5eab7e4c363e4cb8bed0efa3604e6b42" data-title="请替换成文章的标题" data-url="请替换成文章的网址"></div>
-                 多说评论框 end
-                 多说公共JS代码 start (一个网页只需插入一次)
-                <script type="text/javascript">
-                var duoshuoQuery = {short_name:"wfyvv"};
-                    (function() {
-                        var ds = document.createElement('script');
-                        ds.type = 'text/javascript';ds.async = true;
-                        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-                        ds.charset = 'UTF-8';
-                        (document.getElementsByTagName('head')[0]
-                         || document.getElementsByTagName('body')[0]).appendChild(ds);
-                    })();
-                    </script>
-                 多说公共JS代码 end -->
+                </script>-->
             </div>
             <div class="col-lg-3 col-md-3 w_main_right">
                 <img src="img/slider/cartoon.png" style="width: 200px;height: 200px"/>
+                <!-- 代码1：放在页面需要展示的位置  -->
+                <!-- 如果您配置过sourceid，建议在div标签中配置sourceid、cid(分类id)，没有请忽略  -->
+                <div id="cyHotusers" role="cylabs" data-use="hotusers"></div>
+                <div id="cyReping" role="cylabs" data-use="reping"></div>
+                <script type="text/javascript" charset="utf-8"
+                        src="https://cy-cdn.kuaizhan.com/js/lib/jquery.js"></script>
+                <script type="text/javascript" charset="utf-8"
+                        src="https://cy-cdn.kuaizhan.com/js/changyan.labs.https.js?appid=cyunEjeMT"></script>
             </div>
         </div>
     </div>

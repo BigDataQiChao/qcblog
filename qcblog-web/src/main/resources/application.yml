@@ -7,14 +7,25 @@ spring:
       hikari:
         maximum-pool-size: 30
         minimum-idle: 10
+  servlet:
+     multipart:
+       #单个数据上传大小
+       max-file-size: 10Mb
+       #总数据上传大小
+       max-request-size: 100Mb
   ##Redis缓存配置
   redis:
     host: 123.206.28.102
-    port: 6379
+    port: 6380
     password: qcblog
     jedis:
       pool:
         max-active: 8
+        max-wait: -1ms
+    timeout: 30s
+  banner:
+    charset: utf-8
+    location: classpath:static/plugin/banner.txt
 ##驼峰命名规则配置
 mybatis:
    configuration:

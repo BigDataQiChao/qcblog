@@ -28,6 +28,7 @@
 <script type="text/javascript" src="js/service/articleService.js"></script>
 <script type="text/javascript" src="js/service/flinkService.js"></script>
 <script type="text/javascript" src="js/service/userService.js"></script>
+<script type="text/javascript" src="js/service/uploadService.js"></script>
 <script type="text/javascript" src="js/controller/baseController.js"></script>
 <script type="text/javascript" src="js/controller/articleController.js"></script>
 <body ng-app="qcblogs" ng-controller="articleController" ng-init="addNumber();findFlinks();findNames()">
@@ -38,10 +39,11 @@
         <div class="row w_main_row">
             <ol class="breadcrumb w_breadcrumb">
                 <li><a href="/">首页</a></li>
-                <li class="active">文章</li>
+                <li class="active"><i class="glyphicon glyphicon-file"></i>&nbsp;文章</li>
                 <span class="w_navbar_tip">其实我们可以活得糊涂些，没必要去弄清楚那些为什么。</span>
             </ol>
-
+            <button class="button" sec:authorize="isAuthenticated()"><a  href="/addArticle" style="vertical-align:middle;color: #0a789b;"><span>去发表文章</span>
+            </a></button>
             <div class="col-lg-9 col-md-9 w_main_left">
                 <div class="panel panel-default">
                     <div class="panel-body contentList">
@@ -69,13 +71,17 @@
                                             class="label label-default">{{entity.atpos}}</a></p>
                                     <p class="w_list_overview overView" th:utext="${'{{entity.atcontent}}'}"></p>
                                     <div class="feed">
-                                        <div class="heartAnimation" id="like" rel="like" ng-click="getLike(entity.id)"></div>
+                                        <div class="heartAnimation" id="like" rel="like"
+                                             ng-click="getLike(entity.id)"></div>
                                         <div class="likeCount" id="likeCount">{{entity.likenumber}}</div>
                                     </div>
-                                    <p class="count_r"><span class="count" ><i class="glyphicon glyphicon-user"></i><a
-                                            href="#"><span ng-repeat="autorName in userArticles" ng-if="autorName.id == entity.id">{{autorName.username}}</span></a></span> <span
-                                            class="count"><i class="glyphicon glyphicon-eye-open"></i>阅读:{{entity.atnumber}}</span><span
-                                            class="count"><i class="glyphicon glyphicon-time"></i>发表日期:{{entity.ctime}}</span></p>
+                                    <p class="count_r"><span class="count"><i class="glyphicon glyphicon-user"></i><a
+                                            href="#"><span ng-repeat="autorName in userArticles"
+                                                           ng-if="autorName.id == entity.id">{{autorName.username}}</span></a></span>
+                                        <span
+                                                class="count"><i class="glyphicon glyphicon-eye-open"></i>阅读:{{entity.atnumber}}</span><span
+                                                class="count"><i class="glyphicon glyphicon-time"></i>发表日期:{{entity.ctime}}</span>
+                                    </p>
                                 </div>
                             </div>
                         </div>

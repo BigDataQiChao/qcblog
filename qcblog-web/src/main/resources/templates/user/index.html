@@ -23,7 +23,7 @@
 <script type="text/javascript" src="js/service/userService.js"></script>
 <script type="text/javascript" src="js/controller/baseController.js"></script>
 <script type="text/javascript" src="js/controller/qcblogController.js"></script>
-<body ng-app="qcblogs" ng-controller="qcblogController" ng-init="addNumber();findFlinks();loginName();findArticles();listAll()">
+<body ng-app="qcblogs" ng-controller="qcblogController" ng-init="addNumber();findFlinks();loginName();findArticles();listAll();findNames()">
 <div class="w_header" th:replace="/index/header :: header">
 </div>
 <div class="w_container">
@@ -110,7 +110,7 @@
                                         </p>
                                         <p class="overView">{{articleOne.atcontent}}</p>
                                         <p><span class="count"><i class="glyphicon glyphicon-user"></i><a
-                                                href="/detail">作者</a></span> <span class="count"><i
+                                                href="/detail" ng-repeat="autorName in userArticles" ng-if="autorName.id == articleOne.id">{{autorName.username}}</a></span> <span class="count"><i
                                                 class="glyphicon glyphicon-eye-open"></i>阅读:{{articleOne.atnumber}}</span><span
                                                 class="count"><i class="glyphicon glyphicon-time"></i>{{articleOne.ctime}}</span>
                                         </p>

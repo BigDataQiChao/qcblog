@@ -234,6 +234,14 @@ public class LogicalController {
     }
 
     /**
+     * 新增文章
+     *
+     */
+    @GetMapping("/addArticle")
+    public String addArticle(){
+        return PREUSER + "add-article";
+    }
+    /**
      * 说说
      *
      * @return

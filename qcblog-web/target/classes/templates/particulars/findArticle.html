@@ -22,9 +22,10 @@
 <script type="text/javascript" src="js/service/articleService.js"></script>
 <script type="text/javascript" src="js/service/flinkService.js"></script>
 <script type="text/javascript" src="js/service/userService.js"></script>
+<script type="text/javascript" src="js/service/uploadService.js"></script>
 <script type="text/javascript" src="js/controller/baseController.js"></script>
 <script type="text/javascript" src="js/controller/articleController.js"></script>
-<body ng-app="qcblogs" ng-controller="articleController" ng-init="addNumber();findArticleOne()">
+<body ng-app="qcblogs" ng-controller="articleController" ng-init="addNumber();findArticleOne();findFlinks()">
 <div class="w_header" th:replace="/other/header :: o_header">
 </div>
 <div class="w_container">
@@ -72,14 +73,9 @@
                 <div class="panel panel-default">
                     <div class="panel-body">
                         <center>
-                            <div id="cyReward" role="cylabs" data-use="reward"
-                                 sid="f827565197dda3123fd627dfce77e9e4"></div>
+                            <div id="cyReward" role="cylabs" data-use="reward"></div>
                         </center>
-                        <div id="cyEmoji" role="cylabs" data-use="emoji" sid="f827565197dda3123fd627dfce77e9e4"></div>
-                        <script type="text/javascript" charset="utf-8"
-                                src="https://changyan.itc.cn/js/lib/jquery.js"></script>
-                        <script type="text/javascript" charset="utf-8"
-                                src="https://changyan.sohu.com/js/changyan.labs.https.js?appid=cyunEjeMT"></script>
+                        <div id="cyEmoji" role="cylabs" data-use="emoji" ></div>
                         <!--PC版-->
                         <div id="SOHUCS" sid="5eab7e4c363e4cb8bed0efa3604e6b42"></div>
                         <script charset="utf-8" type="text/javascript"
@@ -90,6 +86,10 @@
                                 conf: 'prod_6c6350e206c502f569b865b4bf121e60'
                             });
                         </script>
+                        <script type="text/javascript" charset="utf-8"
+                                src="https://cy-cdn.kuaizhan.com/js/lib/jquery.js"></script>
+                        <script type="text/javascript" charset="utf-8"
+                                src="https://cy-cdn.kuaizhan.com/js/changyan.labs.https.js?appid=cyunEjeMT"></script>
                     </div>
                 </div>
             </div>

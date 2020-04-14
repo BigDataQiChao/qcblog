@@ -17,14 +17,12 @@
             border-radius: 10px;
             text-shadow: 0px 0px 1px;
         }
-
         .button span {
             cursor: pointer;
             display: inline-block;
             position: relative;
             transition: 0.5s;
         }
-
         .button span:after {
             content: '»';
             position: absolute;
@@ -33,21 +31,17 @@
             right: -20px;
             transition: 0.5s;
         }
-
         .button:hover span {
             padding-right: 20px;
         }
-
         .button:hover span:after {
             opacity: 1;
             right: 0;
         }
-
         .content {
             animation: change 3s linear 0s infinite;
             text-indent: 28px;
         }
-
         @keyframes change {
 
             0% {
@@ -95,12 +89,12 @@
         <div class="row w_main_row">
             <ol class="breadcrumb w_breadcrumb">
                 <li><a href="/">首页</a></li>
-                <li class="active">说说</li>
+                <li class="active"><i class="glyphicon glyphicon-heart"></i>&nbsp;说说</li>
                 <span class="w_navbar_tip">愿余生有人陪你烈酒穿肠只笑不哭，可今后无人许我清风明月不再孤苦。</span>
             </ol>
 
             <button class="button" data-toggle="modal" data-target="#editModal" style="vertical-align:middle"
-                    ng-click="entity={};"><span>新增MoodTalk</span></button>
+                    ng-click="entity={};"><span>发表个性说说</span></button>
             <div class="bloglist" ng-repeat="entity in talks" ng-if="entity.status==1">
 
                 <ul class="arrow_box" style="height: 200px;">

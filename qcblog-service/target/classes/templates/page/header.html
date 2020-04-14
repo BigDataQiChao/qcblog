@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+<head>
+    <meta charset="UTF-8">
+    <title>博苑后台管理系统</title>
+</head>
+<body>
+
+<header th:fragment="header">
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                        data-target="#bs-example-navbar-collapse-1" aria-expanded="false"><span
+                        class="sr-only">切换导航</span> <span class="icon-bar"></span> <span class="icon-bar"></span>
+                    <span class="icon-bar"></span></button>
+                <a class="navbar-brand" href="/main">博苑后台管理系统</a></div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                            aria-haspopup="true" aria-expanded="false">公告<span class="badge">{{noticeNum}}</span>
+                        <span class="caret"></span></a>
+                        <ul class="dropdown-menu" >
+                            <li ng-repeat="noticeOne in notices">
+                                <a href="/notice">{{noticeOne.ntcontent | cut:true:10:'...'}}</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                            aria-haspopup="true" aria-expanded="false">{{signinName}} <span
+                            class="caret"></span></a>
+                        <ul class="dropdown-menu dropdown-menu-left">
+                            <li><a title="查看或修改个人信息" data-toggle="modal" data-target="#seeAdminInfo"
+                                   ng-click="findAdminOne(signinName)">资料详情</a></li>
+                            <li><a title="查看您的登录记录" data-toggle="modal" data-target="#seeAdminSigninlog"
+                                   ng-click="findLogs(signinName)">登录日志</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/signout" onClick="if(!confirm('是否确认退出？'))return false;">退出登录</a></li>
+                    <li><a data-toggle="modal" data-target="#WeChat">帮助</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+</body>
+</html>

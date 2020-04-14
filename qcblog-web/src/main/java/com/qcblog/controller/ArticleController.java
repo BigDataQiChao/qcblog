@@ -120,7 +120,53 @@ public class ArticleController {
     }
 
     /**
-     * 插入文章
+     * 发表文章
+     */
+    @RequestMapping("/addToArticle")
+    @ResponseBody
+    public Result addToArticle(@RequestBody Article article) {
+        try {
+            article.setIsDelete("0");
+            article.setCtime(new Date());
+            article.setLikenumber(0);
+            article.setAtnumber(1);
+            articleService.insert(article);
+            return new Result(true, "恭喜您，发表成功！");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return new Result(false, "糟糕，发表失败！");
+    }
+
+    /**
+     * 文章类型查询
+     */
+    @RequestMapping("/findType")
+    @ResponseBody
+    public List<String> findType() {
+        return articleService.findType();
+    }
+
+    /**
+     * 文章前置标签查询
+     */
+    @RequestMapping("/findAtPre")
+    @ResponseBody
+    public List<String> findAtPre() {
+        return articleService.findAtPre();
+    }
+
+    /**
+     * 文章后置标签查询
+     */
+    @RequestMapping("/findAtPos")
+    @ResponseBody
+    public List<String> findAtPos() {
+        return articleService.findAtPos();
+    }
+
+    /**
+     * 更新文章
      *
      * @param article
      * @return
@@ -128,22 +174,21 @@ public class ArticleController {
     @RequestMapping("/add")
     @ResponseBody
     public Result add(@RequestBody Article article) {
-        if (article.getAtname() != null && article.getAtname() != "") {
-            Article articleByName = articleService.findOne(article.getAtname());
-            if (articleByName != null) {
-                article.setAtname(article.getAtname());
-                article.setCtime(new Date());
-                article.setAtnumber(article.getAtnumber());
-                try {
-                    articleService.insert(article);
-                    return new Result(true, "修改成功");
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
+        String name = SecurityContextHolder.getContext().getAuthentication().getName();
+        if (article.getAtname() != null || article.getAtname().equals("") || article.getAtcontent() != null || article.getAtcontent().equals("")) {
+            try {
+                User user = userService.findUserByName(name);
+                System.out.println(name);
+                article.setIsDelete("0");
+                article.setUserId(user.getId());
+                articleService.insert(article);
+                return new Result(true, "恭喜您，发表成功！");
+            } catch (Exception e) {
+                e.printStackTrace();
+                return new Result(false, "网络出现问题，请重新发表！");
             }
-            return new Result(false, "修改的内容不存在！！！");
         } else {
-            return new Result(false, "出现null漏洞！！！");
+            return new Result(false, "有内容项为空，请重新发表！");
         }
     }
 
@@ -214,7 +259,7 @@ public class ArticleController {
                     return new Result(false, "恢复点赞失败哦！");
                 }
             }
-        } else if (userLike == null){
+        } else if (userLike == null) {
             try {
                 UserLike userLike2 = new UserLike();
                 userLike2.setStatus("1");
@@ -230,17 +275,27 @@ public class ArticleController {
         }
         return new Result(false, "方法体异常！");
     }
+
     @RequestMapping("/findStatus")
     @ResponseBody
-    public List findStatus(){
+    public List findStatus() {
         List list = new ArrayList();
         String name = SecurityContextHolder.getContext().getAuthentication().getName();
         User user = userService.findUserByName(name);
         List<Map<String, String>> userLikeServiceStatus = userLikeService.findStatus(user.getId());
-        for(int i=0; i<userLikeServiceStatus.size();i++){
+        for (int i = 0; i < userLikeServiceStatus.size(); i++) {
             list.add(userLikeServiceStatus.get(i));
         }
         return list;
+    }
+
+    /**
+     * 通过ID查询
+     */
+    @RequestMapping("/findById")
+    @ResponseBody
+    public Article findById(@Param("id") Integer id) {
+        return articleService.findById(id);
     }
 }
 

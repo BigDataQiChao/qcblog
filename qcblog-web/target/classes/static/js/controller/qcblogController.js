@@ -8,6 +8,14 @@ app.controller('qcblogController',function($scope ,$controller,userService,qcblo
                 }
             )
     };
+    //通过userid 获取文章作者名称
+    $scope.findNames = function () {
+        articleService.findNameByArticle().success(
+            function (response) {
+                $scope.userArticles = response;
+            }
+        )
+    }
     //通知公告
     $scope.listAll = function () {
         qcblogService.listAll().success(

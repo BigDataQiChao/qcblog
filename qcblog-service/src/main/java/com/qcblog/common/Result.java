@@ -7,8 +7,10 @@ import java.io.Serializable;
  * @date 2020.01.15
  */
 public class Result implements Serializable{
-	private Boolean success;//是否成功
-	private String message;//返回信息
+	//是否成功
+	private Boolean success;
+	//返回信息
+	private String message;
 
 	public Result(Boolean success, String message) {
 		super();

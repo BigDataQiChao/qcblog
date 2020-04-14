@@ -148,4 +148,33 @@ public class ArticleService {
     public void updateLikeNumber(){
          userLikeMapper.updateLikeNumber();
     }
+
+    /**
+     * 通过ID查询
+     *
+     */
+    public Article findById(Integer id){
+        return articleMapper.findById(id);
+    }
+    /**
+     * 文章类型查询
+     *
+     */
+    public List<String> findType(){
+        return articleMapper.findType();
+    }
+    /**
+     * 文章前置标签查询
+     *
+     */
+    public List<String> findAtPre(){
+        return articleMapper.findAtPre();
+    }
+    /**
+     * 文章后置标签查询
+     *
+     */
+    public List<String> findAtPos(){
+        return articleMapper.findAtPos();
+    }
 }

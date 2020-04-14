@@ -26,6 +26,8 @@ public class RandomTest {
                char code3 = (char)(random.nextInt(26)+97);
                str += code3;
                break;
+           default:
+               break;
        }
    }
    return str;

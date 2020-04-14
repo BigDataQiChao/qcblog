@@ -373,14 +373,12 @@ a,a:hover{
 /*导航条*/
 .w_breadcrumb{
 	margin: 20px 15px 0px 15px;
-	height: 40px;
 	border-bottom: #337ab7 1px solid;
 }
 .w_navbar_tip{
 	float: right;
-	color: #999;
-	font-size: 12px; font-weight: normal; 
-	line-height: 40px; height: 40px;
+	color: #363636;
+	font-size: 12px;
 }
 
 @media only screen and (min-width:100px) and (max-width:768px){

@@ -6,10 +6,11 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import java.io.Serializable;
 import java.util.Date;
 
 @Table(name = "article")
-public class Article {
+public class Article implements Serializable{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
@@ -161,5 +162,27 @@ public class Article {
 
     public void setLikenumber(Integer likenumber) {
         this.likenumber = likenumber;
+    }
+
+
+    @Override
+    public String toString() {
+        return "Article{" +
+                "id=" + id +
+                ", userId=" + userId +
+                ", atname='" + atname + '\'' +
+                ", atnumber=" + atnumber +
+                ", ctime=" + ctime +
+                ", utime=" + utime +
+                ", atpre='" + atpre + '\'' +
+                ", atpos='" + atpos + '\'' +
+                ", atimg='" + atimg + '\'' +
+                ", atlink='" + atlink + '\'' +
+                ", status='" + status + '\'' +
+                ", isDelete='" + isDelete + '\'' +
+                ", atype='" + atype + '\'' +
+                ", atcontent='" + atcontent + '\'' +
+                ", likenumber=" + likenumber +
+                '}';
     }
 }
