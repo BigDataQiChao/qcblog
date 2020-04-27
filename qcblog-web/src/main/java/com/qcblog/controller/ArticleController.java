@@ -125,17 +125,25 @@ public class ArticleController {
     @RequestMapping("/addToArticle")
     @ResponseBody
     public Result addToArticle(@RequestBody Article article) {
-        try {
-            article.setIsDelete("0");
-            article.setCtime(new Date());
-            article.setLikenumber(0);
-            article.setAtnumber(1);
-            articleService.insert(article);
-            return new Result(true, "恭喜您，发表成功！");
-        } catch (Exception e) {
-            e.printStackTrace();
+        String name = SecurityContextHolder.getContext().getAuthentication().getName();
+        User user = userService.findUserByName(name);
+        System.out.println(name);
+        if (article.getAtname() != null && article.getAtname() != "" && article.getAtcontent() != null && article.getAtcontent() != "") {
+            try {
+                article.setIsDelete("0");
+                article.setCtime(new Date());
+                article.setLikenumber(0);
+                article.setAtnumber(1);
+                article.setUserId(user.getId());
+                articleService.insert(article);
+                return new Result(true, "恭喜您，发表成功！");
+            } catch (Exception e) {
+                e.printStackTrace();
+                return new Result(false, "网络出现问题，请重新发表！");
+            }
+        } else {
+            return new Result(false, "有内容项为空，请重新发表！");
         }
-        return new Result(false, "糟糕，发表失败！");
     }
 
     /**
@@ -174,21 +182,13 @@ public class ArticleController {
     @RequestMapping("/add")
     @ResponseBody
     public Result add(@RequestBody Article article) {
-        String name = SecurityContextHolder.getContext().getAuthentication().getName();
-        if (article.getAtname() != null || article.getAtname().equals("") || article.getAtcontent() != null || article.getAtcontent().equals("")) {
-            try {
-                User user = userService.findUserByName(name);
-                System.out.println(name);
-                article.setIsDelete("0");
-                article.setUserId(user.getId());
-                articleService.insert(article);
-                return new Result(true, "恭喜您，发表成功！");
-            } catch (Exception e) {
-                e.printStackTrace();
-                return new Result(false, "网络出现问题，请重新发表！");
-            }
-        } else {
-            return new Result(false, "有内容项为空，请重新发表！");
+        try {
+            article.setIsDelete("0");
+            articleService.insert(article);
+            return new Result(true, "恭喜您，更新成功！");
+        } catch (Exception e) {
+            e.printStackTrace();
+            return new Result(false, "网络出现问题，请重新尝试！");
         }
     }
 
@@ -276,6 +276,10 @@ public class ArticleController {
         return new Result(false, "方法体异常！");
     }
 
+    /**
+     * 点赞状态码
+     * @return
+     */
     @RequestMapping("/findStatus")
     @ResponseBody
     public List findStatus() {

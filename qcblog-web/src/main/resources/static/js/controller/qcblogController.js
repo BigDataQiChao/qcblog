@@ -54,12 +54,51 @@ app.controller('qcblogController',function($scope ,$controller,userService,qcblo
             }
         )
     };
+    //专题切换
+    $scope.subCut = [
+        {name:'java'},
+        {name:'python'},
+        {name:'java2'},
+    ];
+    $scope.subCutDetail = $scope.subCut[0];
+        var qiehuan = document.getElementsByClassName('panel-title');
+        qiehuan[0].style.color = "#29bd80";
+        for (let i = 0; i < qiehuan.length; i++) {
+            const item = qiehuan[i];
+            item.onclick = function(){
+                $scope.subCutDetail = $scope.subCut[i];
+                $scope.reloadList();
+                for (let index = 0; index < qiehuan.length; index++) {
+                    qiehuan[index].style.color = '#333';
+                }
+                item.style.color = '#29bd80';
+            }
+        }
     //获取用户IP地址
     //获取当前登录用户的IP地址
     $scope.showIp = function () {
         adminService.getIp().success(
             function (response) {
                 $scope.signinReferer = response.signinReferer;
+            }
+        );
+    };
+    //分页
+    $scope.findPage = function (page, rows) {
+        articleService.findPage(page, rows).success(
+            function (response) {
+                $scope.articles = response.rows;
+                $scope.paginationConf.totalItems = response.total;//更新总记录数
+            }
+        );
+    };
+    $scope.searchEntity = {};//定义搜索对象
+    //搜索
+    $scope.search = function (page, rows) {
+        articleService.search(page, rows, $scope.searchEntity).success(
+            function (response) {
+                $scope.articles = response.rows;
+                $scope.paginationConf.totalItems = response.total;//更新总记录数
             }
         );
     };

@@ -1,6 +1,5 @@
 package com.qcblog.controller;
 
-import com.qcblog.common.IpUtil;
 import com.qcblog.common.Result;
 import com.qcblog.pojo.Article;
 import com.qcblog.pojo.Numbers;
@@ -324,14 +323,14 @@ public class LogicalController {
      * 文章访问量控制层
      */
     @GetMapping("/articles")
-    public String articles(@Param("atname") String atName) {
+    public String articles(@Param("atname") String atname) {
         String name = SecurityContextHolder.getContext().getAuthentication().getName();
-        Article articleServiceOne = articleService.findOne(atName);
+        Article articleServiceOne = articleService.findOne(atname);
         User user = userService.findUserByName(name);
         if (user != null){
             userService.addViewCount(user);
         }
-        if (articleServiceOne != null) {
+        if (articleServiceOne != null){
             articleService.upateArticles(articleServiceOne);
         }
         return DETAILS + "findArticle";

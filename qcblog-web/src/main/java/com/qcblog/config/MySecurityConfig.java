@@ -19,7 +19,6 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 @Configuration
 @EnableWebSecurity
 @EnableGlobalMethodSecurity(prePostEnabled = true)
-//WebSecurityConfigurerAdapter:重写它的方法来设置一些web的安全西街
 public class MySecurityConfig extends WebSecurityConfigurerAdapter {
 
 
@@ -32,7 +31,7 @@ public class MySecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.authorizeRequests().antMatchers("/**").permitAll()
-                .antMatchers("/page/**").hasRole("USER");
+                .antMatchers("/**").hasRole("USER");
         /*
         开启自动配置的登录功能,如果是自己的定制的登入页面，那么/userlogin 的get请求是来到登录页面
         /userlogin的post请求是处理认证登录，也就是loginPage中的URL的post请求是处理登录逻辑的。
@@ -43,7 +42,6 @@ public class MySecurityConfig extends WebSecurityConfigurerAdapter {
                 .accessDeniedPage("/error");
         /*开启自动配置的注销功能，会访问/logout请求**/
         http.logout().logoutSuccessUrl("/"); //注销成功后，回到首页
-
         /*开启记住我功能（开启后，springboot会给浏览器发送一个cookies，以后访问网站都会带上这个cookies给springboot验证
         springboot会检查以前某一个用户的cookies的值是什么，如果找到了，这个用户就不用再次登录了
         注销时候springboot会发送命令给浏览器删除cookies）*/
@@ -73,8 +71,6 @@ public class MySecurityConfig extends WebSecurityConfigurerAdapter {
     public void configure(WebSecurity web) throws Exception {
         //Web层面的拦截，用来跳过的资源
         web.ignoring()
-                .antMatchers("/static/**")
-                .antMatchers("/home/springboot/qcblog/config/static/img/assets/**")
-                .antMatchers("/home/springboot/assets/**");
+                .antMatchers("/static/**");
     }
 }

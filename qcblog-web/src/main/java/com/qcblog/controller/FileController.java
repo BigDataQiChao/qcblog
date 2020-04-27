@@ -44,7 +44,7 @@ public class FileController {
             String url = path + file.getOriginalFilename();
             return new Result(true, url);
         } catch (Exception e) {
-            return new Result(false, "上传失败，文件过大！");
+            return new Result(false, "上传失败，请选择上传图片！");
         }
     }
 }

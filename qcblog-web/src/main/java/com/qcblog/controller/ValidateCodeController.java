@@ -1,7 +1,7 @@
 package com.qcblog.controller;
 
-import com.qcblog.common.ImgValidateCodeUtil;
 import com.qcblog.common.Result;
+import com.qcblog.utils.ImgValidateCodeUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.stereotype.Controller;

@@ -53,15 +53,15 @@
                                     <div class="col-xs-6 col-md-3">
                                         <a href="#" class="thumbnail w_thumbnail"
                                            style="width: 175px;height: 185px;border: 1px solid;">
-                                            <img src="{{userOne.image}}" alt="...">
+                                            <img src="{{userOne.image}}" onerror="{this.src='../img/errorbg_lucency.png'}" alt="...">
                                         </a>
                                         <a data-toggle="modal" data-target="#uploadModal" class="w_list_overview personal"
                                            style="color: #3399ea;margin-left: 45px;margin-top: 20px;cursor: pointer" ng-click="entity={};">更换头像</a>
                                     </div>
                                     <p class="w_list_overview personal">账号ID: &nbsp;&nbsp;<input class="personal_inp" type="text" readonly="readonly"
-                                                                                     ng-model="userOne.id"/> 无权修改</p>
+                                                                                     ng-model="userOne.id"/></p>
                                     <p class="w_list_overview personal">用户昵称:<input class="personal_inp" readonly="readonly" type="text"
-                                                                                    ng-model="userOne.username"/> 无权修改
+                                                                                    ng-model="userOne.username"/>
                                     </p>
                                     <p class="w_list_overview personal">真实姓名:<input class="personal_inp" type="text"
                                                                                     ng-model="userOne.truename"/></p>
@@ -135,7 +135,7 @@
                         <td>
                             <input type="file" id="file" name="fileName" >
                             <button ng-click="uploadFile()" id="url">上传</button>
-                            <img alt="" src="{{userOne.image}}" style="margin-left: 200px;width: 200px;height:150px">
+                            <img alt="" src="{{userOne.image}}" onerror="{this.src='../img/uperror.png'}" style="margin-left: 200px;width: 200px;height:150px">
                     </tr>
                 </table>
             </div>
