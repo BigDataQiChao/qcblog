@@ -30,6 +30,13 @@ spring:
 mybatis:
    configuration:
      map-underscore-to-camel-case: true
+##上下文及端口配置
 server:
   port: 80
-
+  servlet:
+    context-path: /
+# 日志配置
+logging:
+  level:
+    com.qcblog: debug
+    org.springframework: warn

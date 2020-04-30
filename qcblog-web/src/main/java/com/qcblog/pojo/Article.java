@@ -23,6 +23,7 @@ public class Article implements Serializable{
 
     @JsonFormat(pattern="yyyy-MM-dd hh:mm",timezone = "GMT+8")
     private Date ctime;
+
     @JsonFormat(pattern="yyyy-MM-dd hh:mm",timezone = "GMT+8")
     private Date utime;
 

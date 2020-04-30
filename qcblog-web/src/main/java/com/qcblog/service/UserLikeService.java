@@ -26,4 +26,12 @@ public class UserLikeService {
     public List<Map<String,String>> findStatus(Integer userId){
         return userLikeMapper.findStatus(userId);
     }
+
+    public Integer countByLikeArticle(Integer id){
+        return userLikeMapper.countByLikeArticle(id);
+    }
+
+    public Integer countByAllLikeArticle(Integer id){
+        return userLikeMapper.countByAllLikeArticle(id);
+    }
 }

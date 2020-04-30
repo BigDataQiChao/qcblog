@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="shortcut icon" href="img/slider/yuan.png"/>
-    <title>IT boyuan - 说 说</title>
+    <title>IT boyuan - 个性说说</title>
     <style>
         .button {
             width: 150px;
@@ -81,14 +81,14 @@
 <script type="text/javascript" src="js/service/userService.js"></script>
 <script type="text/javascript" src="js/controller/baseController.js"></script>
 <script type="text/javascript" src="js/controller/talkController.js"></script>
-<body ng-app="qcblogs" ng-controller="talkController" ng-init="addNumber()">
+<body ng-app="qcblogs" ng-controller="talkController" ng-init="addNumber();userInfo()">
 <div class="w_header" th:replace="/other/header :: o_header">
 </div>
 <div class="w_container">
     <div class="container">
         <div class="row w_main_row">
             <ol class="breadcrumb w_breadcrumb">
-                <li><a href="/">首页</a></li>
+                <li><a href="/"><i class="glyphicon glyphicon-home"></i>&nbsp;首页</a></li>
                 <li class="active"><i class="glyphicon glyphicon-heart"></i>&nbsp;说说</li>
                 <span class="w_navbar_tip">愿余生有人陪你烈酒穿肠只笑不哭，可今后无人许我清风明月不再孤苦。</span>
             </ol>

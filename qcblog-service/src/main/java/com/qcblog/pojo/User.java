@@ -30,28 +30,36 @@ public class User {
 
     private String industry;
 
+    private String education;
+
+    private String schName;
+
+    private String intro;
+
+    private String wkCondition;
+
     private String telephone;
 
     private String role;
 
     private String image;
 
-    private String lastip;
+    private String lastIp;
 
     @JsonFormat(pattern="yyyy-MM-dd hh:mm",timezone = "GMT+8")
-    private Date lasttime;
+    private Date lastTime;
 
     private String isDelete;
 
     private String status;
 
-    @JsonFormat(pattern="yyyy-MM-dd hh:mm",timezone = "GMT+8")
     private Date utime;
 
     @JsonFormat(pattern="yyyy-MM-dd hh:mm",timezone = "GMT+8")
     private Integer viewCount;
 
     private Integer carticnum;
+
 
     public Integer getId() {
         return id;
@@ -74,7 +82,7 @@ public class User {
     }
 
     public void setUsername(String username) {
-        this.username = username == null ? null : username.trim();
+        this.username = username;
     }
 
     public String getTruename() {
@@ -82,7 +90,7 @@ public class User {
     }
 
     public void setTruename(String truename) {
-        this.truename = truename == null ? null : truename.trim();
+        this.truename = truename;
     }
 
     public String getSex() {
@@ -90,7 +98,7 @@ public class User {
     }
 
     public void setSex(String sex) {
-        this.sex = sex == null ? null : sex.trim();
+        this.sex = sex;
     }
 
     public String getPassword() {
@@ -98,7 +106,7 @@ public class User {
     }
 
     public void setPassword(String password) {
-        this.password = password == null ? null : password.trim();
+        this.password = password;
     }
 
     public String getRepassword() {
@@ -106,7 +114,7 @@ public class User {
     }
 
     public void setRepassword(String repassword) {
-        this.repassword = repassword == null ? null : repassword.trim();
+        this.repassword = repassword;
     }
 
     public String getEmail() {
@@ -114,7 +122,7 @@ public class User {
     }
 
     public void setEmail(String email) {
-        this.email = email == null ? null : email.trim();
+        this.email = email;
     }
 
     public String getIndustry() {
@@ -122,7 +130,39 @@ public class User {
     }
 
     public void setIndustry(String industry) {
-        this.industry = industry == null ? null : industry.trim();
+        this.industry = industry;
+    }
+
+    public String getEducation() {
+        return education;
+    }
+
+    public void setEducation(String education) {
+        this.education = education;
+    }
+
+    public String getSchName() {
+        return schName;
+    }
+
+    public void setSchName(String schName) {
+        this.schName = schName;
+    }
+
+    public String getIntro() {
+        return intro;
+    }
+
+    public void setIntro(String intro) {
+        this.intro = intro;
+    }
+
+    public String getWkCondition() {
+        return wkCondition;
+    }
+
+    public void setWkCondition(String wkCondition) {
+        this.wkCondition = wkCondition;
     }
 
     public String getTelephone() {
@@ -130,7 +170,7 @@ public class User {
     }
 
     public void setTelephone(String telephone) {
-        this.telephone = telephone == null ? null : telephone.trim();
+        this.telephone = telephone;
     }
 
     public String getRole() {
@@ -138,7 +178,7 @@ public class User {
     }
 
     public void setRole(String role) {
-        this.role = role == null ? null : role.trim();
+        this.role = role;
     }
 
     public String getImage() {
@@ -146,23 +186,23 @@ public class User {
     }
 
     public void setImage(String image) {
-        this.image = image == null ? null : image.trim();
+        this.image = image;
     }
 
-    public String getLastip() {
-        return lastip;
+    public String getLastIp() {
+        return lastIp;
     }
 
-    public void setLastip(String lastip) {
-        this.lastip = lastip == null ? null : lastip.trim();
+    public void setLastIp(String lastIp) {
+        this.lastIp = lastIp;
     }
 
-    public Date getLasttime() {
-        return lasttime;
+    public Date getLastTime() {
+        return lastTime;
     }
 
-    public void setLasttime(Date lasttime) {
-        this.lasttime = lasttime;
+    public void setLastTime(Date lastTime) {
+        this.lastTime = lastTime;
     }
 
     public String getIsDelete() {
@@ -170,7 +210,7 @@ public class User {
     }
 
     public void setIsDelete(String isDelete) {
-        this.isDelete = isDelete == null ? null : isDelete.trim();
+        this.isDelete = isDelete;
     }
 
     public String getStatus() {
@@ -178,7 +218,7 @@ public class User {
     }
 
     public void setStatus(String status) {
-        this.status = status == null ? null : status.trim();
+        this.status = status;
     }
 
     public Date getUtime() {

@@ -1,0 +1,79 @@
+.w_main_right .sitetip .outhorInfo{
+    align-items: center;
+    padding: 9px 10px;
+}
+.w_main_right .sitetip .rank_hr{
+    height: 1px;
+    background-color: #f5f6f7;
+    width: 250px;
+    margin: auto;
+}
+.w_main_right .sitetip .outhorInfo img{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-top: 10px;
+    position: relative;
+}
+.w_main_right .sitetip .outhorInfo img:before{
+    content: url("../img/errorbg_lucency.png");
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    border-radius: 50%;
+    margin-left: -35px;
+    margin-top: -20px;
+}
+.w_main_right .sitetip .outhorInfo .outhor_name{
+    color: #363636;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    padding-top: -28px;
+    margin-top: -70px;
+    margin-left: 20px;
+}
+.w_main_right .sitetip .outhorInfo .outhor_age{
+    margin-left: 100px;
+}
+.w_main_right .sitetip .outhor_content{
+    margin-bottom: 0;
+    padding: 9px 10px;
+}
+.w_main_right .sitetip .outhor_content .content_one{
+    margin-left: 40px;
+    font-weight: 600;
+}
+.w_main_right .sitetip .outhor_content .content_two{
+    margin-left: 20px;
+    display: inline-flex;
+    color: #999;
+}
+.w_main_right .sitetip .outhor_like{
+    height: 80px;
+}
+.w_main_right .sitetip .outhor_like span{
+    margin-left: 50px;
+    display: inherit;
+    font-weight: 600;
+    margin-top: 10px;
+}
+.w_main_right .sitetip .outhor_like .outhor_like_one{
+    display: inline-flex;
+}
+.w_main_right .sitetip .outhor_like .outhor_like_one p{
+    margin-left: 30px;
+    color: #999;
+}
+.w_main_right .sitetip .outhor_like .outhor_gz{
+    background: #e33e33;
+    color: #fff;
+    display: block;
+    border-radius: 4px;
+    box-sizing: border-box;
+    width: 80px;
+    height: 28px;
+    margin-left: 70px;
+    text-align: center;
+    cursor: pointer;
+}

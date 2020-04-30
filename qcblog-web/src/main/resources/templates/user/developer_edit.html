@@ -33,8 +33,8 @@
     <div class="container">
         <div class="row w_main_row" sec:authorize="isAuthenticated()">
             <ol class="breadcrumb w_breadcrumb">
-                <li><a href="/">首页</a></li>
-                <li class="active">个人中心</li>
+                <li><a href="/"><i class="glyphicon glyphicon-home"></i>&nbsp;首页</a></li>
+                <li class="active"><i class="glyphicon glyphicon-user"></i>&nbsp;个人中心</li>
                 <span class="w_navbar_tip">欢迎来到博园平台，这是您的小家！</span>
             </ol>
             <div class="col-lg-9 col-md-9 w_main_left">
@@ -59,13 +59,13 @@
                                            style="color: #3399ea;margin-left: 45px;margin-top: 20px;cursor: pointer" ng-click="entity={};">更换头像</a>
                                     </div>
                                     <p class="w_list_overview personal">账号ID: &nbsp;&nbsp;<input class="personal_inp" type="text" readonly="readonly"
-                                                                                     ng-model="userOne.id"/></p>
+                                                                                     ng-model="userOne.id"/></p>每周只限修改一次
                                     <p class="w_list_overview personal">用户昵称:<input class="personal_inp" readonly="readonly" type="text"
                                                                                     ng-model="userOne.username"/>
                                     </p>
                                     <p class="w_list_overview personal">真实姓名:<input class="personal_inp" type="text"
                                                                                     ng-model="userOne.truename"/></p>
-                                    <p class="w_list_overview personal" ng-if="signinSex =='0'|| signinSex == '1'">
+                                    <p class="w_list_overview personal" ng-if="userSex =='0'|| userSex == '1'">
                                         性别: <input type="radio" name="sex" ng-model="userOne.sex" value="0"/> 男
                                         <input type="radio" name="sex" ng-model="userOne.sex" value="1"/>女</p>
                                     <hr style="margin-left: 30px;">
@@ -81,6 +81,14 @@
                                             class="personal_inp" type="text" ng-model="userOne.email"/></p>
                                     <p class="w_list_overview personal" style="margin-left: 65px;display: inline-flex;">所属行业:
                                         <select class="form-industry" ng-model="userOne.industry" ng-options="name for name in business"></select></p>
+                                    <p class="w_list_overview personal" style="margin-left: 65px;display: inline-flex;">当前学历:
+                                        <select class="form-industry" ng-model="userOne.education" ng-options="ename for ename in educations"></select></p>
+                                    <p class="w_list_overview personal" style="margin-left: 65px;display: inline-flex;">学校名称:<input
+                                            class="personal_inp" type="text" ng-model="userOne.schName" /></p>
+                                    <p class="w_list_overview personal" style="margin-left: 65px;display: inline-flex;">当前状况:
+                                        <select class="form-industry" ng-model="userOne.wkCondition" ng-options="wname for wname in wkconditions"></select></p>
+                                    <p class="w_list_overview personal" style="margin-left: 65px;display: inline-flex;height: 200px">个人简介:
+                                        <textarea class="form-industry" ng-model="userOne.intro" style="height: 180px;width: 400px;resize: none" maxlength="200" placeholder="请简述个人经历，例如：毕业于清华大学，拥有超过10年的工作经验，Oracle认证讲师，6年以上授课经验。精通Oracl，Java算法，曾获xxx奖项。"></textarea></p>
                                 </div>
                             </div>
                         </div>
@@ -97,12 +105,12 @@
                             <div class="panel-body">
                                 <div class="row">
                                     <p class="w_list_overview personal">发表文章 &nbsp;&nbsp;<a href="#"
-                                                                                            class="uparticle">{{signinCarticNum}}</a>
+                                                                                            class="uparticle">{{userCarticNum}}</a>
                                         个</p>
-                                    <p class="w_list_overview personal">浏览文章 &nbsp;&nbsp;<a href="#" class="uparticle">{{signinViewNum}}</a>
+                                    <p class="w_list_overview personal">浏览文章 &nbsp;&nbsp;<a href="#" class="uparticle">{{userViewNum}}</a>
                                         个</p>
                                     <p class="w_list_overview personal" style="height: 25px;margin-top: 10px;">最近登录
-                                        &nbsp;&nbsp;<a href="#" class="uparticle" style="font-size: 15px;">{{signinTime}}</a>
+                                        &nbsp;&nbsp;<a href="#" class="uparticle" style="font-size: 15px;">{{userTime}}</a>
                                     </p>
                                     <p class="w_list_overview personal">访问次数 &nbsp;&nbsp;<a href="#" class="uparticle">{{userCount}}</a>次
                                     </p>

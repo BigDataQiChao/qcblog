@@ -15,4 +15,8 @@ app.service('userService',function($http){
     this.updateImage=function (entity) {
         return $http.post('/User/updateImage',entity);
     }
+    //文章对应的作者信息
+    this.findOuthor=function (id) {
+        return $http.post('/User/findOuthor',id);
+    }
 });

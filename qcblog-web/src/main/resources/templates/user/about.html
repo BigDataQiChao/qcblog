@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="shortcut icon" href="img/slider/yuan.png"/>
-    <title>IT boyuan - 关 于 平 台</title>
+    <title>IT boyuan - 关于平台</title>
 </head>
 
 <link href="//cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
@@ -26,7 +26,7 @@
 <script type="text/javascript" src="js/service/userService.js"></script>
 <script type="text/javascript" src="js/controller/baseController.js"></script>
 <script type="text/javascript" src="js/controller/qcblogController.js"></script>
-<body ng-app="qcblogs" ng-controller="qcblogController" ng-init="addNumber()">
+<body ng-app="qcblogs" ng-controller="qcblogController" ng-init="addNumber();userInfo()">
 <div class="w_header" th:replace="/other/header :: o_header">
 </div>
 <div class="w_container">
@@ -34,7 +34,7 @@
         <div class="row w_main_row">
 
             <ol class="breadcrumb w_breadcrumb">
-                <li><a href="/">首页</a></li>
+                <li><a href="/"><i class="glyphicon glyphicon-home"></i>&nbsp;首页</a></li>
                 <li class="active"><i class="glyphicon glyphicon-user"></i>&nbsp;关于平台</li>
                 <span class="w_navbar_tip">喜欢自由又怕堕落，想要放纵又怕寂寞！灵魂无处安放，所以选择流浪！</span>
             </ol>

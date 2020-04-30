@@ -70,5 +70,9 @@ app.service('articleService',function($http){
     //文章后置标签
     this.findAtPos = function () {
         return $http.get('/Article/findAtPos')
-    }
+    };
+    //根据专题分类查询文章内容
+    this.findSubList = function (subname) {
+        return $http.post('/Subject/findSubList',subname);
+    };
 });

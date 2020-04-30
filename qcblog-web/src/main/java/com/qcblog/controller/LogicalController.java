@@ -71,8 +71,8 @@ public class LogicalController {
             System.out.println("实时获取退出的用户：" + auth.getName());
             String host = request.getHeader("host");
             User user = userService.findUserByName(auth.getName());
-            user.setLasttime(new Date());
-            user.setLastip(host);
+            user.setLastTime(new Date());
+            user.setLastIp(host);
             userService.update(user);
             new SecurityContextLogoutHandler().logout(request, response, auth);
         } else {
@@ -99,8 +99,8 @@ public class LogicalController {
         int countUserId = userService.countByArticleUserId(name);
         User user = userService.findUserByName(name);
         System.out.println("获取实时登录用户:"+user.getUsername());
-        user.setLasttime(new Date());
-        System.out.println("获取登录时间:"+user.getLasttime());
+        user.setLastTime(new Date());
+        System.out.println("获取登录时间:"+user.getLastTime());
         String host = request.getHeader("host");
         signinlog.setLogip(host);
         signinlog.setIsDelete("0");
@@ -375,7 +375,7 @@ public class LogicalController {
                     user.setEmail(user.getEmail());
                     user.setTelephone(user.getTelephone());
                     user.setLimitCount(1);
-                    user.setLasttime(new Date());
+                    user.setLastTime(new Date());
                     user.setRole("USER");
                     user.setIsDelete("0");
                     user.setStatus("1");

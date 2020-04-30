@@ -1,0 +1,426 @@
+17:00:43.532 [main] INFO  c.q.QcblogApplication - [logStarting,50] - Starting QcblogApplication on PC-20180928WXPZ with PID 12524 (D:\IDEA\qcblog\qcblog-web\target\classes started by Administrator in D:\IDEA\qcblog)
+17:00:43.539 [main] DEBUG c.q.QcblogApplication - [logStarting,53] - Running with Spring Boot v2.0.1.RELEASE, Spring v5.0.5.RELEASE
+17:00:43.545 [main] INFO  c.q.QcblogApplication - [logStartupProfileInfo,659] - No active profile set, falling back to default profiles: default
+17:00:47.604 [main] WARN  t.m.s.m.ClassPathMapperScanner - [doScan,142] - No MyBatis mapper was found in '[com.qcblog]' package. Please check your configuration.
+17:00:47.637 [main] WARN  o.m.s.m.ClassPathMapperScanner - [doScan,166] - No MyBatis mapper was found in '[com.qcblog]' package. Please check your configuration.
+17:00:52.361 [main] INFO  o.a.c.h.Http11NioProtocol - [log,180] - Initializing ProtocolHandler ["http-nio-80"]
+17:00:52.397 [main] INFO  o.a.c.c.StandardService - [log,180] - Starting service [Tomcat]
+17:00:52.398 [main] INFO  o.a.c.c.StandardEngine - [log,180] - Starting Servlet Engine: Apache Tomcat/8.5.29
+17:00:52.420 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - [log,180] - Loaded APR based Apache Tomcat Native library [1.2.17] using APR version [1.6.3].
+17:00:52.420 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - [log,180] - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+17:00:52.421 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - [log,180] - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+17:00:53.513 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - [log,180] - OpenSSL successfully initialized [OpenSSL 1.0.2o  27 Mar 2018]
+17:00:53.718 [localhost-startStop-1] INFO  o.a.c.c.C.[.[.[/] - [log,180] - Initializing Spring embedded WebApplicationContext
+17:00:54.443 [localhost-startStop-1] DEBUG c.q.c.SimpleCORSFilter - [init,213] - Initializing filter 'simpleCORSFilter'
+17:00:54.443 [localhost-startStop-1] DEBUG c.q.c.SimpleCORSFilter - [init,244] - Filter 'simpleCORSFilter' configured successfully
+17:01:01.369 [main] INFO  o.a.c.h.Http11NioProtocol - [log,180] - Starting ProtocolHandler ["http-nio-80"]
+17:01:01.406 [main] INFO  o.a.t.u.n.NioSelectorPool - [log,180] - Using a shared selector for servlet write/read
+17:01:01.454 [main] INFO  c.q.QcblogApplication - [logStarted,59] - Started QcblogApplication in 19.757 seconds (JVM running for 22.553)
+17:03:24.109 [main] INFO  c.q.QcblogApplication - [logStarting,50] - Starting QcblogApplication on PC-20180928WXPZ with PID 12648 (D:\IDEA\qcblog\qcblog-web\target\classes started by Administrator in D:\IDEA\qcblog)
+17:03:24.320 [main] DEBUG c.q.QcblogApplication - [logStarting,53] - Running with Spring Boot v2.0.1.RELEASE, Spring v5.0.5.RELEASE
+17:03:24.322 [main] INFO  c.q.QcblogApplication - [logStartupProfileInfo,659] - No active profile set, falling back to default profiles: default
+17:03:27.537 [main] WARN  t.m.s.m.ClassPathMapperScanner - [doScan,142] - No MyBatis mapper was found in '[com.qcblog]' package. Please check your configuration.
+17:03:27.561 [main] WARN  o.m.s.m.ClassPathMapperScanner - [doScan,166] - No MyBatis mapper was found in '[com.qcblog]' package. Please check your configuration.
+17:03:31.597 [main] INFO  o.a.c.h.Http11NioProtocol - [log,180] - Initializing ProtocolHandler ["http-nio-80"]
+17:03:31.611 [main] INFO  o.a.c.c.StandardService - [log,180] - Starting service [Tomcat]
+17:03:31.612 [main] INFO  o.a.c.c.StandardEngine - [log,180] - Starting Servlet Engine: Apache Tomcat/8.5.29
+17:03:31.624 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - [log,180] - Loaded APR based Apache Tomcat Native library [1.2.17] using APR version [1.6.3].
+17:03:31.624 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - [log,180] - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+17:03:31.625 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - [log,180] - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+17:03:32.695 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - [log,180] - OpenSSL successfully initialized [OpenSSL 1.0.2o  27 Mar 2018]
+17:03:32.927 [localhost-startStop-1] INFO  o.a.c.c.C.[.[.[/] - [log,180] - Initializing Spring embedded WebApplicationContext
+17:03:33.457 [localhost-startStop-1] DEBUG c.q.c.SimpleCORSFilter - [init,213] - Initializing filter 'simpleCORSFilter'
+17:03:33.458 [localhost-startStop-1] DEBUG c.q.c.SimpleCORSFilter - [init,244] - Filter 'simpleCORSFilter' configured successfully
+17:03:40.005 [main] INFO  o.a.c.h.Http11NioProtocol - [log,180] - Starting ProtocolHandler ["http-nio-80"]
+17:03:40.050 [main] INFO  o.a.t.u.n.NioSelectorPool - [log,180] - Using a shared selector for servlet write/read
+17:03:40.135 [main] INFO  c.q.QcblogApplication - [logStarted,59] - Started QcblogApplication in 17.504 seconds (JVM running for 18.784)
+17:04:02.147 [http-nio-80-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,180] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+17:04:05.103 [http-nio-80-exec-5] INFO  c.z.h.HikariDataSource - [getConnection,110] - HikariPool-1 - Starting...
+17:04:06.066 [http-nio-80-exec-5] INFO  c.z.h.HikariDataSource - [getConnection,123] - HikariPool-1 - Start completed.
+17:04:06.080 [http-nio-80-exec-5] DEBUG c.q.m.A.selectNameByArticle - [debug,159] - ==>  Preparing: select a.id,u.username from article a,user u where a.user_id = u.id 
+17:04:06.121 [http-nio-80-exec-5] DEBUG c.q.m.A.selectNameByArticle - [debug,159] - ==> Parameters: 
+17:04:06.441 [http-nio-80-exec-5] DEBUG c.q.m.A.selectNameByArticle - [debug,159] - <==      Total: 30
+17:04:06.447 [http-nio-80-exec-8] DEBUG c.q.m.U.selectOne - [debug,159] - ==>  Preparing: SELECT id,limit_count,username,truename,sex,password,repassword,email,industry,education,sch_name,intro,wk_condition,telephone,role,image,last_ip,last_time,is_delete,status,utime,view_count,carticnum FROM user WHERE username = ? 
+17:04:06.449 [http-nio-80-exec-8] DEBUG c.q.m.U.selectOne - [debug,159] - ==> Parameters: anonymousUser(String)
+17:04:06.462 [http-nio-80-exec-8] DEBUG c.q.m.U.selectOne - [debug,159] - <==      Total: 0
+17:04:06.463 [http-nio-80-exec-7] DEBUG c.q.m.U.selectOne - [debug,159] - ==>  Preparing: SELECT id,limit_count,username,truename,sex,password,repassword,email,industry,education,sch_name,intro,wk_condition,telephone,role,image,last_ip,last_time,is_delete,status,utime,view_count,carticnum FROM user WHERE username = ? 
+17:04:06.464 [http-nio-80-exec-7] DEBUG c.q.m.U.selectOne - [debug,159] - ==> Parameters: anonymousUser(String)
+17:04:06.468 [http-nio-80-exec-9] DEBUG c.q.m.N.selectByExample - [debug,159] - ==>  Preparing: SELECT id,ntname,ntstatus,is_delete,ctime,utime,nttype,ntcontent FROM notice 
+17:04:06.470 [http-nio-80-exec-9] DEBUG c.q.m.N.selectByExample - [debug,159] - ==> Parameters: 
+17:04:06.476 [http-nio-80-exec-7] DEBUG c.q.m.U.selectOne - [debug,159] - <==      Total: 0
+17:04:06.477 [http-nio-80-exec-7] WARN  c.q.c.UserController - [map,67] - 警告：当前处于未登录状态！
+17:04:06.489 [http-nio-80-exec-6] DEBUG c.q.m.F.selectByExample - [debug,159] - ==>  Preparing: SELECT id,flname,flink,flstatus,is_delete,flcontent,ctime,utime,fltype FROM flink 
+17:04:06.491 [http-nio-80-exec-6] DEBUG c.q.m.F.selectByExample - [debug,159] - ==> Parameters: 
+17:04:06.497 [http-nio-80-exec-9] DEBUG c.q.m.N.selectByExample - [debug,159] - <==      Total: 2
+17:04:06.498 [http-nio-80-exec-9] DEBUG c.q.m.N.selectByExample - [debug,159] - ==>  Preparing: SELECT id,ntname,ntstatus,is_delete,ctime,utime,nttype,ntcontent FROM notice 
+17:04:06.499 [http-nio-80-exec-9] DEBUG c.q.m.N.selectByExample - [debug,159] - ==> Parameters: 
+17:04:06.522 [http-nio-80-exec-9] DEBUG c.q.m.N.selectByExample - [debug,159] - <==      Total: 2
+17:04:06.539 [http-nio-80-exec-6] DEBUG c.q.m.F.selectByExample - [debug,159] - <==      Total: 53
+17:04:06.554 [http-nio-80-exec-4] DEBUG c.q.m.A.selectByExample - [debug,159] - ==>  Preparing: SELECT id,user_id,atname,atnumber,ctime,utime,atpre,atpos,atimg,atlink,status,is_delete,atype,atcontent,likenumber FROM article 
+17:04:06.557 [http-nio-80-exec-4] DEBUG c.q.m.A.selectByExample - [debug,159] - ==> Parameters: 
+17:04:06.583 [http-nio-80-exec-8] DEBUG c.q.m.N.selectByPrimaryKey - [debug,159] - ==>  Preparing: SELECT id,tnumber,wnumber,ctime,utime,status FROM numbers WHERE id = ? 
+17:04:06.588 [http-nio-80-exec-8] DEBUG c.q.m.N.selectByPrimaryKey - [debug,159] - ==> Parameters: 1(Integer)
+17:04:06.626 [http-nio-80-exec-8] DEBUG c.q.m.N.selectByPrimaryKey - [debug,159] - <==      Total: 1
+17:04:09.523 [http-nio-80-exec-4] DEBUG c.q.m.A.selectByExample - [debug,159] - <==      Total: 30
+17:04:11.584 [http-nio-80-exec-5] INFO  i.l.c.EpollProvider - [info,101] - Starting without optional epoll library
+17:04:11.589 [http-nio-80-exec-5] INFO  i.l.c.KqueueProvider - [info,101] - Starting without optional kqueue library
+17:04:28.665 [http-nio-80-exec-4] DEBUG c.q.m.U.selectOne - [debug,159] - ==>  Preparing: SELECT id,limit_count,username,truename,sex,password,repassword,email,industry,education,sch_name,intro,wk_condition,telephone,role,image,last_ip,last_time,is_delete,status,utime,view_count,carticnum FROM user WHERE username = ? 
+17:04:28.666 [http-nio-80-exec-4] DEBUG c.q.m.U.selectOne - [debug,159] - ==> Parameters: qichao(String)
+17:04:28.688 [http-nio-80-exec-4] DEBUG c.q.m.U.selectOne - [debug,159] - <==      Total: 1
+17:04:28.697 [http-nio-80-exec-4] INFO  c.q.c.MyUserDetailsService - [loadUserByUsername,56] - qichao角色权限为：[USER, 普通用户]
+17:04:28.826 [http-nio-80-exec-4] DEBUG c.q.m.U.countByArticleUserId - [debug,159] - ==>  Preparing: select count(*) from article a,user u where a.user_id = u.id and u.username=?; 
+17:04:28.829 [http-nio-80-exec-4] DEBUG c.q.m.U.countByArticleUserId - [debug,159] - ==> Parameters: qichao(String)
+17:04:28.853 [http-nio-80-exec-4] DEBUG c.q.m.U.countByArticleUserId - [debug,159] - <==      Total: 1
+17:04:28.856 [http-nio-80-exec-4] DEBUG c.q.m.U.selectOne - [debug,159] - ==>  Preparing: SELECT id,limit_count,username,truename,sex,password,repassword,email,industry,education,sch_name,intro,wk_condition,telephone,role,image,last_ip,last_time,is_delete,status,utime,view_count,carticnum FROM user WHERE username = ? 
+17:04:28.857 [http-nio-80-exec-4] DEBUG c.q.m.U.selectOne - [debug,159] - ==> Parameters: qichao(String)
+17:04:28.869 [http-nio-80-exec-4] DEBUG c.q.m.U.selectOne - [debug,159] - <==      Total: 1
+17:04:28.879 [http-nio-80-exec-4] DEBUG c.q.m.L.insert - [debug,159] - ==>  Preparing: INSERT INTO signinlog ( id,logip,logtime,logstatus,logname,logtype,utime,is_delete ) VALUES( ?,?,?,?,?,?,?,? ) 
+17:04:28.881 [http-nio-80-exec-4] DEBUG c.q.m.L.insert - [debug,159] - ==> Parameters: null, localhost(String), 2020-04-29 17:04:28.87(Timestamp), 1(String), qichao(String), 平台用户(String), null, 0(String)
+17:04:28.907 [http-nio-80-exec-4] DEBUG c.q.m.L.insert - [debug,159] - <==    Updates: 1
+17:04:28.914 [http-nio-80-exec-4] DEBUG c.q.m.L.insert!selectKey - [debug,159] - ==>  Executing: SELECT LAST_INSERT_ID() 
+17:04:28.936 [http-nio-80-exec-4] DEBUG c.q.m.L.insert!selectKey - [debug,159] - <==      Total: 1
+17:04:28.937 [http-nio-80-exec-4] DEBUG c.q.m.U.updatePersonal - [debug,159] - ==>  Preparing: update user set username = ?,truename = ?,industry = ?,utime = ?,telephone = ?,sex = ?, email = ?,wk_condition = ?,intro = ?,sch_name = ?,education = ? where id = ? 
+17:04:28.939 [http-nio-80-exec-4] DEBUG c.q.m.U.updatePersonal - [debug,159] - ==> Parameters: qichao(String), 赵起超(String), 计算机软件(String), 2020-04-28 19:33:44.0(Timestamp), 18732336429(String), 0(String), 1416537683@qq.com(String), 度假中(String), 本人很帅，且经历过大风大浪，为了写这laji @!#$%^&*(!@#$%^^&*..........的毕设，磨炼数月，饱经沧桑，蹉跎岁月，命途多舛.......(String), 河北北方学院(String), 本科(String), 1(Integer)
+17:04:28.972 [http-nio-80-exec-4] DEBUG c.q.m.U.updatePersonal - [debug,159] - <==    Updates: 1
+17:04:28.975 [http-nio-80-exec-4] DEBUG c.q.m.U.updateCarticnum - [debug,159] - ==>  Preparing: update user set carticnum = ? where username = ? 
+17:04:28.976 [http-nio-80-exec-4] DEBUG c.q.m.U.updateCarticnum - [debug,159] - ==> Parameters: 21(Integer), qichao(String)
+17:04:29.000 [http-nio-80-exec-4] DEBUG c.q.m.U.updateCarticnum - [debug,159] - <==    Updates: 1
+17:04:30.251 [http-nio-80-exec-9] DEBUG c.q.m.U.selectOne - [debug,159] - ==>  Preparing: SELECT id,limit_count,username,truename,sex,password,repassword,email,industry,education,sch_name,intro,wk_condition,telephone,role,image,last_ip,last_time,is_delete,status,utime,view_count,carticnum FROM user WHERE username = ? 
+17:04:30.252 [http-nio-80-exec-9] DEBUG c.q.m.U.selectOne - [debug,159] - ==> Parameters: qichao(String)
+17:04:30.268 [http-nio-80-exec-9] DEBUG c.q.m.U.selectOne - [debug,159] - <==      Total: 1
+17:04:30.276 [http-nio-80-exec-10] DEBUG c.q.m.F.selectByExample - [debug,159] - ==>  Preparing: SELECT id,flname,flink,flstatus,is_delete,flcontent,ctime,utime,fltype FROM flink 
+17:04:30.276 [http-nio-80-exec-4] DEBUG c.q.m.A.selectByExample - [debug,159] - ==>  Preparing: SELECT id,user_id,atname,atnumber,ctime,utime,atpre,atpos,atimg,atlink,status,is_delete,atype,atcontent,likenumber FROM article 
+17:04:30.279 [http-nio-80-exec-10] DEBUG c.q.m.F.selectByExample - [debug,159] - ==> Parameters: 
+17:04:30.274 [http-nio-80-exec-9] DEBUG c.q.m.U.selectByPrimaryKey - [debug,159] - ==>  Preparing: SELECT id,limit_count,username,truename,sex,password,repassword,email,industry,education,sch_name,intro,wk_condition,telephone,role,image,last_ip,last_time,is_delete,status,utime,view_count,carticnum FROM user WHERE id = ? 
+17:04:30.281 [http-nio-80-exec-4] DEBUG c.q.m.A.selectByExample - [debug,159] - ==> Parameters: 
+17:04:30.280 [http-nio-80-exec-9] DEBUG c.q.m.U.selectByPrimaryKey - [debug,159] - ==> Parameters: 1(Integer)
+17:04:30.297 [http-nio-80-exec-8] DEBUG c.q.m.U.selectOne - [debug,159] - ==>  Preparing: SELECT id,limit_count,username,truename,sex,password,repassword,email,industry,education,sch_name,intro,wk_condition,telephone,role,image,last_ip,last_time,is_delete,status,utime,view_count,carticnum FROM user WHERE username = ? 
+17:04:30.297 [http-nio-80-exec-6] DEBUG c.q.m.N.selectByExample - [debug,159] - ==>  Preparing: SELECT id,ntname,ntstatus,is_delete,ctime,utime,nttype,ntcontent FROM notice 
+17:04:30.298 [http-nio-80-exec-5] DEBUG c.q.m.A.selectNameByArticle - [debug,159] - ==>  Preparing: select a.id,u.username from article a,user u where a.user_id = u.id 
+17:04:30.300 [http-nio-80-exec-8] DEBUG c.q.m.U.selectOne - [debug,159] - ==> Parameters: qichao(String)
+17:04:30.300 [http-nio-80-exec-9] DEBUG c.q.m.U.selectByPrimaryKey - [debug,159] - <==      Total: 1
+17:04:30.300 [http-nio-80-exec-6] DEBUG c.q.m.N.selectByExample - [debug,159] - ==> Parameters: 
+17:04:30.300 [http-nio-80-exec-5] DEBUG c.q.m.A.selectNameByArticle - [debug,159] - ==> Parameters: 
+17:04:30.303 [http-nio-80-exec-9] DEBUG c.q.m.U.updateUser - [debug,159] - ==>  Preparing: update user set limit_count = ? where id = ? 
+17:04:30.304 [http-nio-80-exec-9] DEBUG c.q.m.U.updateUser - [debug,159] - ==> Parameters: 840(Integer), 1(Integer)
+17:04:30.311 [http-nio-80-exec-10] DEBUG c.q.m.F.selectByExample - [debug,159] - <==      Total: 53
+17:04:30.331 [http-nio-80-exec-6] DEBUG c.q.m.N.selectByExample - [debug,159] - <==      Total: 2
+17:04:30.332 [http-nio-80-exec-5] DEBUG c.q.m.A.selectNameByArticle - [debug,159] - <==      Total: 30
+17:04:30.333 [http-nio-80-exec-6] DEBUG c.q.m.N.selectByExample - [debug,159] - ==>  Preparing: SELECT id,ntname,ntstatus,is_delete,ctime,utime,nttype,ntcontent FROM notice 
+17:04:30.334 [http-nio-80-exec-6] DEBUG c.q.m.N.selectByExample - [debug,159] - ==> Parameters: 
+17:04:30.337 [http-nio-80-exec-8] DEBUG c.q.m.U.selectOne - [debug,159] - <==      Total: 1
+17:04:30.359 [http-nio-80-exec-6] DEBUG c.q.m.N.selectByExample - [debug,159] - <==      Total: 2
+17:04:30.379 [http-nio-80-exec-9] DEBUG c.q.m.U.updateUser - [debug,159] - <==    Updates: 1
+17:04:30.381 [http-nio-80-exec-9] DEBUG c.q.m.N.selectByPrimaryKey - [debug,159] - ==>  Preparing: SELECT id,tnumber,wnumber,ctime,utime,status FROM numbers WHERE id = ? 
+17:04:30.382 [http-nio-80-exec-9] DEBUG c.q.m.N.selectByPrimaryKey - [debug,159] - ==> Parameters: 1(Integer)
+17:04:30.415 [http-nio-80-exec-1] DEBUG c.q.m.U.selectOne - [debug,159] - ==>  Preparing: SELECT id,limit_count,username,truename,sex,password,repassword,email,industry,education,sch_name,intro,wk_condition,telephone,role,image,last_ip,last_time,is_delete,status,utime,view_count,carticnum FROM user WHERE username = ? 
+17:04:30.404 [http-nio-80-exec-9] DEBUG c.q.m.N.selectByPrimaryKey - [debug,159] - <==      Total: 1
+17:04:30.851 [http-nio-80-exec-1] DEBUG c.q.m.U.selectOne - [debug,159] - ==> Parameters: qichao(String)
+17:04:30.851 [http-nio-80-exec-9] DEBUG c.q.m.N.updateNumber - [debug,159] - ==>  Preparing: update numbers set tnumber = ?+1,wnumber = ?+1 where id = ? 
+17:04:30.852 [http-nio-80-exec-9] DEBUG c.q.m.N.updateNumber - [debug,159] - ==> Parameters: 1100(Integer), 1100(Integer), 1(Integer)
+17:04:30.922 [http-nio-80-exec-1] DEBUG c.q.m.U.selectOne - [debug,159] - <==      Total: 1
+17:04:30.963 [http-nio-80-exec-9] DEBUG c.q.m.N.updateNumber - [debug,159] - <==    Updates: 1
+17:04:30.964 [http-nio-80-exec-9] DEBUG c.q.m.N.selectByPrimaryKey - [debug,159] - ==>  Preparing: SELECT id,tnumber,wnumber,ctime,utime,status FROM numbers WHERE id = ? 
+17:04:30.965 [http-nio-80-exec-9] DEBUG c.q.m.N.selectByPrimaryKey - [debug,159] - ==> Parameters: 1(Integer)
+17:04:31.003 [http-nio-80-exec-9] DEBUG c.q.m.N.selectByPrimaryKey - [debug,159] - <==      Total: 1
+17:04:33.028 [http-nio-80-exec-8] DEBUG c.q.m.U.selectOne - [debug,159] - ==>  Preparing: SELECT id,limit_count,username,truename,sex,password,repassword,email,industry,education,sch_name,intro,wk_condition,telephone,role,image,last_ip,last_time,is_delete,status,utime,view_count,carticnum FROM user WHERE username = ? 
+17:04:33.029 [http-nio-80-exec-8] DEBUG c.q.m.U.selectOne - [debug,159] - ==> Parameters: qichao(String)
+17:04:33.062 [http-nio-80-exec-6] DEBUG c.q.m.S.findArticleBySubType - [debug,159] - ==>  Preparing: SELECT a.id,a.atimg,a.atname,a.atpre,a.atpos,a.atcontent,a.atnumber,a.ctime FROM article a,subject s WHERE a.id = s.article_id AND s.STATUS = 1 AND s.subname = ? 
+17:04:33.064 [http-nio-80-exec-1] DEBUG c.q.m.F.selectByExample - [debug,159] - ==>  Preparing: SELECT id,flname,flink,flstatus,is_delete,flcontent,ctime,utime,fltype FROM flink 
+17:04:33.065 [http-nio-80-exec-8] DEBUG c.q.m.U.selectOne - [debug,159] - <==      Total: 1
+17:04:33.065 [http-nio-80-exec-1] DEBUG c.q.m.F.selectByExample - [debug,159] - ==> Parameters: 
+17:04:33.067 [http-nio-80-exec-8] DEBUG c.q.m.U.selectByPrimaryKey - [debug,159] - ==>  Preparing: SELECT id,limit_count,username,truename,sex,password,repassword,email,industry,education,sch_name,intro,wk_condition,telephone,role,image,last_ip,last_time,is_delete,status,utime,view_count,carticnum FROM user WHERE id = ? 
+17:04:33.068 [http-nio-80-exec-7] DEBUG c.q.m.A.selectNameByArticle - [debug,159] - ==>  Preparing: select a.id,u.username from article a,user u where a.user_id = u.id 
+17:04:33.068 [http-nio-80-exec-8] DEBUG c.q.m.U.selectByPrimaryKey - [debug,159] - ==> Parameters: 1(Integer)
+17:04:33.068 [http-nio-80-exec-7] DEBUG c.q.m.A.selectNameByArticle - [debug,159] - ==> Parameters: 
+17:04:33.064 [http-nio-80-exec-6] DEBUG c.q.m.S.findArticleBySubType - [debug,159] - ==> Parameters: Java专题(String)
+17:04:33.070 [http-nio-80-exec-3] DEBUG c.q.m.U.selectOne - [debug,159] - ==>  Preparing: SELECT id,limit_count,username,truename,sex,password,repassword,email,industry,education,sch_name,intro,wk_condition,telephone,role,image,last_ip,last_time,is_delete,status,utime,view_count,carticnum FROM user WHERE username = ? 
+17:04:33.072 [http-nio-80-exec-3] DEBUG c.q.m.U.selectOne - [debug,159] - ==> Parameters: qichao(String)
+17:04:33.095 [http-nio-80-exec-3] DEBUG c.q.m.U.selectOne - [debug,159] - <==      Total: 1
+17:04:33.095 [http-nio-80-exec-7] DEBUG c.q.m.A.selectNameByArticle - [debug,159] - <==      Total: 30
+17:04:33.106 [http-nio-80-exec-1] DEBUG c.q.m.F.selectByExample - [debug,159] - <==      Total: 53
+17:04:33.423 [http-nio-80-exec-8] DEBUG c.q.m.U.selectByPrimaryKey - [debug,159] - <==      Total: 1
+17:04:33.424 [http-nio-80-exec-8] DEBUG c.q.m.U.updateUser - [debug,159] - ==>  Preparing: update user set limit_count = ? where id = ? 
+17:04:33.425 [http-nio-80-exec-8] DEBUG c.q.m.U.updateUser - [debug,159] - ==> Parameters: 841(Integer), 1(Integer)
+17:04:33.485 [http-nio-80-exec-8] DEBUG c.q.m.U.updateUser - [debug,159] - <==    Updates: 1
+17:04:33.486 [http-nio-80-exec-8] DEBUG c.q.m.N.selectByPrimaryKey - [debug,159] - ==>  Preparing: SELECT id,tnumber,wnumber,ctime,utime,status FROM numbers WHERE id = ? 
+17:04:33.487 [http-nio-80-exec-8] DEBUG c.q.m.N.selectByPrimaryKey - [debug,159] - ==> Parameters: 1(Integer)
+17:04:33.520 [http-nio-80-exec-8] DEBUG c.q.m.N.selectByPrimaryKey - [debug,159] - <==      Total: 1
+17:04:33.521 [http-nio-80-exec-8] DEBUG c.q.m.N.updateNumber - [debug,159] - ==>  Preparing: update numbers set tnumber = ?+1,wnumber = ?+1 where id = ? 
+17:04:33.522 [http-nio-80-exec-8] DEBUG c.q.m.N.updateNumber - [debug,159] - ==> Parameters: 1101(Integer), 1101(Integer), 1(Integer)
+17:04:33.582 [http-nio-80-exec-8] DEBUG c.q.m.N.updateNumber - [debug,159] - <==    Updates: 1
+17:04:33.583 [http-nio-80-exec-8] DEBUG c.q.m.N.selectByPrimaryKey - [debug,159] - ==>  Preparing: SELECT id,tnumber,wnumber,ctime,utime,status FROM numbers WHERE id = ? 
+17:04:33.583 [http-nio-80-exec-8] DEBUG c.q.m.N.selectByPrimaryKey - [debug,159] - ==> Parameters: 1(Integer)
+17:04:33.619 [http-nio-80-exec-8] DEBUG c.q.m.N.selectByPrimaryKey - [debug,159] - <==      Total: 1
+17:04:33.805 [http-nio-80-exec-4] DEBUG c.q.m.A.selectByExample - [debug,159] - <==      Total: 30
+17:04:34.251 [http-nio-80-exec-6] DEBUG c.q.m.S.findArticleBySubType - [debug,159] - <==      Total: 8
+17:04:40.518 [http-nio-80-exec-8] DEBUG c.q.m.A.findByName - [debug,159] - ==>  Preparing: select * from article where atname = ? 
+17:04:40.519 [http-nio-80-exec-8] DEBUG c.q.m.A.findByName - [debug,159] - ==> Parameters: 32位的UUID生成方法总结(String)
+17:04:40.597 [http-nio-80-exec-8] DEBUG c.q.m.A.findByName - [debug,159] - <==      Total: 1
+17:04:40.600 [http-nio-80-exec-8] DEBUG c.q.m.U.selectOne - [debug,159] - ==>  Preparing: SELECT id,limit_count,username,truename,sex,password,repassword,email,industry,education,sch_name,intro,wk_condition,telephone,role,image,last_ip,last_time,is_delete,status,utime,view_count,carticnum FROM user WHERE username = ? 
+17:04:40.601 [http-nio-80-exec-8] DEBUG c.q.m.U.selectOne - [debug,159] - ==> Parameters: qichao(String)
+17:04:40.635 [http-nio-80-exec-8] DEBUG c.q.m.U.selectOne - [debug,159] - <==      Total: 1
+17:04:40.636 [http-nio-80-exec-8] DEBUG c.q.m.U.addViewCount - [debug,159] - ==>  Preparing: update user set view_count = ?+1 where id = ? 
+17:04:40.638 [http-nio-80-exec-8] DEBUG c.q.m.U.addViewCount - [debug,159] - ==> Parameters: 36(Integer), 1(Integer)
+17:04:40.716 [http-nio-80-exec-8] DEBUG c.q.m.U.addViewCount - [debug,159] - <==    Updates: 1
+17:04:40.718 [http-nio-80-exec-8] DEBUG c.q.m.A.updateArticle - [debug,159] - ==>  Preparing: update article set atnumber = ?+1 where id = ? 
+17:04:40.718 [http-nio-80-exec-8] DEBUG c.q.m.A.updateArticle - [debug,159] - ==> Parameters: 38(Integer), 3(Integer)
+17:04:40.796 [http-nio-80-exec-8] DEBUG c.q.m.A.updateArticle - [debug,159] - <==    Updates: 1
+17:04:42.536 [http-nio-80-exec-10] DEBUG c.q.m.U.selectOne - [debug,159] - ==>  Preparing: SELECT id,limit_count,username,truename,sex,password,repassword,email,industry,education,sch_name,intro,wk_condition,telephone,role,image,last_ip,last_time,is_delete,status,utime,view_count,carticnum FROM user WHERE username = ? 
+17:04:42.536 [http-nio-80-exec-3] DEBUG c.q.m.A.findByName - [debug,159] - ==>  Preparing: select * from article where atname = ? 
+17:04:42.537 [http-nio-80-exec-3] DEBUG c.q.m.A.findByName - [debug,159] - ==> Parameters: 32位的UUID生成方法总结(String)
+17:04:42.537 [http-nio-80-exec-1] DEBUG c.q.m.U.selectOne - [debug,159] - ==>  Preparing: SELECT id,limit_count,username,truename,sex,password,repassword,email,industry,education,sch_name,intro,wk_condition,telephone,role,image,last_ip,last_time,is_delete,status,utime,view_count,carticnum FROM user WHERE username = ? 
+17:04:42.537 [http-nio-80-exec-10] DEBUG c.q.m.U.selectOne - [debug,159] - ==> Parameters: qichao(String)
+17:04:42.537 [http-nio-80-exec-7] DEBUG c.q.m.F.selectByExample - [debug,159] - ==>  Preparing: SELECT id,flname,flink,flstatus,is_delete,flcontent,ctime,utime,fltype FROM flink 
+17:04:42.538 [http-nio-80-exec-1] DEBUG c.q.m.U.selectOne - [debug,159] - ==> Parameters: qichao(String)
+17:04:42.538 [http-nio-80-exec-7] DEBUG c.q.m.F.selectByExample - [debug,159] - ==> Parameters: 
+17:04:42.582 [http-nio-80-exec-3] DEBUG c.q.m.A.findByName - [debug,159] - <==      Total: 1
+17:04:42.582 [http-nio-80-exec-10] DEBUG c.q.m.U.selectOne - [debug,159] - <==      Total: 1
+17:04:42.586 [http-nio-80-exec-10] DEBUG c.q.m.U.selectByPrimaryKey - [debug,159] - ==>  Preparing: SELECT id,limit_count,username,truename,sex,password,repassword,email,industry,education,sch_name,intro,wk_condition,telephone,role,image,last_ip,last_time,is_delete,status,utime,view_count,carticnum FROM user WHERE id = ? 
+17:04:42.588 [http-nio-80-exec-10] DEBUG c.q.m.U.selectByPrimaryKey - [debug,159] - ==> Parameters: 1(Integer)
+17:04:42.590 [http-nio-80-exec-1] DEBUG c.q.m.U.selectOne - [debug,159] - <==      Total: 1
+17:04:42.613 [http-nio-80-exec-5] DEBUG c.q.m.U.selectOne - [debug,159] - ==>  Preparing: SELECT id,limit_count,username,truename,sex,password,repassword,email,industry,education,sch_name,intro,wk_condition,telephone,role,image,last_ip,last_time,is_delete,status,utime,view_count,carticnum FROM user WHERE username = ? 
+17:04:42.614 [http-nio-80-exec-5] DEBUG c.q.m.U.selectOne - [debug,159] - ==> Parameters: qichao(String)
+17:04:42.620 [http-nio-80-exec-10] DEBUG c.q.m.U.selectByPrimaryKey - [debug,159] - <==      Total: 1
+17:04:42.622 [http-nio-80-exec-10] DEBUG c.q.m.U.updateUser - [debug,159] - ==>  Preparing: update user set limit_count = ? where id = ? 
+17:04:42.623 [http-nio-80-exec-10] DEBUG c.q.m.U.updateUser - [debug,159] - ==> Parameters: 842(Integer), 1(Integer)
+17:04:42.657 [http-nio-80-exec-5] DEBUG c.q.m.U.selectOne - [debug,159] - <==      Total: 1
+17:04:42.661 [http-nio-80-exec-7] DEBUG c.q.m.F.selectByExample - [debug,159] - <==      Total: 53
+17:04:42.685 [http-nio-80-exec-10] DEBUG c.q.m.U.updateUser - [debug,159] - <==    Updates: 1
+17:04:42.686 [http-nio-80-exec-10] DEBUG c.q.m.N.selectByPrimaryKey - [debug,159] - ==>  Preparing: SELECT id,tnumber,wnumber,ctime,utime,status FROM numbers WHERE id = ? 
+17:04:42.687 [http-nio-80-exec-10] DEBUG c.q.m.N.selectByPrimaryKey - [debug,159] - ==> Parameters: 1(Integer)
+17:04:42.721 [http-nio-80-exec-10] DEBUG c.q.m.N.selectByPrimaryKey - [debug,159] - <==      Total: 1
+17:04:42.722 [http-nio-80-exec-10] DEBUG c.q.m.N.updateNumber - [debug,159] - ==>  Preparing: update numbers set tnumber = ?+1,wnumber = ?+1 where id = ? 
+17:04:42.722 [http-nio-80-exec-10] DEBUG c.q.m.N.updateNumber - [debug,159] - ==> Parameters: 1102(Integer), 1102(Integer), 1(Integer)
+17:04:42.742 [http-nio-80-exec-2] DEBUG c.q.m.A.findByName - [debug,159] - ==>  Preparing: select * from article where atname = ? 
+17:04:42.747 [http-nio-80-exec-2] DEBUG c.q.m.A.findByName - [debug,159] - ==> Parameters: 32位的UUID生成方法总结(String)
+17:04:42.751 [http-nio-80-exec-4] DEBUG c.q.m.A.findByName - [debug,159] - ==>  Preparing: select * from article where atname = ? 
+17:04:42.752 [http-nio-80-exec-4] DEBUG c.q.m.A.findByName - [debug,159] - ==> Parameters: 32位的UUID生成方法总结(String)
+17:04:42.789 [http-nio-80-exec-6] DEBUG c.q.m.U.countByLikeArticle - [debug,159] - ==>  Preparing: select count(entity_id) from article a,userlike ul where ul.entity_id = a.id and ul.entity_id = ? 
+17:04:42.791 [http-nio-80-exec-6] DEBUG c.q.m.U.countByLikeArticle - [debug,159] - ==> Parameters: 3(Integer)
+17:04:42.807 [http-nio-80-exec-1] DEBUG c.q.m.U.selectOne - [debug,159] - ==>  Preparing: SELECT id,limit_count,username,truename,sex,password,repassword,email,industry,education,sch_name,intro,wk_condition,telephone,role,image,last_ip,last_time,is_delete,status,utime,view_count,carticnum FROM user WHERE username = ? 
+17:04:42.808 [http-nio-80-exec-1] DEBUG c.q.m.U.selectOne - [debug,159] - ==> Parameters: qichao(String)
+17:04:42.809 [http-nio-80-exec-10] DEBUG c.q.m.N.updateNumber - [debug,159] - <==    Updates: 1
+17:04:42.808 [http-nio-80-exec-2] DEBUG c.q.m.A.findByName - [debug,159] - <==      Total: 1
+17:04:42.809 [http-nio-80-exec-8] DEBUG c.q.m.U.findArticleOneOuthor - [debug,159] - ==>  Preparing: select u.* from user u, article a where u.id = a.user_id and a.id = ? 
+17:04:42.811 [http-nio-80-exec-10] DEBUG c.q.m.N.selectByPrimaryKey - [debug,159] - ==>  Preparing: SELECT id,tnumber,wnumber,ctime,utime,status FROM numbers WHERE id = ? 
+17:04:42.811 [http-nio-80-exec-10] DEBUG c.q.m.N.selectByPrimaryKey - [debug,159] - ==> Parameters: 1(Integer)
+17:04:42.812 [http-nio-80-exec-2] DEBUG c.q.m.A.nextArticle - [debug,159] - ==>  Preparing: select * from article where status = 1 and id > ? order by id asc limit 1 
+17:04:42.813 [http-nio-80-exec-8] DEBUG c.q.m.U.findArticleOneOuthor - [debug,159] - ==> Parameters: 3(Integer)
+17:04:42.813 [http-nio-80-exec-2] DEBUG c.q.m.A.nextArticle - [debug,159] - ==> Parameters: 3(Integer)
+17:04:42.835 [http-nio-80-exec-6] DEBUG c.q.m.U.countByLikeArticle - [debug,159] - <==      Total: 1
+17:04:42.837 [http-nio-80-exec-10] DEBUG c.q.m.N.selectByPrimaryKey - [debug,159] - <==      Total: 1
+17:04:42.835 [http-nio-80-exec-4] DEBUG c.q.m.A.findByName - [debug,159] - <==      Total: 1
+17:04:42.838 [http-nio-80-exec-8] DEBUG c.q.m.U.findArticleOneOuthor - [debug,159] - <==      Total: 1
+17:04:42.839 [http-nio-80-exec-4] DEBUG c.q.m.A.preArticle - [debug,159] - ==>  Preparing: select * from article where status = 1 and id < ? order by id desc limit 1 
+17:04:42.840 [http-nio-80-exec-4] DEBUG c.q.m.A.preArticle - [debug,159] - ==> Parameters: 3(Integer)
+17:04:42.848 [http-nio-80-exec-2] DEBUG c.q.m.A.nextArticle - [debug,159] - <==      Total: 1
+17:04:42.858 [http-nio-80-exec-1] DEBUG c.q.m.U.selectOne - [debug,159] - <==      Total: 1
+17:04:42.859 [http-nio-80-exec-1] DEBUG c.q.m.U.countByAllLikeArticle - [debug,159] - ==>  Preparing: select count(*) from article a,user u,userlike ul where u.id = a.user_id and ul.entity_id = a.id and u.id = ? 
+17:04:42.859 [http-nio-80-exec-1] DEBUG c.q.m.U.countByAllLikeArticle - [debug,159] - ==> Parameters: 1(Integer)
+17:04:42.880 [http-nio-80-exec-1] DEBUG c.q.m.U.countByAllLikeArticle - [debug,159] - <==      Total: 1
+17:04:42.921 [http-nio-80-exec-4] DEBUG c.q.m.A.preArticle - [debug,159] - <==      Total: 1
+17:06:01.101 [main] INFO  c.q.QcblogApplication - [logStarting,50] - Starting QcblogApplication on PC-20180928WXPZ with PID 6764 (D:\IDEA\qcblog\qcblog-web\target\classes started by Administrator in D:\IDEA\qcblog)
+17:06:01.109 [main] DEBUG c.q.QcblogApplication - [logStarting,53] - Running with Spring Boot v2.0.1.RELEASE, Spring v5.0.5.RELEASE
+17:06:01.142 [main] INFO  c.q.QcblogApplication - [logStartupProfileInfo,659] - No active profile set, falling back to default profiles: default
+17:06:04.529 [main] WARN  t.m.s.m.ClassPathMapperScanner - [doScan,142] - No MyBatis mapper was found in '[com.qcblog]' package. Please check your configuration.
+17:06:04.551 [main] WARN  o.m.s.m.ClassPathMapperScanner - [doScan,166] - No MyBatis mapper was found in '[com.qcblog]' package. Please check your configuration.
+17:06:11.993 [main] INFO  o.a.c.h.Http11NioProtocol - [log,180] - Initializing ProtocolHandler ["http-nio-80"]
+17:06:12.025 [main] INFO  o.a.c.c.StandardService - [log,180] - Starting service [Tomcat]
+17:06:12.028 [main] INFO  o.a.c.c.StandardEngine - [log,180] - Starting Servlet Engine: Apache Tomcat/8.5.29
+17:06:12.062 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - [log,180] - Loaded APR based Apache Tomcat Native library [1.2.17] using APR version [1.6.3].
+17:06:12.062 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - [log,180] - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+17:06:12.063 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - [log,180] - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+17:06:13.175 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - [log,180] - OpenSSL successfully initialized [OpenSSL 1.0.2o  27 Mar 2018]
+17:06:13.591 [localhost-startStop-1] INFO  o.a.c.c.C.[.[.[/] - [log,180] - Initializing Spring embedded WebApplicationContext
+17:06:14.109 [localhost-startStop-1] DEBUG c.q.c.SimpleCORSFilter - [init,213] - Initializing filter 'simpleCORSFilter'
+17:06:14.110 [localhost-startStop-1] DEBUG c.q.c.SimpleCORSFilter - [init,244] - Filter 'simpleCORSFilter' configured successfully
+17:06:21.878 [main] INFO  o.a.c.h.Http11NioProtocol - [log,180] - Starting ProtocolHandler ["http-nio-80"]
+17:06:21.913 [main] INFO  o.a.t.u.n.NioSelectorPool - [log,180] - Using a shared selector for servlet write/read
+17:06:21.973 [main] INFO  c.q.QcblogApplication - [logStarted,59] - Started QcblogApplication in 22.314 seconds (JVM running for 23.973)
+17:06:23.272 [http-nio-80-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,180] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+17:06:26.283 [http-nio-80-exec-10] INFO  c.z.h.HikariDataSource - [getConnection,110] - HikariPool-1 - Starting...
+17:06:26.912 [http-nio-80-exec-10] INFO  c.z.h.HikariDataSource - [getConnection,123] - HikariPool-1 - Start completed.
+17:06:26.925 [http-nio-80-exec-10] DEBUG c.q.m.U.selectOne - [debug,159] - ==>  Preparing: SELECT id,limit_count,username,truename,sex,password,repassword,email,industry,education,sch_name,intro,wk_condition,telephone,role,image,last_ip,last_time,is_delete,status,utime,view_count,carticnum FROM user WHERE username = ? 
+17:06:26.977 [http-nio-80-exec-10] DEBUG c.q.m.U.selectOne - [debug,159] - ==> Parameters: anonymousUser(String)
+17:06:27.061 [http-nio-80-exec-10] DEBUG c.q.m.U.selectOne - [debug,159] - <==      Total: 0
+17:06:27.071 [http-nio-80-exec-10] DEBUG c.q.m.N.selectByPrimaryKey - [debug,159] - ==>  Preparing: SELECT id,tnumber,wnumber,ctime,utime,status FROM numbers WHERE id = ? 
+17:06:27.073 [http-nio-80-exec-10] DEBUG c.q.m.N.selectByPrimaryKey - [debug,159] - ==> Parameters: 1(Integer)
+17:06:27.074 [http-nio-80-exec-6] DEBUG c.q.m.A.selectNameByArticle - [debug,159] - ==>  Preparing: select a.id,u.username from article a,user u where a.user_id = u.id 
+17:06:27.077 [http-nio-80-exec-6] DEBUG c.q.m.A.selectNameByArticle - [debug,159] - ==> Parameters: 
+17:06:27.448 [http-nio-80-exec-10] DEBUG c.q.m.N.selectByPrimaryKey - [debug,159] - <==      Total: 1
+17:06:27.455 [http-nio-80-exec-6] DEBUG c.q.m.A.selectNameByArticle - [debug,159] - <==      Total: 30
+17:06:27.458 [http-nio-80-exec-3] DEBUG c.q.m.A.selectByExample - [debug,159] - ==>  Preparing: SELECT id,user_id,atname,atnumber,ctime,utime,atpre,atpos,atimg,atlink,status,is_delete,atype,atcontent,likenumber FROM article 
+17:06:27.459 [http-nio-80-exec-3] DEBUG c.q.m.A.selectByExample - [debug,159] - ==> Parameters: 
+17:06:27.460 [http-nio-80-exec-7] DEBUG c.q.m.N.selectByExample - [debug,159] - ==>  Preparing: SELECT id,ntname,ntstatus,is_delete,ctime,utime,nttype,ntcontent FROM notice 
+17:06:27.461 [http-nio-80-exec-7] DEBUG c.q.m.N.selectByExample - [debug,159] - ==> Parameters: 
+17:06:27.488 [http-nio-80-exec-7] DEBUG c.q.m.N.selectByExample - [debug,159] - <==      Total: 2
+17:06:27.490 [http-nio-80-exec-7] DEBUG c.q.m.N.selectByExample - [debug,159] - ==>  Preparing: SELECT id,ntname,ntstatus,is_delete,ctime,utime,nttype,ntcontent FROM notice 
+17:06:27.491 [http-nio-80-exec-7] DEBUG c.q.m.N.selectByExample - [debug,159] - ==> Parameters: 
+17:06:27.507 [http-nio-80-exec-7] DEBUG c.q.m.N.selectByExample - [debug,159] - <==      Total: 2
+17:06:27.510 [http-nio-80-exec-1] DEBUG c.q.m.U.selectOne - [debug,159] - ==>  Preparing: SELECT id,limit_count,username,truename,sex,password,repassword,email,industry,education,sch_name,intro,wk_condition,telephone,role,image,last_ip,last_time,is_delete,status,utime,view_count,carticnum FROM user WHERE username = ? 
+17:06:27.512 [http-nio-80-exec-1] DEBUG c.q.m.U.selectOne - [debug,159] - ==> Parameters: anonymousUser(String)
+17:06:27.523 [http-nio-80-exec-9] DEBUG c.q.m.F.selectByExample - [debug,159] - ==>  Preparing: SELECT id,flname,flink,flstatus,is_delete,flcontent,ctime,utime,fltype FROM flink 
+17:06:27.525 [http-nio-80-exec-9] DEBUG c.q.m.F.selectByExample - [debug,159] - ==> Parameters: 
+17:06:27.526 [http-nio-80-exec-1] DEBUG c.q.m.U.selectOne - [debug,159] - <==      Total: 0
+17:06:27.528 [http-nio-80-exec-1] WARN  c.q.c.UserController - [map,67] - 警告：当前处于未登录状态！
+17:06:27.817 [http-nio-80-exec-9] DEBUG c.q.m.F.selectByExample - [debug,159] - <==      Total: 53
+17:06:30.412 [http-nio-80-exec-3] DEBUG c.q.m.A.selectByExample - [debug,159] - <==      Total: 30
+17:06:32.758 [http-nio-80-exec-1] INFO  i.l.c.EpollProvider - [info,101] - Starting without optional epoll library
+17:06:32.761 [http-nio-80-exec-1] INFO  i.l.c.KqueueProvider - [info,101] - Starting without optional kqueue library
+17:06:57.156 [http-nio-80-exec-9] DEBUG c.q.m.U.selectOne - [debug,159] - ==>  Preparing: SELECT id,limit_count,username,truename,sex,password,repassword,email,industry,education,sch_name,intro,wk_condition,telephone,role,image,last_ip,last_time,is_delete,status,utime,view_count,carticnum FROM user WHERE username = ? 
+17:06:57.157 [http-nio-80-exec-9] DEBUG c.q.m.U.selectOne - [debug,159] - ==> Parameters: qichao(String)
+17:06:57.230 [http-nio-80-exec-9] DEBUG c.q.m.U.selectOne - [debug,159] - <==      Total: 1
+17:06:57.238 [http-nio-80-exec-9] INFO  c.q.c.MyUserDetailsService - [loadUserByUsername,56] - qichao角色权限为：[USER, 普通用户]
+17:06:57.373 [http-nio-80-exec-9] DEBUG c.q.m.U.countByArticleUserId - [debug,159] - ==>  Preparing: select count(*) from article a,user u where a.user_id = u.id and u.username=?; 
+17:06:57.374 [http-nio-80-exec-9] DEBUG c.q.m.U.countByArticleUserId - [debug,159] - ==> Parameters: qichao(String)
+17:06:57.401 [http-nio-80-exec-9] DEBUG c.q.m.U.countByArticleUserId - [debug,159] - <==      Total: 1
+17:06:57.403 [http-nio-80-exec-9] DEBUG c.q.m.U.selectOne - [debug,159] - ==>  Preparing: SELECT id,limit_count,username,truename,sex,password,repassword,email,industry,education,sch_name,intro,wk_condition,telephone,role,image,last_ip,last_time,is_delete,status,utime,view_count,carticnum FROM user WHERE username = ? 
+17:06:57.405 [http-nio-80-exec-9] DEBUG c.q.m.U.selectOne - [debug,159] - ==> Parameters: qichao(String)
+17:06:57.436 [http-nio-80-exec-9] DEBUG c.q.m.U.selectOne - [debug,159] - <==      Total: 1
+17:06:57.442 [http-nio-80-exec-9] DEBUG c.q.m.L.insert - [debug,159] - ==>  Preparing: INSERT INTO signinlog ( id,logip,logtime,logstatus,logname,logtype,utime,is_delete ) VALUES( ?,?,?,?,?,?,?,? ) 
+17:06:57.443 [http-nio-80-exec-9] DEBUG c.q.m.L.insert - [debug,159] - ==> Parameters: null, localhost(String), 2020-04-29 17:06:57.437(Timestamp), 1(String), qichao(String), 平台用户(String), null, 0(String)
+17:06:57.533 [http-nio-80-exec-9] DEBUG c.q.m.L.insert - [debug,159] - <==    Updates: 1
+17:06:57.539 [http-nio-80-exec-9] DEBUG c.q.m.L.insert!selectKey - [debug,159] - ==>  Executing: SELECT LAST_INSERT_ID() 
+17:06:57.583 [http-nio-80-exec-9] DEBUG c.q.m.L.insert!selectKey - [debug,159] - <==      Total: 1
+17:06:57.585 [http-nio-80-exec-9] DEBUG c.q.m.U.updatePersonal - [debug,159] - ==>  Preparing: update user set username = ?,truename = ?,industry = ?,utime = ?,telephone = ?,sex = ?, email = ?,wk_condition = ?,intro = ?,sch_name = ?,education = ? where id = ? 
+17:06:57.586 [http-nio-80-exec-9] DEBUG c.q.m.U.updatePersonal - [debug,159] - ==> Parameters: qichao(String), 赵起超(String), 计算机软件(String), 2020-04-28 19:33:44.0(Timestamp), 18732336429(String), 0(String), 1416537683@qq.com(String), 度假中(String), 本人很帅，且经历过大风大浪，为了写这laji @!#$%^&*(!@#$%^^&*..........的毕设，磨炼数月，饱经沧桑，蹉跎岁月，命途多舛.......(String), 河北北方学院(String), 本科(String), 1(Integer)
+17:06:57.671 [http-nio-80-exec-9] DEBUG c.q.m.U.updatePersonal - [debug,159] - <==    Updates: 1
+17:06:57.673 [http-nio-80-exec-9] DEBUG c.q.m.U.updateCarticnum - [debug,159] - ==>  Preparing: update user set carticnum = ? where username = ? 
+17:06:57.674 [http-nio-80-exec-9] DEBUG c.q.m.U.updateCarticnum - [debug,159] - ==> Parameters: 21(Integer), qichao(String)
+17:06:57.729 [http-nio-80-exec-9] DEBUG c.q.m.U.updateCarticnum - [debug,159] - <==    Updates: 1
+17:06:59.140 [http-nio-80-exec-3] DEBUG c.q.m.U.selectOne - [debug,159] - ==>  Preparing: SELECT id,limit_count,username,truename,sex,password,repassword,email,industry,education,sch_name,intro,wk_condition,telephone,role,image,last_ip,last_time,is_delete,status,utime,view_count,carticnum FROM user WHERE username = ? 
+17:06:59.141 [http-nio-80-exec-3] DEBUG c.q.m.U.selectOne - [debug,159] - ==> Parameters: qichao(String)
+17:06:59.147 [http-nio-80-exec-6] DEBUG c.q.m.F.selectByExample - [debug,159] - ==>  Preparing: SELECT id,flname,flink,flstatus,is_delete,flcontent,ctime,utime,fltype FROM flink 
+17:06:59.149 [http-nio-80-exec-6] DEBUG c.q.m.F.selectByExample - [debug,159] - ==> Parameters: 
+17:06:59.224 [http-nio-80-exec-7] DEBUG c.q.m.N.selectByExample - [debug,159] - ==>  Preparing: SELECT id,ntname,ntstatus,is_delete,ctime,utime,nttype,ntcontent FROM notice 
+17:06:59.224 [http-nio-80-exec-5] DEBUG c.q.m.A.selectByExample - [debug,159] - ==>  Preparing: SELECT id,user_id,atname,atnumber,ctime,utime,atpre,atpos,atimg,atlink,status,is_delete,atype,atcontent,likenumber FROM article 
+17:06:59.225 [http-nio-80-exec-5] DEBUG c.q.m.A.selectByExample - [debug,159] - ==> Parameters: 
+17:06:59.225 [http-nio-80-exec-7] DEBUG c.q.m.N.selectByExample - [debug,159] - ==> Parameters: 
+17:06:59.249 [http-nio-80-exec-4] DEBUG c.q.m.A.selectNameByArticle - [debug,159] - ==>  Preparing: select a.id,u.username from article a,user u where a.user_id = u.id 
+17:06:59.251 [http-nio-80-exec-3] DEBUG c.q.m.U.selectOne - [debug,159] - <==      Total: 1
+17:06:59.252 [http-nio-80-exec-2] DEBUG c.q.m.U.selectOne - [debug,159] - ==>  Preparing: SELECT id,limit_count,username,truename,sex,password,repassword,email,industry,education,sch_name,intro,wk_condition,telephone,role,image,last_ip,last_time,is_delete,status,utime,view_count,carticnum FROM user WHERE username = ? 
+17:06:59.254 [http-nio-80-exec-2] DEBUG c.q.m.U.selectOne - [debug,159] - ==> Parameters: qichao(String)
+17:06:59.253 [http-nio-80-exec-4] DEBUG c.q.m.A.selectNameByArticle - [debug,159] - ==> Parameters: 
+17:06:59.257 [http-nio-80-exec-3] DEBUG c.q.m.U.selectByPrimaryKey - [debug,159] - ==>  Preparing: SELECT id,limit_count,username,truename,sex,password,repassword,email,industry,education,sch_name,intro,wk_condition,telephone,role,image,last_ip,last_time,is_delete,status,utime,view_count,carticnum FROM user WHERE id = ? 
+17:06:59.259 [http-nio-80-exec-3] DEBUG c.q.m.U.selectByPrimaryKey - [debug,159] - ==> Parameters: 1(Integer)
+17:06:59.263 [http-nio-80-exec-6] DEBUG c.q.m.F.selectByExample - [debug,159] - <==      Total: 53
+17:06:59.298 [http-nio-80-exec-4] DEBUG c.q.m.A.selectNameByArticle - [debug,159] - <==      Total: 30
+17:06:59.300 [http-nio-80-exec-7] DEBUG c.q.m.N.selectByExample - [debug,159] - <==      Total: 2
+17:06:59.302 [http-nio-80-exec-3] DEBUG c.q.m.U.selectByPrimaryKey - [debug,159] - <==      Total: 1
+17:06:59.304 [http-nio-80-exec-7] DEBUG c.q.m.N.selectByExample - [debug,159] - ==>  Preparing: SELECT id,ntname,ntstatus,is_delete,ctime,utime,nttype,ntcontent FROM notice 
+17:06:59.305 [http-nio-80-exec-2] DEBUG c.q.m.U.selectOne - [debug,159] - <==      Total: 1
+17:06:59.305 [http-nio-80-exec-7] DEBUG c.q.m.N.selectByExample - [debug,159] - ==> Parameters: 
+17:06:59.308 [http-nio-80-exec-3] DEBUG c.q.m.U.updateUser - [debug,159] - ==>  Preparing: update user set limit_count = ? where id = ? 
+17:06:59.309 [http-nio-80-exec-3] DEBUG c.q.m.U.updateUser - [debug,159] - ==> Parameters: 843(Integer), 1(Integer)
+17:06:59.325 [http-nio-80-exec-10] DEBUG c.q.m.U.selectOne - [debug,159] - ==>  Preparing: SELECT id,limit_count,username,truename,sex,password,repassword,email,industry,education,sch_name,intro,wk_condition,telephone,role,image,last_ip,last_time,is_delete,status,utime,view_count,carticnum FROM user WHERE username = ? 
+17:06:59.327 [http-nio-80-exec-10] DEBUG c.q.m.U.selectOne - [debug,159] - ==> Parameters: qichao(String)
+17:06:59.353 [http-nio-80-exec-7] DEBUG c.q.m.N.selectByExample - [debug,159] - <==      Total: 2
+17:06:59.397 [http-nio-80-exec-10] DEBUG c.q.m.U.selectOne - [debug,159] - <==      Total: 1
+17:06:59.406 [http-nio-80-exec-3] DEBUG c.q.m.U.updateUser - [debug,159] - <==    Updates: 1
+17:06:59.407 [http-nio-80-exec-3] DEBUG c.q.m.N.selectByPrimaryKey - [debug,159] - ==>  Preparing: SELECT id,tnumber,wnumber,ctime,utime,status FROM numbers WHERE id = ? 
+17:06:59.409 [http-nio-80-exec-3] DEBUG c.q.m.N.selectByPrimaryKey - [debug,159] - ==> Parameters: 1(Integer)
+17:06:59.451 [http-nio-80-exec-3] DEBUG c.q.m.N.selectByPrimaryKey - [debug,159] - <==      Total: 1
+17:06:59.452 [http-nio-80-exec-3] DEBUG c.q.m.N.updateNumber - [debug,159] - ==>  Preparing: update numbers set tnumber = ?+1,wnumber = ?+1 where id = ? 
+17:06:59.453 [http-nio-80-exec-3] DEBUG c.q.m.N.updateNumber - [debug,159] - ==> Parameters: 1103(Integer), 1103(Integer), 1(Integer)
+17:06:59.536 [http-nio-80-exec-3] DEBUG c.q.m.N.updateNumber - [debug,159] - <==    Updates: 1
+17:06:59.537 [http-nio-80-exec-3] DEBUG c.q.m.N.selectByPrimaryKey - [debug,159] - ==>  Preparing: SELECT id,tnumber,wnumber,ctime,utime,status FROM numbers WHERE id = ? 
+17:06:59.539 [http-nio-80-exec-3] DEBUG c.q.m.N.selectByPrimaryKey - [debug,159] - ==> Parameters: 1(Integer)
+17:06:59.571 [http-nio-80-exec-3] DEBUG c.q.m.N.selectByPrimaryKey - [debug,159] - <==      Total: 1
+17:07:02.198 [http-nio-80-exec-7] DEBUG c.q.m.U.selectOne - [debug,159] - ==>  Preparing: SELECT id,limit_count,username,truename,sex,password,repassword,email,industry,education,sch_name,intro,wk_condition,telephone,role,image,last_ip,last_time,is_delete,status,utime,view_count,carticnum FROM user WHERE username = ? 
+17:07:02.200 [http-nio-80-exec-7] DEBUG c.q.m.U.selectOne - [debug,159] - ==> Parameters: qichao(String)
+17:07:02.229 [http-nio-80-exec-10] DEBUG c.q.m.F.selectByExample - [debug,159] - ==>  Preparing: SELECT id,flname,flink,flstatus,is_delete,flcontent,ctime,utime,fltype FROM flink 
+17:07:02.231 [http-nio-80-exec-3] DEBUG c.q.m.S.findArticleBySubType - [debug,159] - ==>  Preparing: SELECT a.id,a.atimg,a.atname,a.atpre,a.atpos,a.atcontent,a.atnumber,a.ctime FROM article a,subject s WHERE a.id = s.article_id AND s.STATUS = 1 AND s.subname = ? 
+17:07:02.232 [http-nio-80-exec-10] DEBUG c.q.m.F.selectByExample - [debug,159] - ==> Parameters: 
+17:07:02.232 [http-nio-80-exec-2] DEBUG c.q.m.A.selectNameByArticle - [debug,159] - ==>  Preparing: select a.id,u.username from article a,user u where a.user_id = u.id 
+17:07:02.234 [http-nio-80-exec-2] DEBUG c.q.m.A.selectNameByArticle - [debug,159] - ==> Parameters: 
+17:07:02.234 [http-nio-80-exec-1] DEBUG c.q.m.U.selectOne - [debug,159] - ==>  Preparing: SELECT id,limit_count,username,truename,sex,password,repassword,email,industry,education,sch_name,intro,wk_condition,telephone,role,image,last_ip,last_time,is_delete,status,utime,view_count,carticnum FROM user WHERE username = ? 
+17:07:02.232 [http-nio-80-exec-3] DEBUG c.q.m.S.findArticleBySubType - [debug,159] - ==> Parameters: Java专题(String)
+17:07:02.235 [http-nio-80-exec-1] DEBUG c.q.m.U.selectOne - [debug,159] - ==> Parameters: qichao(String)
+17:07:02.292 [http-nio-80-exec-1] DEBUG c.q.m.U.selectOne - [debug,159] - <==      Total: 1
+17:07:02.303 [http-nio-80-exec-10] DEBUG c.q.m.F.selectByExample - [debug,159] - <==      Total: 53
+17:07:02.304 [http-nio-80-exec-2] DEBUG c.q.m.A.selectNameByArticle - [debug,159] - <==      Total: 30
+17:07:02.431 [http-nio-80-exec-7] DEBUG c.q.m.U.selectOne - [debug,159] - <==      Total: 1
+17:07:02.433 [http-nio-80-exec-7] DEBUG c.q.m.U.selectByPrimaryKey - [debug,159] - ==>  Preparing: SELECT id,limit_count,username,truename,sex,password,repassword,email,industry,education,sch_name,intro,wk_condition,telephone,role,image,last_ip,last_time,is_delete,status,utime,view_count,carticnum FROM user WHERE id = ? 
+17:07:02.434 [http-nio-80-exec-7] DEBUG c.q.m.U.selectByPrimaryKey - [debug,159] - ==> Parameters: 1(Integer)
+17:07:02.504 [http-nio-80-exec-7] DEBUG c.q.m.U.selectByPrimaryKey - [debug,159] - <==      Total: 1
+17:07:02.505 [http-nio-80-exec-7] DEBUG c.q.m.U.updateUser - [debug,159] - ==>  Preparing: update user set limit_count = ? where id = ? 
+17:07:02.506 [http-nio-80-exec-7] DEBUG c.q.m.U.updateUser - [debug,159] - ==> Parameters: 844(Integer), 1(Integer)
+17:07:02.550 [http-nio-80-exec-5] DEBUG c.q.m.A.selectByExample - [debug,159] - <==      Total: 30
+17:07:02.597 [http-nio-80-exec-7] DEBUG c.q.m.U.updateUser - [debug,159] - <==    Updates: 1
+17:07:02.600 [http-nio-80-exec-7] DEBUG c.q.m.N.selectByPrimaryKey - [debug,159] - ==>  Preparing: SELECT id,tnumber,wnumber,ctime,utime,status FROM numbers WHERE id = ? 
+17:07:02.601 [http-nio-80-exec-7] DEBUG c.q.m.N.selectByPrimaryKey - [debug,159] - ==> Parameters: 1(Integer)
+17:07:02.631 [http-nio-80-exec-7] DEBUG c.q.m.N.selectByPrimaryKey - [debug,159] - <==      Total: 1
+17:07:02.633 [http-nio-80-exec-7] DEBUG c.q.m.N.updateNumber - [debug,159] - ==>  Preparing: update numbers set tnumber = ?+1,wnumber = ?+1 where id = ? 
+17:07:02.634 [http-nio-80-exec-7] DEBUG c.q.m.N.updateNumber - [debug,159] - ==> Parameters: 1104(Integer), 1104(Integer), 1(Integer)
+17:07:02.728 [http-nio-80-exec-7] DEBUG c.q.m.N.updateNumber - [debug,159] - <==    Updates: 1
+17:07:02.729 [http-nio-80-exec-7] DEBUG c.q.m.N.selectByPrimaryKey - [debug,159] - ==>  Preparing: SELECT id,tnumber,wnumber,ctime,utime,status FROM numbers WHERE id = ? 
+17:07:02.730 [http-nio-80-exec-7] DEBUG c.q.m.N.selectByPrimaryKey - [debug,159] - ==> Parameters: 1(Integer)
+17:07:02.764 [http-nio-80-exec-7] DEBUG c.q.m.N.selectByPrimaryKey - [debug,159] - <==      Total: 1
+17:07:03.556 [http-nio-80-exec-3] DEBUG c.q.m.S.findArticleBySubType - [debug,159] - <==      Total: 8
+17:07:06.521 [http-nio-80-exec-5] DEBUG c.q.m.A.findByName - [debug,159] - ==>  Preparing: select * from article where atname = ? 
+17:07:06.522 [http-nio-80-exec-5] DEBUG c.q.m.A.findByName - [debug,159] - ==> Parameters: 32位的UUID生成方法总结(String)
+17:07:06.615 [http-nio-80-exec-5] DEBUG c.q.m.A.findByName - [debug,159] - <==      Total: 1
+17:07:06.617 [http-nio-80-exec-5] DEBUG c.q.m.U.selectOne - [debug,159] - ==>  Preparing: SELECT id,limit_count,username,truename,sex,password,repassword,email,industry,education,sch_name,intro,wk_condition,telephone,role,image,last_ip,last_time,is_delete,status,utime,view_count,carticnum FROM user WHERE username = ? 
+17:07:06.619 [http-nio-80-exec-5] DEBUG c.q.m.U.selectOne - [debug,159] - ==> Parameters: qichao(String)
+17:07:06.660 [http-nio-80-exec-5] DEBUG c.q.m.U.selectOne - [debug,159] - <==      Total: 1
+17:07:06.661 [http-nio-80-exec-5] DEBUG c.q.m.U.addViewCount - [debug,159] - ==>  Preparing: update user set view_count = ?+1 where id = ? 
+17:07:06.662 [http-nio-80-exec-5] DEBUG c.q.m.U.addViewCount - [debug,159] - ==> Parameters: 37(Integer), 1(Integer)
+17:07:06.734 [http-nio-80-exec-5] DEBUG c.q.m.U.addViewCount - [debug,159] - <==    Updates: 1
+17:07:06.735 [http-nio-80-exec-5] DEBUG c.q.m.A.updateArticle - [debug,159] - ==>  Preparing: update article set atnumber = ?+1 where id = ? 
+17:07:06.736 [http-nio-80-exec-5] DEBUG c.q.m.A.updateArticle - [debug,159] - ==> Parameters: 39(Integer), 3(Integer)
+17:07:06.815 [http-nio-80-exec-5] DEBUG c.q.m.A.updateArticle - [debug,159] - <==    Updates: 1
+17:07:07.947 [http-nio-80-exec-6] DEBUG c.q.m.U.selectOne - [debug,159] - ==>  Preparing: SELECT id,limit_count,username,truename,sex,password,repassword,email,industry,education,sch_name,intro,wk_condition,telephone,role,image,last_ip,last_time,is_delete,status,utime,view_count,carticnum FROM user WHERE username = ? 
+17:07:07.948 [http-nio-80-exec-6] DEBUG c.q.m.U.selectOne - [debug,159] - ==> Parameters: qichao(String)
+17:07:07.974 [http-nio-80-exec-2] DEBUG c.q.m.F.selectByExample - [debug,159] - ==>  Preparing: SELECT id,flname,flink,flstatus,is_delete,flcontent,ctime,utime,fltype FROM flink 
+17:07:07.974 [http-nio-80-exec-9] DEBUG c.q.m.A.findByName - [debug,159] - ==>  Preparing: select * from article where atname = ? 
+17:07:07.975 [http-nio-80-exec-9] DEBUG c.q.m.A.findByName - [debug,159] - ==> Parameters: 32位的UUID生成方法总结(String)
+17:07:07.975 [http-nio-80-exec-2] DEBUG c.q.m.F.selectByExample - [debug,159] - ==> Parameters: 
+17:07:07.976 [http-nio-80-exec-4] DEBUG c.q.m.U.selectOne - [debug,159] - ==>  Preparing: SELECT id,limit_count,username,truename,sex,password,repassword,email,industry,education,sch_name,intro,wk_condition,telephone,role,image,last_ip,last_time,is_delete,status,utime,view_count,carticnum FROM user WHERE username = ? 
+17:07:07.979 [http-nio-80-exec-4] DEBUG c.q.m.U.selectOne - [debug,159] - ==> Parameters: qichao(String)
+17:07:07.979 [http-nio-80-exec-6] DEBUG c.q.m.U.selectOne - [debug,159] - <==      Total: 1
+17:07:07.981 [http-nio-80-exec-6] DEBUG c.q.m.U.selectByPrimaryKey - [debug,159] - ==>  Preparing: SELECT id,limit_count,username,truename,sex,password,repassword,email,industry,education,sch_name,intro,wk_condition,telephone,role,image,last_ip,last_time,is_delete,status,utime,view_count,carticnum FROM user WHERE id = ? 
+17:07:07.984 [http-nio-80-exec-6] DEBUG c.q.m.U.selectByPrimaryKey - [debug,159] - ==> Parameters: 1(Integer)
+17:07:08.011 [http-nio-80-exec-9] DEBUG c.q.m.A.findByName - [debug,159] - <==      Total: 1
+17:07:08.019 [http-nio-80-exec-6] DEBUG c.q.m.U.selectByPrimaryKey - [debug,159] - <==      Total: 1
+17:07:08.021 [http-nio-80-exec-4] DEBUG c.q.m.U.selectOne - [debug,159] - <==      Total: 1
+17:07:08.021 [http-nio-80-exec-6] DEBUG c.q.m.U.updateUser - [debug,159] - ==>  Preparing: update user set limit_count = ? where id = ? 
+17:07:08.022 [http-nio-80-exec-6] DEBUG c.q.m.U.updateUser - [debug,159] - ==> Parameters: 845(Integer), 1(Integer)
+17:07:08.023 [http-nio-80-exec-2] DEBUG c.q.m.F.selectByExample - [debug,159] - <==      Total: 53
+17:07:08.082 [http-nio-80-exec-10] DEBUG c.q.m.U.selectOne - [debug,159] - ==>  Preparing: SELECT id,limit_count,username,truename,sex,password,repassword,email,industry,education,sch_name,intro,wk_condition,telephone,role,image,last_ip,last_time,is_delete,status,utime,view_count,carticnum FROM user WHERE username = ? 
+17:07:08.082 [http-nio-80-exec-6] DEBUG c.q.m.U.updateUser - [debug,159] - <==    Updates: 1
+17:07:08.083 [http-nio-80-exec-10] DEBUG c.q.m.U.selectOne - [debug,159] - ==> Parameters: qichao(String)
+17:07:08.084 [http-nio-80-exec-6] DEBUG c.q.m.N.selectByPrimaryKey - [debug,159] - ==>  Preparing: SELECT id,tnumber,wnumber,ctime,utime,status FROM numbers WHERE id = ? 
+17:07:08.085 [http-nio-80-exec-6] DEBUG c.q.m.N.selectByPrimaryKey - [debug,159] - ==> Parameters: 1(Integer)
+17:07:08.124 [http-nio-80-exec-10] DEBUG c.q.m.U.selectOne - [debug,159] - <==      Total: 1
+17:07:08.125 [http-nio-80-exec-6] DEBUG c.q.m.N.selectByPrimaryKey - [debug,159] - <==      Total: 1
+17:07:08.128 [http-nio-80-exec-6] DEBUG c.q.m.N.updateNumber - [debug,159] - ==>  Preparing: update numbers set tnumber = ?+1,wnumber = ?+1 where id = ? 
+17:07:08.131 [http-nio-80-exec-6] DEBUG c.q.m.N.updateNumber - [debug,159] - ==> Parameters: 1105(Integer), 1105(Integer), 1(Integer)
+17:07:08.192 [http-nio-80-exec-6] DEBUG c.q.m.N.updateNumber - [debug,159] - <==    Updates: 1
+17:07:08.193 [http-nio-80-exec-6] DEBUG c.q.m.N.selectByPrimaryKey - [debug,159] - ==>  Preparing: SELECT id,tnumber,wnumber,ctime,utime,status FROM numbers WHERE id = ? 
+17:07:08.194 [http-nio-80-exec-6] DEBUG c.q.m.N.selectByPrimaryKey - [debug,159] - ==> Parameters: 1(Integer)
+17:07:08.224 [http-nio-80-exec-6] DEBUG c.q.m.N.selectByPrimaryKey - [debug,159] - <==      Total: 1
+17:07:08.305 [http-nio-80-exec-1] DEBUG c.q.m.A.findByName - [debug,159] - ==>  Preparing: select * from article where atname = ? 
+17:07:08.306 [http-nio-80-exec-1] DEBUG c.q.m.A.findByName - [debug,159] - ==> Parameters: 32位的UUID生成方法总结(String)
+17:07:08.307 [http-nio-80-exec-8] DEBUG c.q.m.A.findByName - [debug,159] - ==>  Preparing: select * from article where atname = ? 
+17:07:08.309 [http-nio-80-exec-8] DEBUG c.q.m.A.findByName - [debug,159] - ==> Parameters: 32位的UUID生成方法总结(String)
+17:07:08.312 [http-nio-80-exec-3] DEBUG c.q.m.U.countByLikeArticle - [debug,159] - ==>  Preparing: select count(entity_id) from article a,userlike ul where ul.entity_id = a.id and ul.entity_id = ? 
+17:07:08.315 [http-nio-80-exec-3] DEBUG c.q.m.U.countByLikeArticle - [debug,159] - ==> Parameters: 3(Integer)
+17:07:08.324 [http-nio-80-exec-1] DEBUG c.q.m.A.findByName - [debug,159] - <==      Total: 1
+17:07:08.326 [http-nio-80-exec-1] DEBUG c.q.m.A.preArticle - [debug,159] - ==>  Preparing: select * from article where status = 1 and id < ? order by id desc limit 1 
+17:07:08.326 [http-nio-80-exec-8] DEBUG c.q.m.A.findByName - [debug,159] - <==      Total: 1
+17:07:08.326 [http-nio-80-exec-1] DEBUG c.q.m.A.preArticle - [debug,159] - ==> Parameters: 3(Integer)
+17:07:08.327 [http-nio-80-exec-8] DEBUG c.q.m.A.nextArticle - [debug,159] - ==>  Preparing: select * from article where status = 1 and id > ? order by id asc limit 1 
+17:07:08.328 [http-nio-80-exec-8] DEBUG c.q.m.A.nextArticle - [debug,159] - ==> Parameters: 3(Integer)
+17:07:08.311 [http-nio-80-exec-5] DEBUG c.q.m.U.findArticleOneOuthor - [debug,159] - ==>  Preparing: select u.* from user u, article a where u.id = a.user_id and a.id = ? 
+17:07:08.332 [http-nio-80-exec-5] DEBUG c.q.m.U.findArticleOneOuthor - [debug,159] - ==> Parameters: 3(Integer)
+17:07:08.356 [http-nio-80-exec-4] DEBUG c.q.m.U.selectOne - [debug,159] - ==>  Preparing: SELECT id,limit_count,username,truename,sex,password,repassword,email,industry,education,sch_name,intro,wk_condition,telephone,role,image,last_ip,last_time,is_delete,status,utime,view_count,carticnum FROM user WHERE username = ? 
+17:07:08.356 [http-nio-80-exec-3] DEBUG c.q.m.U.countByLikeArticle - [debug,159] - <==      Total: 1
+17:07:08.357 [http-nio-80-exec-4] DEBUG c.q.m.U.selectOne - [debug,159] - ==> Parameters: qichao(String)
+17:07:08.360 [http-nio-80-exec-8] DEBUG c.q.m.A.nextArticle - [debug,159] - <==      Total: 1
+17:07:08.362 [http-nio-80-exec-5] DEBUG c.q.m.U.findArticleOneOuthor - [debug,159] - <==      Total: 1
+17:07:08.360 [http-nio-80-exec-1] DEBUG c.q.m.A.preArticle - [debug,159] - <==      Total: 1
+17:07:08.398 [http-nio-80-exec-4] DEBUG c.q.m.U.selectOne - [debug,159] - <==      Total: 1
+17:07:08.400 [http-nio-80-exec-4] DEBUG c.q.m.U.countByAllLikeArticle - [debug,159] - ==>  Preparing: select count(*) from article a,user u,userlike ul where u.id = a.user_id and ul.entity_id = a.id and u.id = ? 
+17:07:08.402 [http-nio-80-exec-4] DEBUG c.q.m.U.countByAllLikeArticle - [debug,159] - ==> Parameters: 1(Integer)
+17:07:08.423 [http-nio-80-exec-4] DEBUG c.q.m.U.countByAllLikeArticle - [debug,159] - <==      Total: 1

@@ -18,19 +18,24 @@ app.controller('personalController',function($scope ,$location,$controller,userS
     $scope.userInfo = function () {
         userService.userInfo().success(
             function (repsonse) {
-                $scope.signinName =repsonse.signinName;
-                $scope.signinEmail = repsonse.signinEmail;
-                $scope.signinIndus = repsonse.signinIndus;
-                $scope.signinTelph = repsonse.signinTelph;
-                $scope.signinStatus = repsonse.signinStatus;
-                $scope.signinTime = repsonse.signinTime;
-                $scope.signinImage = repsonse.signinImage;
-                $scope.signinSex = repsonse.signinSex;
-                $scope.signinTame = repsonse.signinTame;
+                $scope.userName =repsonse.userName;
+                $scope.userEmail = repsonse.userEmail;
+                $scope.userIndus = repsonse.userIndus;
+                $scope.userTelph = repsonse.userTelph;
+                $scope.userStatus = repsonse.userStatus;
+                $scope.userTime = repsonse.userTime;
+                $scope.userImage = repsonse.userImage;
+                $scope.userSex = repsonse.userSex;
+                $scope.userTName = repsonse.userTName;
                 $scope.userCount = repsonse.userCount;
-                $scope.signinViewNum = repsonse.signinViewNum;
-                $scope.signinId = repsonse.signinId;
-                $scope.signinCarticNum =repsonse.signinCarticNum;
+                $scope.userViewNum = repsonse.userViewNum;
+                $scope.userId = repsonse.userId;
+                $scope.userCarticNum =repsonse.userCarticNum;
+                $scope.userIntro =repsonse.userIntro;
+                $scope.userEducation =repsonse.userEducation;
+                $scope.userSchName =repsonse.userSchName;
+                $scope.userWkCondition =repsonse.userWkCondition;
+
             }
         )
     };
@@ -93,4 +98,6 @@ app.controller('personalController',function($scope ,$location,$controller,userS
         );
     };
     $scope.business = ['教育行业', '保险业', '公益组织','航空航天','计算机软件','制造业','交通运输、仓储和邮政','批发和零售','住宿和餐饮业','科学研究、技术服务和地质勘查','金融业','公共管理和社会组织','房地产业','水利、环境和公共设施管理','卫生、社会保障和社会福利','文化、体育和娱乐业','租赁和商务服务','国际组织'];
+    $scope.educations = ['小学','初中', '高中', '专科','本科','硕士','博士'];
+    $scope.wkconditions = ['学生','工作中','待就业','度假中','隔离中','已确诊'];
 });

@@ -1,13 +1,13 @@
 package com.qcblog.mapper;
 
 import com.qcblog.pojo.Article;
-import com.qcblog.pojo.User;
 import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.Update;
 import tk.mybatis.mapper.common.Mapper;
 
 import java.util.List;
 import java.util.Map;
+
 
 public interface ArticleMapper extends Mapper<Article>{
 

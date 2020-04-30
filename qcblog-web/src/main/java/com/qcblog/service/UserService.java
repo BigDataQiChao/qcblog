@@ -51,4 +51,7 @@ public class UserService {
         return userMapper.countByArticleUserId(name);
     }
 
+    public User findArticleOneOuthor(Integer id){
+        return userMapper.findArticleOneOuthor(id);
+    }
 }

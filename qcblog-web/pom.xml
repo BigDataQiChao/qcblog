@@ -119,7 +119,7 @@
                     <include>static/**/**</include>
                     <include>templates/**/**</include>
                     <include>*.yml</include>
-                    <include>*.properties</include>
+                    <include>**/logback.xml</include>
                 </includes>
                 <excludes>
                     <exclude>**/*.ttf</exclude>

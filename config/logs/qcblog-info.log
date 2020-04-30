@@ -1,0 +1,451 @@
+12:46:49.451 [main] INFO  c.q.QcblogApplication - [logStarting,50] - Starting QcblogApplication on PC-20180928WXPZ with PID 17536 (D:\IDEA\qcblog\qcblog-web\target\classes started by Administrator in D:\IDEA\qcblog)
+12:46:49.512 [main] INFO  c.q.QcblogApplication - [logStartupProfileInfo,659] - No active profile set, falling back to default profiles: default
+12:46:59.337 [main] INFO  o.a.c.h.Http11NioProtocol - [log,180] - Initializing ProtocolHandler ["http-nio-80"]
+12:46:59.359 [main] INFO  o.a.c.c.StandardService - [log,180] - Starting service [Tomcat]
+12:46:59.360 [main] INFO  o.a.c.c.StandardEngine - [log,180] - Starting Servlet Engine: Apache Tomcat/8.5.29
+12:46:59.379 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - [log,180] - Loaded APR based Apache Tomcat Native library [1.2.17] using APR version [1.6.3].
+12:46:59.380 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - [log,180] - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+12:46:59.380 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - [log,180] - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+12:47:00.484 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - [log,180] - OpenSSL successfully initialized [OpenSSL 1.0.2o  27 Mar 2018]
+12:47:00.716 [localhost-startStop-1] INFO  o.a.c.c.C.[.[.[/] - [log,180] - Initializing Spring embedded WebApplicationContext
+12:47:07.652 [main] INFO  o.a.c.h.Http11NioProtocol - [log,180] - Starting ProtocolHandler ["http-nio-80"]
+12:47:07.693 [main] INFO  o.a.t.u.n.NioSelectorPool - [log,180] - Using a shared selector for servlet write/read
+12:47:07.766 [main] INFO  c.q.QcblogApplication - [logStarted,59] - Started QcblogApplication in 20.351 seconds (JVM running for 23.611)
+12:47:56.691 [http-nio-80-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,180] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+12:48:00.255 [http-nio-80-exec-10] INFO  c.z.h.HikariDataSource - [getConnection,110] - HikariPool-1 - Starting...
+12:48:01.512 [http-nio-80-exec-10] INFO  c.z.h.HikariDataSource - [getConnection,123] - HikariPool-1 - Start completed.
+12:48:12.902 [http-nio-80-exec-10] INFO  i.l.c.EpollProvider - [info,101] - Starting without optional epoll library
+12:48:12.905 [http-nio-80-exec-10] INFO  i.l.c.KqueueProvider - [info,101] - Starting without optional kqueue library
+12:48:29.826 [http-nio-80-exec-9] INFO  c.q.c.MyUserDetailsService - [loadUserByUsername,56] - qichao角色权限为：[USER, 普通用户]
+13:02:03.265 [main] INFO  c.q.QcblogApplication - [logStarting,50] - Starting QcblogApplication on PC-20180928WXPZ with PID 18764 (D:\IDEA\qcblog\qcblog-web\target\classes started by Administrator in D:\IDEA\qcblog)
+13:02:03.276 [main] INFO  c.q.QcblogApplication - [logStartupProfileInfo,659] - No active profile set, falling back to default profiles: default
+13:02:17.932 [main] INFO  o.a.c.h.Http11NioProtocol - [log,180] - Initializing ProtocolHandler ["http-nio-80"]
+13:02:18.020 [main] INFO  o.a.c.c.StandardService - [log,180] - Starting service [Tomcat]
+13:02:18.020 [main] INFO  o.a.c.c.StandardEngine - [log,180] - Starting Servlet Engine: Apache Tomcat/8.5.29
+13:02:18.049 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - [log,180] - Loaded APR based Apache Tomcat Native library [1.2.17] using APR version [1.6.3].
+13:02:18.050 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - [log,180] - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+13:02:18.050 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - [log,180] - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+13:02:19.189 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - [log,180] - OpenSSL successfully initialized [OpenSSL 1.0.2o  27 Mar 2018]
+13:02:19.550 [localhost-startStop-1] INFO  o.a.c.c.C.[.[.[/] - [log,180] - Initializing Spring embedded WebApplicationContext
+13:02:31.204 [main] INFO  o.a.c.h.Http11NioProtocol - [log,180] - Starting ProtocolHandler ["http-nio-80"]
+13:02:31.255 [main] INFO  o.a.t.u.n.NioSelectorPool - [log,180] - Using a shared selector for servlet write/read
+13:02:31.363 [main] INFO  c.q.QcblogApplication - [logStarted,59] - Started QcblogApplication in 30.254 seconds (JVM running for 32.506)
+13:02:32.071 [http-nio-80-exec-10] INFO  o.a.c.c.C.[.[.[/] - [log,180] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+13:02:36.075 [http-nio-80-exec-1] INFO  c.z.h.HikariDataSource - [getConnection,110] - HikariPool-1 - Starting...
+13:02:37.037 [http-nio-80-exec-1] INFO  c.z.h.HikariDataSource - [getConnection,123] - HikariPool-1 - Start completed.
+13:02:52.932 [http-nio-80-exec-4] INFO  i.l.c.EpollProvider - [info,101] - Starting without optional epoll library
+13:02:52.936 [http-nio-80-exec-4] INFO  i.l.c.KqueueProvider - [info,101] - Starting without optional kqueue library
+13:03:03.210 [http-nio-80-exec-6] INFO  c.q.c.MyUserDetailsService - [loadUserByUsername,56] - qichao角色权限为：[USER, 普通用户]
+13:14:00.407 [main] INFO  c.q.QcblogApplication - [logStarting,50] - Starting QcblogApplication on PC-20180928WXPZ with PID 8320 (D:\IDEA\qcblog\qcblog-web\target\classes started by Administrator in D:\IDEA\qcblog)
+13:14:00.418 [main] INFO  c.q.QcblogApplication - [logStartupProfileInfo,659] - No active profile set, falling back to default profiles: default
+13:14:09.935 [main] INFO  o.a.c.h.Http11NioProtocol - [log,180] - Initializing ProtocolHandler ["http-nio-80"]
+13:14:09.956 [main] INFO  o.a.c.c.StandardService - [log,180] - Starting service [Tomcat]
+13:14:09.957 [main] INFO  o.a.c.c.StandardEngine - [log,180] - Starting Servlet Engine: Apache Tomcat/8.5.29
+13:14:09.971 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - [log,180] - Loaded APR based Apache Tomcat Native library [1.2.17] using APR version [1.6.3].
+13:14:09.971 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - [log,180] - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+13:14:09.971 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - [log,180] - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+13:14:11.024 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - [log,180] - OpenSSL successfully initialized [OpenSSL 1.0.2o  27 Mar 2018]
+13:14:11.222 [localhost-startStop-1] INFO  o.a.c.c.C.[.[.[/] - [log,180] - Initializing Spring embedded WebApplicationContext
+13:14:19.970 [main] INFO  o.a.c.h.Http11NioProtocol - [log,180] - Starting ProtocolHandler ["http-nio-80"]
+13:14:20.001 [main] INFO  o.a.t.u.n.NioSelectorPool - [log,180] - Using a shared selector for servlet write/read
+13:14:20.051 [main] INFO  c.q.QcblogApplication - [logStarted,59] - Started QcblogApplication in 22.154 seconds (JVM running for 24.422)
+13:14:32.895 [main] INFO  c.q.QcblogApplication - [logStarting,50] - Starting QcblogApplication on PC-20180928WXPZ with PID 1412 (D:\IDEA\qcblog\qcblog-web\target\classes started by Administrator in D:\IDEA\qcblog)
+13:14:32.908 [main] INFO  c.q.QcblogApplication - [logStartupProfileInfo,659] - No active profile set, falling back to default profiles: default
+13:14:40.336 [main] INFO  o.a.c.h.Http11NioProtocol - [log,180] - Initializing ProtocolHandler ["http-nio-80"]
+13:14:40.355 [main] INFO  o.a.c.c.StandardService - [log,180] - Starting service [Tomcat]
+13:14:40.355 [main] INFO  o.a.c.c.StandardEngine - [log,180] - Starting Servlet Engine: Apache Tomcat/8.5.29
+13:14:40.371 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - [log,180] - Loaded APR based Apache Tomcat Native library [1.2.17] using APR version [1.6.3].
+13:14:40.372 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - [log,180] - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+13:14:40.372 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - [log,180] - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+13:14:41.440 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - [log,180] - OpenSSL successfully initialized [OpenSSL 1.0.2o  27 Mar 2018]
+13:14:41.666 [localhost-startStop-1] INFO  o.a.c.c.C.[.[.[/] - [log,180] - Initializing Spring embedded WebApplicationContext
+13:14:46.365 [main] INFO  o.a.c.h.Http11NioProtocol - [log,180] - Starting ProtocolHandler ["http-nio-80"]
+13:14:46.395 [main] INFO  o.a.t.u.n.NioSelectorPool - [log,180] - Using a shared selector for servlet write/read
+13:14:46.451 [main] INFO  c.q.QcblogApplication - [logStarted,59] - Started QcblogApplication in 15.12 seconds (JVM running for 17.172)
+13:15:21.918 [http-nio-80-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,180] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+13:15:26.482 [http-nio-80-exec-4] INFO  c.z.h.HikariDataSource - [getConnection,110] - HikariPool-1 - Starting...
+13:15:27.504 [http-nio-80-exec-4] INFO  c.z.h.HikariDataSource - [getConnection,123] - HikariPool-1 - Start completed.
+13:15:34.157 [http-nio-80-exec-4] INFO  i.l.c.EpollProvider - [info,101] - Starting without optional epoll library
+13:15:34.165 [http-nio-80-exec-4] INFO  i.l.c.KqueueProvider - [info,101] - Starting without optional kqueue library
+13:15:43.447 [http-nio-80-exec-6] INFO  c.q.c.MyUserDetailsService - [loadUserByUsername,56] - qichao角色权限为：[USER, 普通用户]
+13:22:43.514 [main] INFO  c.q.QcblogApplication - [logStarting,50] - Starting QcblogApplication on PC-20180928WXPZ with PID 10440 (D:\IDEA\qcblog\qcblog-web\target\classes started by Administrator in D:\IDEA\qcblog)
+13:22:43.523 [main] INFO  c.q.QcblogApplication - [logStartupProfileInfo,659] - No active profile set, falling back to default profiles: default
+13:22:53.034 [main] INFO  o.a.c.h.Http11NioProtocol - [log,180] - Initializing ProtocolHandler ["http-nio-80"]
+13:22:53.053 [main] INFO  o.a.c.c.StandardService - [log,180] - Starting service [Tomcat]
+13:22:53.054 [main] INFO  o.a.c.c.StandardEngine - [log,180] - Starting Servlet Engine: Apache Tomcat/8.5.29
+13:22:53.069 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - [log,180] - Loaded APR based Apache Tomcat Native library [1.2.17] using APR version [1.6.3].
+13:22:53.069 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - [log,180] - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+13:22:53.069 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - [log,180] - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+13:22:54.159 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - [log,180] - OpenSSL successfully initialized [OpenSSL 1.0.2o  27 Mar 2018]
+13:22:54.355 [localhost-startStop-1] INFO  o.a.c.c.C.[.[.[/] - [log,180] - Initializing Spring embedded WebApplicationContext
+13:23:00.165 [main] INFO  o.a.c.h.Http11NioProtocol - [log,180] - Starting ProtocolHandler ["http-nio-80"]
+13:23:00.207 [main] INFO  o.a.t.u.n.NioSelectorPool - [log,180] - Using a shared selector for servlet write/read
+13:23:00.275 [main] INFO  c.q.QcblogApplication - [logStarted,59] - Started QcblogApplication in 18.439 seconds (JVM running for 20.24)
+13:23:11.388 [http-nio-80-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,180] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+13:23:13.871 [http-nio-80-exec-3] INFO  c.z.h.HikariDataSource - [getConnection,110] - HikariPool-1 - Starting...
+13:23:14.557 [http-nio-80-exec-3] INFO  c.z.h.HikariDataSource - [getConnection,123] - HikariPool-1 - Start completed.
+13:23:25.378 [http-nio-80-exec-2] INFO  i.l.c.EpollProvider - [info,101] - Starting without optional epoll library
+13:23:25.386 [http-nio-80-exec-2] INFO  i.l.c.KqueueProvider - [info,101] - Starting without optional kqueue library
+13:23:37.437 [http-nio-80-exec-6] INFO  c.q.c.MyUserDetailsService - [loadUserByUsername,56] - qichao角色权限为：[USER, 普通用户]
+13:31:09.924 [main] INFO  c.q.QcblogApplication - [logStarting,50] - Starting QcblogApplication on PC-20180928WXPZ with PID 5944 (D:\IDEA\qcblog\qcblog-web\target\classes started by Administrator in D:\IDEA\qcblog)
+13:31:09.942 [main] INFO  c.q.QcblogApplication - [logStartupProfileInfo,659] - No active profile set, falling back to default profiles: default
+13:31:18.310 [main] INFO  o.a.c.h.Http11NioProtocol - [log,180] - Initializing ProtocolHandler ["http-nio-80"]
+13:31:18.333 [main] INFO  o.a.c.c.StandardService - [log,180] - Starting service [Tomcat]
+13:31:18.333 [main] INFO  o.a.c.c.StandardEngine - [log,180] - Starting Servlet Engine: Apache Tomcat/8.5.29
+13:31:18.349 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - [log,180] - Loaded APR based Apache Tomcat Native library [1.2.17] using APR version [1.6.3].
+13:31:18.350 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - [log,180] - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+13:31:18.350 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - [log,180] - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+13:31:19.442 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - [log,180] - OpenSSL successfully initialized [OpenSSL 1.0.2o  27 Mar 2018]
+13:31:19.618 [localhost-startStop-1] INFO  o.a.c.c.C.[.[.[/] - [log,180] - Initializing Spring embedded WebApplicationContext
+13:31:26.785 [main] INFO  o.a.c.h.Http11NioProtocol - [log,180] - Starting ProtocolHandler ["http-nio-80"]
+13:31:26.839 [main] INFO  o.a.t.u.n.NioSelectorPool - [log,180] - Using a shared selector for servlet write/read
+13:31:26.932 [main] INFO  c.q.QcblogApplication - [logStarted,59] - Started QcblogApplication in 19.036 seconds (JVM running for 20.92)
+13:32:28.851 [main] INFO  c.q.QcblogApplication - [logStarting,50] - Starting QcblogApplication on PC-20180928WXPZ with PID 10108 (D:\IDEA\qcblog\qcblog-web\target\classes started by Administrator in D:\IDEA\qcblog)
+13:32:28.926 [main] INFO  c.q.QcblogApplication - [logStartupProfileInfo,659] - No active profile set, falling back to default profiles: default
+13:32:37.468 [main] INFO  o.a.c.h.Http11NioProtocol - [log,180] - Initializing ProtocolHandler ["http-nio-80"]
+13:32:37.488 [main] INFO  o.a.c.c.StandardService - [log,180] - Starting service [Tomcat]
+13:32:37.488 [main] INFO  o.a.c.c.StandardEngine - [log,180] - Starting Servlet Engine: Apache Tomcat/8.5.29
+13:32:37.501 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - [log,180] - Loaded APR based Apache Tomcat Native library [1.2.17] using APR version [1.6.3].
+13:32:37.501 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - [log,180] - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+13:32:37.501 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - [log,180] - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+13:32:38.575 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - [log,180] - OpenSSL successfully initialized [OpenSSL 1.0.2o  27 Mar 2018]
+13:32:38.769 [localhost-startStop-1] INFO  o.a.c.c.C.[.[.[/] - [log,180] - Initializing Spring embedded WebApplicationContext
+13:32:43.817 [main] INFO  o.a.c.h.Http11NioProtocol - [log,180] - Starting ProtocolHandler ["http-nio-80"]
+13:32:43.856 [main] INFO  o.a.t.u.n.NioSelectorPool - [log,180] - Using a shared selector for servlet write/read
+13:32:43.916 [main] INFO  c.q.QcblogApplication - [logStarted,59] - Started QcblogApplication in 16.479 seconds (JVM running for 17.992)
+13:32:51.693 [http-nio-80-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,180] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+13:32:54.349 [http-nio-80-exec-6] INFO  c.z.h.HikariDataSource - [getConnection,110] - HikariPool-1 - Starting...
+13:32:55.100 [http-nio-80-exec-6] INFO  c.z.h.HikariDataSource - [getConnection,123] - HikariPool-1 - Start completed.
+13:32:57.365 [http-nio-80-exec-2] INFO  i.l.c.EpollProvider - [info,101] - Starting without optional epoll library
+13:32:57.399 [http-nio-80-exec-2] INFO  i.l.c.KqueueProvider - [info,101] - Starting without optional kqueue library
+13:33:07.917 [http-nio-80-exec-7] INFO  c.q.c.MyUserDetailsService - [loadUserByUsername,56] - qichao角色权限为：[USER, 普通用户]
+13:46:16.189 [main] INFO  c.q.QcblogApplication - [logStarting,50] - Starting QcblogApplication on PC-20180928WXPZ with PID 8980 (D:\IDEA\qcblog\qcblog-web\target\classes started by Administrator in D:\IDEA\qcblog)
+13:46:16.201 [main] INFO  c.q.QcblogApplication - [logStartupProfileInfo,659] - No active profile set, falling back to default profiles: default
+13:46:24.413 [main] INFO  o.a.c.h.Http11NioProtocol - [log,180] - Initializing ProtocolHandler ["http-nio-80"]
+13:46:24.441 [main] INFO  o.a.c.c.StandardService - [log,180] - Starting service [Tomcat]
+13:46:24.442 [main] INFO  o.a.c.c.StandardEngine - [log,180] - Starting Servlet Engine: Apache Tomcat/8.5.29
+13:46:24.463 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - [log,180] - Loaded APR based Apache Tomcat Native library [1.2.17] using APR version [1.6.3].
+13:46:24.464 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - [log,180] - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+13:46:24.465 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - [log,180] - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+13:46:25.548 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - [log,180] - OpenSSL successfully initialized [OpenSSL 1.0.2o  27 Mar 2018]
+13:46:25.726 [localhost-startStop-1] INFO  o.a.c.c.C.[.[.[/] - [log,180] - Initializing Spring embedded WebApplicationContext
+13:46:30.726 [main] INFO  o.a.c.h.Http11NioProtocol - [log,180] - Starting ProtocolHandler ["http-nio-80"]
+13:46:30.770 [main] INFO  o.a.t.u.n.NioSelectorPool - [log,180] - Using a shared selector for servlet write/read
+13:46:30.819 [main] INFO  c.q.QcblogApplication - [logStarted,59] - Started QcblogApplication in 16.125 seconds (JVM running for 18.011)
+13:46:37.501 [http-nio-80-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,180] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+13:46:39.813 [http-nio-80-exec-2] INFO  c.z.h.HikariDataSource - [getConnection,110] - HikariPool-1 - Starting...
+13:46:40.809 [http-nio-80-exec-2] INFO  c.z.h.HikariDataSource - [getConnection,123] - HikariPool-1 - Start completed.
+13:46:44.224 [http-nio-80-exec-3] INFO  i.l.c.EpollProvider - [info,101] - Starting without optional epoll library
+13:46:44.249 [http-nio-80-exec-3] INFO  i.l.c.KqueueProvider - [info,101] - Starting without optional kqueue library
+13:46:54.643 [http-nio-80-exec-6] INFO  c.q.c.MyUserDetailsService - [loadUserByUsername,56] - qichao角色权限为：[USER, 普通用户]
+13:47:43.817 [main] INFO  c.q.QcblogApplication - [logStarting,50] - Starting QcblogApplication on PC-20180928WXPZ with PID 10056 (D:\IDEA\qcblog\qcblog-web\target\classes started by Administrator in D:\IDEA\qcblog)
+13:47:43.827 [main] INFO  c.q.QcblogApplication - [logStartupProfileInfo,659] - No active profile set, falling back to default profiles: default
+13:47:50.915 [main] INFO  o.a.c.h.Http11NioProtocol - [log,180] - Initializing ProtocolHandler ["http-nio-80"]
+13:47:50.931 [main] INFO  o.a.c.c.StandardService - [log,180] - Starting service [Tomcat]
+13:47:50.932 [main] INFO  o.a.c.c.StandardEngine - [log,180] - Starting Servlet Engine: Apache Tomcat/8.5.29
+13:47:50.944 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - [log,180] - Loaded APR based Apache Tomcat Native library [1.2.17] using APR version [1.6.3].
+13:47:50.944 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - [log,180] - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+13:47:50.945 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - [log,180] - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+13:47:52.013 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - [log,180] - OpenSSL successfully initialized [OpenSSL 1.0.2o  27 Mar 2018]
+13:47:52.173 [localhost-startStop-1] INFO  o.a.c.c.C.[.[.[/] - [log,180] - Initializing Spring embedded WebApplicationContext
+13:47:56.773 [main] INFO  o.a.c.h.Http11NioProtocol - [log,180] - Starting ProtocolHandler ["http-nio-80"]
+13:47:56.805 [main] INFO  o.a.t.u.n.NioSelectorPool - [log,180] - Using a shared selector for servlet write/read
+13:47:56.856 [main] INFO  c.q.QcblogApplication - [logStarted,59] - Started QcblogApplication in 14.526 seconds (JVM running for 15.734)
+13:48:08.877 [http-nio-80-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,180] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+13:48:11.212 [http-nio-80-exec-7] INFO  c.z.h.HikariDataSource - [getConnection,110] - HikariPool-1 - Starting...
+13:48:12.267 [http-nio-80-exec-7] INFO  c.z.h.HikariDataSource - [getConnection,123] - HikariPool-1 - Start completed.
+13:48:15.076 [http-nio-80-exec-8] INFO  i.l.c.EpollProvider - [info,101] - Starting without optional epoll library
+13:48:15.083 [http-nio-80-exec-8] INFO  i.l.c.KqueueProvider - [info,101] - Starting without optional kqueue library
+13:48:26.327 [http-nio-80-exec-2] INFO  c.q.c.MyUserDetailsService - [loadUserByUsername,56] - qichao角色权限为：[USER, 普通用户]
+13:56:58.786 [main] INFO  c.q.QcblogApplication - [logStarting,50] - Starting QcblogApplication on PC-20180928WXPZ with PID 3456 (D:\IDEA\qcblog\qcblog-web\target\classes started by Administrator in D:\IDEA\qcblog)
+13:56:58.796 [main] INFO  c.q.QcblogApplication - [logStartupProfileInfo,659] - No active profile set, falling back to default profiles: default
+13:57:06.203 [main] INFO  o.a.c.h.Http11NioProtocol - [log,180] - Initializing ProtocolHandler ["http-nio-80"]
+13:57:06.227 [main] INFO  o.a.c.c.StandardService - [log,180] - Starting service [Tomcat]
+13:57:06.229 [main] INFO  o.a.c.c.StandardEngine - [log,180] - Starting Servlet Engine: Apache Tomcat/8.5.29
+13:57:06.246 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - [log,180] - Loaded APR based Apache Tomcat Native library [1.2.17] using APR version [1.6.3].
+13:57:06.246 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - [log,180] - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+13:57:06.247 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - [log,180] - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+13:57:07.309 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - [log,180] - OpenSSL successfully initialized [OpenSSL 1.0.2o  27 Mar 2018]
+13:57:07.502 [localhost-startStop-1] INFO  o.a.c.c.C.[.[.[/] - [log,180] - Initializing Spring embedded WebApplicationContext
+13:57:13.555 [main] INFO  o.a.c.h.Http11NioProtocol - [log,180] - Starting ProtocolHandler ["http-nio-80"]
+13:57:13.600 [main] INFO  o.a.t.u.n.NioSelectorPool - [log,180] - Using a shared selector for servlet write/read
+13:57:13.695 [main] INFO  c.q.QcblogApplication - [logStarted,59] - Started QcblogApplication in 16.472 seconds (JVM running for 17.735)
+13:57:17.124 [http-nio-80-exec-10] INFO  o.a.c.c.C.[.[.[/] - [log,180] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+13:57:20.194 [http-nio-80-exec-10] INFO  c.z.h.HikariDataSource - [getConnection,110] - HikariPool-1 - Starting...
+13:57:21.196 [http-nio-80-exec-10] INFO  c.z.h.HikariDataSource - [getConnection,123] - HikariPool-1 - Start completed.
+13:57:27.239 [http-nio-80-exec-4] INFO  i.l.c.EpollProvider - [info,101] - Starting without optional epoll library
+13:57:27.242 [http-nio-80-exec-4] INFO  i.l.c.KqueueProvider - [info,101] - Starting without optional kqueue library
+13:57:40.286 [http-nio-80-exec-7] INFO  c.q.c.MyUserDetailsService - [loadUserByUsername,56] - qichao角色权限为：[USER, 普通用户]
+14:13:20.844 [main] INFO  c.q.QcblogApplication - [logStarting,50] - Starting QcblogApplication on PC-20180928WXPZ with PID 6792 (D:\IDEA\qcblog\qcblog-web\target\classes started by Administrator in D:\IDEA\qcblog)
+14:13:20.864 [main] INFO  c.q.QcblogApplication - [logStartupProfileInfo,659] - No active profile set, falling back to default profiles: default
+14:13:31.133 [main] INFO  o.a.c.h.Http11NioProtocol - [log,180] - Initializing ProtocolHandler ["http-nio-80"]
+14:13:31.151 [main] INFO  o.a.c.c.StandardService - [log,180] - Starting service [Tomcat]
+14:13:31.152 [main] INFO  o.a.c.c.StandardEngine - [log,180] - Starting Servlet Engine: Apache Tomcat/8.5.29
+14:13:31.166 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - [log,180] - Loaded APR based Apache Tomcat Native library [1.2.17] using APR version [1.6.3].
+14:13:31.167 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - [log,180] - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+14:13:31.167 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - [log,180] - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+14:13:32.239 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - [log,180] - OpenSSL successfully initialized [OpenSSL 1.0.2o  27 Mar 2018]
+14:13:32.436 [localhost-startStop-1] INFO  o.a.c.c.C.[.[.[/] - [log,180] - Initializing Spring embedded WebApplicationContext
+14:13:36.987 [main] INFO  o.a.c.h.Http11NioProtocol - [log,180] - Starting ProtocolHandler ["http-nio-80"]
+14:13:37.020 [main] INFO  o.a.t.u.n.NioSelectorPool - [log,180] - Using a shared selector for servlet write/read
+14:13:37.074 [main] INFO  c.q.QcblogApplication - [logStarted,59] - Started QcblogApplication in 17.842 seconds (JVM running for 19.683)
+14:18:45.377 [main] INFO  c.q.QcblogApplication - [logStarting,50] - Starting QcblogApplication on PC-20180928WXPZ with PID 18864 (D:\IDEA\qcblog\qcblog-web\target\classes started by Administrator in D:\IDEA\qcblog)
+14:18:45.414 [main] INFO  c.q.QcblogApplication - [logStartupProfileInfo,659] - No active profile set, falling back to default profiles: default
+14:18:53.902 [main] INFO  o.a.c.h.Http11NioProtocol - [log,180] - Initializing ProtocolHandler ["http-nio-80"]
+14:18:53.919 [main] INFO  o.a.c.c.StandardService - [log,180] - Starting service [Tomcat]
+14:18:53.920 [main] INFO  o.a.c.c.StandardEngine - [log,180] - Starting Servlet Engine: Apache Tomcat/8.5.29
+14:18:53.934 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - [log,180] - Loaded APR based Apache Tomcat Native library [1.2.17] using APR version [1.6.3].
+14:18:53.935 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - [log,180] - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+14:18:53.935 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - [log,180] - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+14:18:55.029 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - [log,180] - OpenSSL successfully initialized [OpenSSL 1.0.2o  27 Mar 2018]
+14:18:55.405 [localhost-startStop-1] INFO  o.a.c.c.C.[.[.[/] - [log,180] - Initializing Spring embedded WebApplicationContext
+14:19:01.453 [main] INFO  o.a.c.h.Http11NioProtocol - [log,180] - Starting ProtocolHandler ["http-nio-80"]
+14:19:01.494 [main] INFO  o.a.t.u.n.NioSelectorPool - [log,180] - Using a shared selector for servlet write/read
+14:19:01.629 [main] INFO  c.q.QcblogApplication - [logStarted,59] - Started QcblogApplication in 17.753 seconds (JVM running for 19.124)
+14:19:01.731 [http-nio-80-exec-10] INFO  o.a.c.c.C.[.[.[/] - [log,180] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+14:19:04.326 [http-nio-80-exec-3] INFO  c.z.h.HikariDataSource - [getConnection,110] - HikariPool-1 - Starting...
+14:19:05.362 [http-nio-80-exec-3] INFO  c.z.h.HikariDataSource - [getConnection,123] - HikariPool-1 - Start completed.
+14:19:54.867 [http-nio-80-exec-10] INFO  i.l.c.EpollProvider - [info,101] - Starting without optional epoll library
+14:19:54.873 [http-nio-80-exec-10] INFO  i.l.c.KqueueProvider - [info,101] - Starting without optional kqueue library
+14:20:08.575 [http-nio-80-exec-9] INFO  c.q.c.MyUserDetailsService - [loadUserByUsername,56] - qichao角色权限为：[USER, 普通用户]
+14:25:53.877 [main] INFO  c.q.QcblogApplication - [logStarting,50] - Starting QcblogApplication on PC-20180928WXPZ with PID 18404 (D:\IDEA\qcblog\qcblog-web\target\classes started by Administrator in D:\IDEA\qcblog)
+14:25:53.897 [main] INFO  c.q.QcblogApplication - [logStartupProfileInfo,659] - No active profile set, falling back to default profiles: default
+14:26:05.567 [main] INFO  o.a.c.h.Http11NioProtocol - [log,180] - Initializing ProtocolHandler ["http-nio-80"]
+14:26:05.592 [main] INFO  o.a.c.c.StandardService - [log,180] - Starting service [Tomcat]
+14:26:05.593 [main] INFO  o.a.c.c.StandardEngine - [log,180] - Starting Servlet Engine: Apache Tomcat/8.5.29
+14:26:05.620 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - [log,180] - Loaded APR based Apache Tomcat Native library [1.2.17] using APR version [1.6.3].
+14:26:05.621 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - [log,180] - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+14:26:05.622 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - [log,180] - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+14:26:06.819 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - [log,180] - OpenSSL successfully initialized [OpenSSL 1.0.2o  27 Mar 2018]
+14:26:07.190 [localhost-startStop-1] INFO  o.a.c.c.C.[.[.[/] - [log,180] - Initializing Spring embedded WebApplicationContext
+14:26:14.377 [main] INFO  o.a.c.h.Http11NioProtocol - [log,180] - Starting ProtocolHandler ["http-nio-80"]
+14:26:14.426 [main] INFO  o.a.t.u.n.NioSelectorPool - [log,180] - Using a shared selector for servlet write/read
+14:26:14.508 [main] INFO  c.q.QcblogApplication - [logStarted,59] - Started QcblogApplication in 22.375 seconds (JVM running for 23.746)
+14:30:25.627 [http-nio-80-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,180] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+14:30:28.489 [http-nio-80-exec-4] INFO  c.z.h.HikariDataSource - [getConnection,110] - HikariPool-1 - Starting...
+14:30:29.443 [http-nio-80-exec-4] INFO  c.z.h.HikariDataSource - [getConnection,123] - HikariPool-1 - Start completed.
+14:30:32.634 [http-nio-80-exec-4] INFO  i.l.c.EpollProvider - [info,101] - Starting without optional epoll library
+14:30:32.638 [http-nio-80-exec-4] INFO  i.l.c.KqueueProvider - [info,101] - Starting without optional kqueue library
+14:30:42.806 [http-nio-80-exec-7] INFO  c.q.c.MyUserDetailsService - [loadUserByUsername,56] - qichao角色权限为：[USER, 普通用户]
+14:34:49.314 [main] INFO  c.q.QcblogApplication - [logStarting,50] - Starting QcblogApplication on PC-20180928WXPZ with PID 944 (D:\IDEA\qcblog\qcblog-web\target\classes started by Administrator in D:\IDEA\qcblog)
+14:34:49.325 [main] INFO  c.q.QcblogApplication - [logStartupProfileInfo,659] - No active profile set, falling back to default profiles: default
+14:34:57.785 [main] INFO  o.a.c.h.Http11NioProtocol - [log,180] - Initializing ProtocolHandler ["http-nio-80"]
+14:34:57.806 [main] INFO  o.a.c.c.StandardService - [log,180] - Starting service [Tomcat]
+14:34:57.807 [main] INFO  o.a.c.c.StandardEngine - [log,180] - Starting Servlet Engine: Apache Tomcat/8.5.29
+14:34:57.828 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - [log,180] - Loaded APR based Apache Tomcat Native library [1.2.17] using APR version [1.6.3].
+14:34:57.830 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - [log,180] - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+14:34:57.830 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - [log,180] - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+14:34:58.905 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - [log,180] - OpenSSL successfully initialized [OpenSSL 1.0.2o  27 Mar 2018]
+14:34:59.197 [localhost-startStop-1] INFO  o.a.c.c.C.[.[.[/] - [log,180] - Initializing Spring embedded WebApplicationContext
+14:35:06.396 [main] INFO  o.a.c.h.Http11NioProtocol - [log,180] - Starting ProtocolHandler ["http-nio-80"]
+14:35:06.436 [main] INFO  o.a.t.u.n.NioSelectorPool - [log,180] - Using a shared selector for servlet write/read
+14:35:06.517 [main] INFO  c.q.QcblogApplication - [logStarted,59] - Started QcblogApplication in 18.617 seconds (JVM running for 20.459)
+14:35:06.652 [http-nio-80-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,180] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+14:35:10.557 [http-nio-80-exec-4] INFO  c.z.h.HikariDataSource - [getConnection,110] - HikariPool-1 - Starting...
+14:35:11.518 [http-nio-80-exec-4] INFO  c.z.h.HikariDataSource - [getConnection,123] - HikariPool-1 - Start completed.
+14:37:06.991 [http-nio-80-exec-6] INFO  i.l.c.EpollProvider - [info,101] - Starting without optional epoll library
+14:37:06.996 [http-nio-80-exec-6] INFO  i.l.c.KqueueProvider - [info,101] - Starting without optional kqueue library
+14:37:18.308 [http-nio-80-exec-8] INFO  c.q.c.MyUserDetailsService - [loadUserByUsername,56] - qichao角色权限为：[USER, 普通用户]
+14:47:19.358 [main] INFO  c.q.QcblogApplication - [logStarting,50] - Starting QcblogApplication on PC-20180928WXPZ with PID 2488 (D:\IDEA\qcblog\qcblog-web\target\classes started by Administrator in D:\IDEA\qcblog)
+14:47:19.369 [main] INFO  c.q.QcblogApplication - [logStartupProfileInfo,659] - No active profile set, falling back to default profiles: default
+14:47:29.600 [main] INFO  o.a.c.h.Http11NioProtocol - [log,180] - Initializing ProtocolHandler ["http-nio-80"]
+14:47:29.617 [main] INFO  o.a.c.c.StandardService - [log,180] - Starting service [Tomcat]
+14:47:29.618 [main] INFO  o.a.c.c.StandardEngine - [log,180] - Starting Servlet Engine: Apache Tomcat/8.5.29
+14:47:29.630 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - [log,180] - Loaded APR based Apache Tomcat Native library [1.2.17] using APR version [1.6.3].
+14:47:29.630 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - [log,180] - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+14:47:29.630 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - [log,180] - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+14:47:30.687 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - [log,180] - OpenSSL successfully initialized [OpenSSL 1.0.2o  27 Mar 2018]
+14:47:30.897 [localhost-startStop-1] INFO  o.a.c.c.C.[.[.[/] - [log,180] - Initializing Spring embedded WebApplicationContext
+14:47:40.492 [main] INFO  o.a.c.h.Http11NioProtocol - [log,180] - Starting ProtocolHandler ["http-nio-80"]
+14:47:40.570 [main] INFO  o.a.t.u.n.NioSelectorPool - [log,180] - Using a shared selector for servlet write/read
+14:47:40.623 [main] INFO  c.q.QcblogApplication - [logStarted,59] - Started QcblogApplication in 22.635 seconds (JVM running for 24.017)
+14:47:43.644 [http-nio-80-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,180] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+14:47:47.112 [http-nio-80-exec-5] INFO  c.z.h.HikariDataSource - [getConnection,110] - HikariPool-1 - Starting...
+14:47:48.124 [http-nio-80-exec-5] INFO  c.z.h.HikariDataSource - [getConnection,123] - HikariPool-1 - Start completed.
+14:48:03.857 [http-nio-80-exec-5] INFO  i.l.c.EpollProvider - [info,101] - Starting without optional epoll library
+14:48:03.861 [http-nio-80-exec-5] INFO  i.l.c.KqueueProvider - [info,101] - Starting without optional kqueue library
+14:48:15.878 [http-nio-80-exec-3] INFO  c.q.c.MyUserDetailsService - [loadUserByUsername,56] - qichao角色权限为：[USER, 普通用户]
+14:57:29.524 [main] INFO  c.q.QcblogApplication - [logStarting,50] - Starting QcblogApplication on PC-20180928WXPZ with PID 1036 (D:\IDEA\qcblog\qcblog-web\target\classes started by Administrator in D:\IDEA\qcblog)
+14:57:29.534 [main] INFO  c.q.QcblogApplication - [logStartupProfileInfo,659] - No active profile set, falling back to default profiles: default
+14:57:38.957 [main] INFO  o.a.c.h.Http11NioProtocol - [log,180] - Initializing ProtocolHandler ["http-nio-80"]
+14:57:38.976 [main] INFO  o.a.c.c.StandardService - [log,180] - Starting service [Tomcat]
+14:57:38.977 [main] INFO  o.a.c.c.StandardEngine - [log,180] - Starting Servlet Engine: Apache Tomcat/8.5.29
+14:57:38.991 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - [log,180] - Loaded APR based Apache Tomcat Native library [1.2.17] using APR version [1.6.3].
+14:57:38.992 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - [log,180] - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+14:57:38.992 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - [log,180] - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+14:57:40.074 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - [log,180] - OpenSSL successfully initialized [OpenSSL 1.0.2o  27 Mar 2018]
+14:57:40.265 [localhost-startStop-1] INFO  o.a.c.c.C.[.[.[/] - [log,180] - Initializing Spring embedded WebApplicationContext
+14:57:45.893 [main] INFO  o.a.c.h.Http11NioProtocol - [log,180] - Starting ProtocolHandler ["http-nio-80"]
+14:57:45.930 [main] INFO  o.a.t.u.n.NioSelectorPool - [log,180] - Using a shared selector for servlet write/read
+14:57:45.994 [main] INFO  c.q.QcblogApplication - [logStarted,59] - Started QcblogApplication in 17.613 seconds (JVM running for 19.157)
+15:30:36.785 [http-nio-80-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,180] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+15:30:40.031 [http-nio-80-exec-1] INFO  c.z.h.HikariDataSource - [getConnection,110] - HikariPool-1 - Starting...
+15:30:41.304 [http-nio-80-exec-1] INFO  c.z.h.HikariDataSource - [getConnection,123] - HikariPool-1 - Start completed.
+15:30:46.296 [http-nio-80-exec-5] INFO  i.l.c.EpollProvider - [info,101] - Starting without optional epoll library
+15:30:46.301 [http-nio-80-exec-5] INFO  i.l.c.KqueueProvider - [info,101] - Starting without optional kqueue library
+15:30:58.234 [http-nio-80-exec-2] INFO  c.q.c.MyUserDetailsService - [loadUserByUsername,56] - qichao角色权限为：[USER, 普通用户]
+15:34:31.273 [main] INFO  c.q.QcblogApplication - [logStarting,50] - Starting QcblogApplication on PC-20180928WXPZ with PID 15536 (D:\IDEA\qcblog\qcblog-web\target\classes started by Administrator in D:\IDEA\qcblog)
+15:34:31.284 [main] INFO  c.q.QcblogApplication - [logStartupProfileInfo,659] - No active profile set, falling back to default profiles: default
+15:34:40.652 [main] INFO  o.a.c.h.Http11NioProtocol - [log,180] - Initializing ProtocolHandler ["http-nio-80"]
+15:34:40.676 [main] INFO  o.a.c.c.StandardService - [log,180] - Starting service [Tomcat]
+15:34:40.677 [main] INFO  o.a.c.c.StandardEngine - [log,180] - Starting Servlet Engine: Apache Tomcat/8.5.29
+15:34:40.695 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - [log,180] - Loaded APR based Apache Tomcat Native library [1.2.17] using APR version [1.6.3].
+15:34:40.695 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - [log,180] - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+15:34:40.696 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - [log,180] - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+15:34:41.802 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - [log,180] - OpenSSL successfully initialized [OpenSSL 1.0.2o  27 Mar 2018]
+15:34:42.040 [localhost-startStop-1] INFO  o.a.c.c.C.[.[.[/] - [log,180] - Initializing Spring embedded WebApplicationContext
+15:34:47.823 [main] INFO  o.a.c.h.Http11NioProtocol - [log,180] - Starting ProtocolHandler ["http-nio-80"]
+15:34:47.865 [main] INFO  o.a.t.u.n.NioSelectorPool - [log,180] - Using a shared selector for servlet write/read
+15:34:47.920 [main] INFO  c.q.QcblogApplication - [logStarted,59] - Started QcblogApplication in 18.114 seconds (JVM running for 19.821)
+15:39:38.882 [http-nio-80-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,180] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+15:39:41.896 [http-nio-80-exec-10] INFO  c.z.h.HikariDataSource - [getConnection,110] - HikariPool-1 - Starting...
+15:39:43.218 [http-nio-80-exec-10] INFO  c.z.h.HikariDataSource - [getConnection,123] - HikariPool-1 - Start completed.
+15:39:47.548 [http-nio-80-exec-9] INFO  i.l.c.EpollProvider - [info,101] - Starting without optional epoll library
+15:39:47.552 [http-nio-80-exec-9] INFO  i.l.c.KqueueProvider - [info,101] - Starting without optional kqueue library
+15:39:58.981 [http-nio-80-exec-1] INFO  c.q.c.MyUserDetailsService - [loadUserByUsername,56] - qichao角色权限为：[USER, 普通用户]
+15:43:56.273 [main] INFO  c.q.QcblogApplication - [logStarting,50] - Starting QcblogApplication on PC-20180928WXPZ with PID 3180 (D:\IDEA\qcblog\qcblog-web\target\classes started by Administrator in D:\IDEA\qcblog)
+15:43:56.290 [main] INFO  c.q.QcblogApplication - [logStartupProfileInfo,659] - No active profile set, falling back to default profiles: default
+15:44:08.939 [main] INFO  o.a.c.h.Http11NioProtocol - [log,180] - Initializing ProtocolHandler ["http-nio-80"]
+15:44:08.965 [main] INFO  o.a.c.c.StandardService - [log,180] - Starting service [Tomcat]
+15:44:08.966 [main] INFO  o.a.c.c.StandardEngine - [log,180] - Starting Servlet Engine: Apache Tomcat/8.5.29
+15:44:08.985 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - [log,180] - Loaded APR based Apache Tomcat Native library [1.2.17] using APR version [1.6.3].
+15:44:08.986 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - [log,180] - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+15:44:08.986 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - [log,180] - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+15:44:10.066 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - [log,180] - OpenSSL successfully initialized [OpenSSL 1.0.2o  27 Mar 2018]
+15:44:10.271 [localhost-startStop-1] INFO  o.a.c.c.C.[.[.[/] - [log,180] - Initializing Spring embedded WebApplicationContext
+15:44:15.772 [main] INFO  o.a.c.h.Http11NioProtocol - [log,180] - Starting ProtocolHandler ["http-nio-80"]
+15:44:15.817 [main] INFO  o.a.t.u.n.NioSelectorPool - [log,180] - Using a shared selector for servlet write/read
+15:44:15.867 [main] INFO  c.q.QcblogApplication - [logStarted,59] - Started QcblogApplication in 21.694 seconds (JVM running for 23.45)
+15:46:51.705 [http-nio-80-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,180] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+15:46:55.126 [http-nio-80-exec-2] INFO  c.z.h.HikariDataSource - [getConnection,110] - HikariPool-1 - Starting...
+15:46:56.067 [http-nio-80-exec-2] INFO  c.z.h.HikariDataSource - [getConnection,123] - HikariPool-1 - Start completed.
+15:53:22.750 [http-nio-80-exec-8] INFO  i.l.c.EpollProvider - [info,101] - Starting without optional epoll library
+15:53:22.754 [http-nio-80-exec-8] INFO  i.l.c.KqueueProvider - [info,101] - Starting without optional kqueue library
+15:53:34.249 [http-nio-80-exec-4] INFO  c.q.c.MyUserDetailsService - [loadUserByUsername,56] - qichao角色权限为：[USER, 普通用户]
+15:54:34.977 [main] INFO  c.q.QcblogApplication - [logStarting,50] - Starting QcblogApplication on PC-20180928WXPZ with PID 11024 (D:\IDEA\qcblog\qcblog-web\target\classes started by Administrator in D:\IDEA\qcblog)
+15:54:34.996 [main] INFO  c.q.QcblogApplication - [logStartupProfileInfo,659] - No active profile set, falling back to default profiles: default
+15:54:42.617 [main] INFO  o.a.c.h.Http11NioProtocol - [log,180] - Initializing ProtocolHandler ["http-nio-80"]
+15:54:42.634 [main] INFO  o.a.c.c.StandardService - [log,180] - Starting service [Tomcat]
+15:54:42.635 [main] INFO  o.a.c.c.StandardEngine - [log,180] - Starting Servlet Engine: Apache Tomcat/8.5.29
+15:54:42.650 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - [log,180] - Loaded APR based Apache Tomcat Native library [1.2.17] using APR version [1.6.3].
+15:54:42.650 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - [log,180] - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+15:54:42.650 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - [log,180] - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+15:54:43.712 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - [log,180] - OpenSSL successfully initialized [OpenSSL 1.0.2o  27 Mar 2018]
+15:54:43.893 [localhost-startStop-1] INFO  o.a.c.c.C.[.[.[/] - [log,180] - Initializing Spring embedded WebApplicationContext
+15:54:49.130 [main] INFO  o.a.c.h.Http11NioProtocol - [log,180] - Starting ProtocolHandler ["http-nio-80"]
+15:54:49.169 [main] INFO  o.a.t.u.n.NioSelectorPool - [log,180] - Using a shared selector for servlet write/read
+15:54:49.219 [main] INFO  c.q.QcblogApplication - [logStarted,59] - Started QcblogApplication in 16.385 seconds (JVM running for 18.237)
+16:04:38.839 [http-nio-80-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,180] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+16:04:41.503 [http-nio-80-exec-2] INFO  c.z.h.HikariDataSource - [getConnection,110] - HikariPool-1 - Starting...
+16:04:44.008 [http-nio-80-exec-2] INFO  c.z.h.HikariDataSource - [getConnection,123] - HikariPool-1 - Start completed.
+16:04:49.935 [http-nio-80-exec-3] INFO  i.l.c.EpollProvider - [info,101] - Starting without optional epoll library
+16:04:49.938 [http-nio-80-exec-3] INFO  i.l.c.KqueueProvider - [info,101] - Starting without optional kqueue library
+16:04:59.097 [http-nio-80-exec-5] INFO  c.q.c.MyUserDetailsService - [loadUserByUsername,56] - qichao角色权限为：[USER, 普通用户]
+16:07:09.377 [main] INFO  c.q.QcblogApplication - [logStarting,50] - Starting QcblogApplication on PC-20180928WXPZ with PID 7560 (D:\IDEA\qcblog\qcblog-web\target\classes started by Administrator in D:\IDEA\qcblog)
+16:07:09.408 [main] INFO  c.q.QcblogApplication - [logStartupProfileInfo,659] - No active profile set, falling back to default profiles: default
+16:07:17.642 [main] INFO  o.a.c.h.Http11NioProtocol - [log,180] - Initializing ProtocolHandler ["http-nio-80"]
+16:07:17.667 [main] INFO  o.a.c.c.StandardService - [log,180] - Starting service [Tomcat]
+16:07:17.668 [main] INFO  o.a.c.c.StandardEngine - [log,180] - Starting Servlet Engine: Apache Tomcat/8.5.29
+16:07:17.687 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - [log,180] - Loaded APR based Apache Tomcat Native library [1.2.17] using APR version [1.6.3].
+16:07:17.687 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - [log,180] - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+16:07:17.688 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - [log,180] - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+16:07:18.781 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - [log,180] - OpenSSL successfully initialized [OpenSSL 1.0.2o  27 Mar 2018]
+16:07:19.007 [localhost-startStop-1] INFO  o.a.c.c.C.[.[.[/] - [log,180] - Initializing Spring embedded WebApplicationContext
+16:07:25.360 [main] INFO  o.a.c.h.Http11NioProtocol - [log,180] - Starting ProtocolHandler ["http-nio-80"]
+16:07:25.398 [main] INFO  o.a.t.u.n.NioSelectorPool - [log,180] - Using a shared selector for servlet write/read
+16:07:25.461 [main] INFO  c.q.QcblogApplication - [logStarted,59] - Started QcblogApplication in 17.6 seconds (JVM running for 18.98)
+16:07:25.763 [http-nio-80-exec-10] INFO  o.a.c.c.C.[.[.[/] - [log,180] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+16:07:29.976 [http-nio-80-exec-6] INFO  c.z.h.HikariDataSource - [getConnection,110] - HikariPool-1 - Starting...
+16:07:30.775 [http-nio-80-exec-6] INFO  c.z.h.HikariDataSource - [getConnection,123] - HikariPool-1 - Start completed.
+16:07:44.288 [http-nio-80-exec-5] INFO  i.l.c.EpollProvider - [info,101] - Starting without optional epoll library
+16:07:44.296 [http-nio-80-exec-5] INFO  i.l.c.KqueueProvider - [info,101] - Starting without optional kqueue library
+16:07:56.677 [http-nio-80-exec-7] INFO  c.q.c.MyUserDetailsService - [loadUserByUsername,56] - qichao角色权限为：[USER, 普通用户]
+16:09:47.469 [main] INFO  c.q.QcblogApplication - [logStarting,50] - Starting QcblogApplication on PC-20180928WXPZ with PID 10936 (D:\IDEA\qcblog\qcblog-web\target\classes started by Administrator in D:\IDEA\qcblog)
+16:09:47.484 [main] INFO  c.q.QcblogApplication - [logStartupProfileInfo,659] - No active profile set, falling back to default profiles: default
+16:09:56.811 [main] INFO  o.a.c.h.Http11NioProtocol - [log,180] - Initializing ProtocolHandler ["http-nio-80"]
+16:09:56.834 [main] INFO  o.a.c.c.StandardService - [log,180] - Starting service [Tomcat]
+16:09:56.835 [main] INFO  o.a.c.c.StandardEngine - [log,180] - Starting Servlet Engine: Apache Tomcat/8.5.29
+16:09:56.852 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - [log,180] - Loaded APR based Apache Tomcat Native library [1.2.17] using APR version [1.6.3].
+16:09:56.853 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - [log,180] - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+16:09:56.853 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - [log,180] - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+16:09:57.986 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - [log,180] - OpenSSL successfully initialized [OpenSSL 1.0.2o  27 Mar 2018]
+16:09:58.265 [localhost-startStop-1] INFO  o.a.c.c.C.[.[.[/] - [log,180] - Initializing Spring embedded WebApplicationContext
+16:10:05.320 [main] INFO  o.a.c.h.Http11NioProtocol - [log,180] - Starting ProtocolHandler ["http-nio-80"]
+16:10:05.361 [main] INFO  o.a.t.u.n.NioSelectorPool - [log,180] - Using a shared selector for servlet write/read
+16:10:05.437 [main] INFO  c.q.QcblogApplication - [logStarted,59] - Started QcblogApplication in 20.034 seconds (JVM running for 21.606)
+16:10:21.666 [http-nio-80-exec-10] INFO  o.a.c.c.C.[.[.[/] - [log,180] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+16:10:24.251 [http-nio-80-exec-2] INFO  c.z.h.HikariDataSource - [getConnection,110] - HikariPool-1 - Starting...
+16:10:25.171 [http-nio-80-exec-2] INFO  c.z.h.HikariDataSource - [getConnection,123] - HikariPool-1 - Start completed.
+16:10:32.643 [http-nio-80-exec-3] INFO  i.l.c.EpollProvider - [info,101] - Starting without optional epoll library
+16:10:32.658 [http-nio-80-exec-3] INFO  i.l.c.KqueueProvider - [info,101] - Starting without optional kqueue library
+16:10:47.779 [http-nio-80-exec-1] INFO  c.q.c.MyUserDetailsService - [loadUserByUsername,56] - 朱莹角色权限为：[USER, 普通用户]
+16:12:30.696 [main] INFO  c.q.QcblogApplication - [logStarting,50] - Starting QcblogApplication on PC-20180928WXPZ with PID 7048 (D:\IDEA\qcblog\qcblog-web\target\classes started by Administrator in D:\IDEA\qcblog)
+16:12:30.754 [main] INFO  c.q.QcblogApplication - [logStartupProfileInfo,659] - No active profile set, falling back to default profiles: default
+16:12:39.886 [main] INFO  o.a.c.h.Http11NioProtocol - [log,180] - Initializing ProtocolHandler ["http-nio-80"]
+16:12:39.908 [main] INFO  o.a.c.c.StandardService - [log,180] - Starting service [Tomcat]
+16:12:39.909 [main] INFO  o.a.c.c.StandardEngine - [log,180] - Starting Servlet Engine: Apache Tomcat/8.5.29
+16:12:39.925 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - [log,180] - Loaded APR based Apache Tomcat Native library [1.2.17] using APR version [1.6.3].
+16:12:39.925 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - [log,180] - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+16:12:39.926 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - [log,180] - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+16:12:41.021 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - [log,180] - OpenSSL successfully initialized [OpenSSL 1.0.2o  27 Mar 2018]
+16:12:41.369 [localhost-startStop-1] INFO  o.a.c.c.C.[.[.[/] - [log,180] - Initializing Spring embedded WebApplicationContext
+16:12:48.365 [main] INFO  o.a.c.h.Http11NioProtocol - [log,180] - Starting ProtocolHandler ["http-nio-80"]
+16:12:48.410 [main] INFO  o.a.t.u.n.NioSelectorPool - [log,180] - Using a shared selector for servlet write/read
+16:12:48.467 [main] INFO  c.q.QcblogApplication - [logStarted,59] - Started QcblogApplication in 19.341 seconds (JVM running for 21.427)
+16:13:24.634 [main] INFO  c.q.QcblogApplication - [logStarting,50] - Starting QcblogApplication on PC-20180928WXPZ with PID 10760 (D:\IDEA\qcblog\qcblog-web\target\classes started by Administrator in D:\IDEA\qcblog)
+16:13:24.653 [main] INFO  c.q.QcblogApplication - [logStartupProfileInfo,659] - No active profile set, falling back to default profiles: default
+16:13:33.415 [main] INFO  o.a.c.h.Http11NioProtocol - [log,180] - Initializing ProtocolHandler ["http-nio-80"]
+16:13:33.433 [main] INFO  o.a.c.c.StandardService - [log,180] - Starting service [Tomcat]
+16:13:33.434 [main] INFO  o.a.c.c.StandardEngine - [log,180] - Starting Servlet Engine: Apache Tomcat/8.5.29
+16:13:33.448 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - [log,180] - Loaded APR based Apache Tomcat Native library [1.2.17] using APR version [1.6.3].
+16:13:33.448 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - [log,180] - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+16:13:33.449 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - [log,180] - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+16:13:34.588 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - [log,180] - OpenSSL successfully initialized [OpenSSL 1.0.2o  27 Mar 2018]
+16:13:34.877 [localhost-startStop-1] INFO  o.a.c.c.C.[.[.[/] - [log,180] - Initializing Spring embedded WebApplicationContext
+16:13:45.907 [main] INFO  o.a.c.h.Http11NioProtocol - [log,180] - Starting ProtocolHandler ["http-nio-80"]
+16:13:45.951 [main] INFO  o.a.t.u.n.NioSelectorPool - [log,180] - Using a shared selector for servlet write/read
+16:13:46.019 [main] INFO  c.q.QcblogApplication - [logStarted,59] - Started QcblogApplication in 23.016 seconds (JVM running for 25.082)
+16:13:46.246 [http-nio-80-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,180] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+16:13:49.290 [http-nio-80-exec-4] INFO  c.z.h.HikariDataSource - [getConnection,110] - HikariPool-1 - Starting...
+16:13:50.276 [http-nio-80-exec-4] INFO  c.z.h.HikariDataSource - [getConnection,123] - HikariPool-1 - Start completed.
+16:14:05.752 [http-nio-80-exec-5] INFO  i.l.c.EpollProvider - [info,101] - Starting without optional epoll library
+16:14:05.757 [http-nio-80-exec-5] INFO  i.l.c.KqueueProvider - [info,101] - Starting without optional kqueue library
+16:14:14.899 [http-nio-80-exec-1] INFO  c.q.c.MyUserDetailsService - [loadUserByUsername,56] - qichao角色权限为：[USER, 普通用户]
+16:26:28.917 [main] INFO  c.q.QcblogApplication - [logStarting,50] - Starting QcblogApplication on PC-20180928WXPZ with PID 12048 (D:\IDEA\qcblog\qcblog-web\target\classes started by Administrator in D:\IDEA\qcblog)
+16:26:28.991 [main] INFO  c.q.QcblogApplication - [logStartupProfileInfo,659] - No active profile set, falling back to default profiles: default
+16:26:40.192 [main] INFO  o.a.c.h.Http11NioProtocol - [log,180] - Initializing ProtocolHandler ["http-nio-80"]
+16:26:40.214 [main] INFO  o.a.c.c.StandardService - [log,180] - Starting service [Tomcat]
+16:26:40.214 [main] INFO  o.a.c.c.StandardEngine - [log,180] - Starting Servlet Engine: Apache Tomcat/8.5.29
+16:26:40.233 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - [log,180] - Loaded APR based Apache Tomcat Native library [1.2.17] using APR version [1.6.3].
+16:26:40.233 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - [log,180] - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+16:26:40.234 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - [log,180] - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+16:26:41.328 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - [log,180] - OpenSSL successfully initialized [OpenSSL 1.0.2o  27 Mar 2018]
+16:26:41.632 [localhost-startStop-1] INFO  o.a.c.c.C.[.[.[/] - [log,180] - Initializing Spring embedded WebApplicationContext
+16:26:49.221 [main] INFO  o.a.c.h.Http11NioProtocol - [log,180] - Starting ProtocolHandler ["http-nio-80"]
+16:26:49.374 [main] INFO  o.a.t.u.n.NioSelectorPool - [log,180] - Using a shared selector for servlet write/read
+16:26:49.583 [main] INFO  c.q.QcblogApplication - [logStarted,59] - Started QcblogApplication in 22.325 seconds (JVM running for 23.64)
+16:26:53.850 [http-nio-80-exec-10] INFO  o.a.c.c.C.[.[.[/] - [log,180] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+16:26:56.272 [http-nio-80-exec-6] INFO  c.z.h.HikariDataSource - [getConnection,110] - HikariPool-1 - Starting...
+16:26:57.289 [http-nio-80-exec-6] INFO  c.z.h.HikariDataSource - [getConnection,123] - HikariPool-1 - Start completed.
+16:27:10.610 [http-nio-80-exec-5] INFO  i.l.c.EpollProvider - [info,101] - Starting without optional epoll library
+16:27:10.616 [http-nio-80-exec-5] INFO  i.l.c.KqueueProvider - [info,101] - Starting without optional kqueue library
+16:27:21.885 [http-nio-80-exec-8] INFO  c.q.c.MyUserDetailsService - [loadUserByUsername,56] - qichao角色权限为：[USER, 普通用户]
+16:28:20.968 [main] INFO  c.q.QcblogApplication - [logStarting,50] - Starting QcblogApplication on PC-20180928WXPZ with PID 4596 (D:\IDEA\qcblog\qcblog-web\target\classes started by Administrator in D:\IDEA\qcblog)
+16:28:21.068 [main] INFO  c.q.QcblogApplication - [logStartupProfileInfo,659] - No active profile set, falling back to default profiles: default
+16:28:28.656 [main] INFO  o.a.c.h.Http11NioProtocol - [log,180] - Initializing ProtocolHandler ["http-nio-80"]
+16:28:28.676 [main] INFO  o.a.c.c.StandardService - [log,180] - Starting service [Tomcat]
+16:28:28.676 [main] INFO  o.a.c.c.StandardEngine - [log,180] - Starting Servlet Engine: Apache Tomcat/8.5.29
+16:28:28.690 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - [log,180] - Loaded APR based Apache Tomcat Native library [1.2.17] using APR version [1.6.3].
+16:28:28.691 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - [log,180] - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+16:28:28.691 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - [log,180] - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+16:28:29.767 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - [log,180] - OpenSSL successfully initialized [OpenSSL 1.0.2o  27 Mar 2018]
+16:28:29.978 [localhost-startStop-1] INFO  o.a.c.c.C.[.[.[/] - [log,180] - Initializing Spring embedded WebApplicationContext
+16:28:39.622 [main] INFO  o.a.c.h.Http11NioProtocol - [log,180] - Starting ProtocolHandler ["http-nio-80"]
+16:28:39.673 [main] INFO  o.a.t.u.n.NioSelectorPool - [log,180] - Using a shared selector for servlet write/read
+16:28:39.737 [main] INFO  c.q.QcblogApplication - [logStarted,59] - Started QcblogApplication in 20.503 seconds (JVM running for 22.186)
+16:28:42.505 [http-nio-80-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,180] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+16:28:45.643 [http-nio-80-exec-2] INFO  c.z.h.HikariDataSource - [getConnection,110] - HikariPool-1 - Starting...
+16:28:46.655 [http-nio-80-exec-2] INFO  c.z.h.HikariDataSource - [getConnection,123] - HikariPool-1 - Start completed.
+16:31:39.334 [http-nio-80-exec-10] INFO  i.l.c.EpollProvider - [info,101] - Starting without optional epoll library
+16:31:39.338 [http-nio-80-exec-10] INFO  i.l.c.KqueueProvider - [info,101] - Starting without optional kqueue library
+16:31:48.787 [http-nio-80-exec-3] INFO  c.q.c.MyUserDetailsService - [loadUserByUsername,56] - qichao角色权限为：[USER, 普通用户]

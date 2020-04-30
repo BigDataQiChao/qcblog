@@ -28,15 +28,15 @@
 <script type="text/javascript" src="js/service/uploadService.js"></script>
 <script type="text/javascript" src="js/controller/baseController.js"></script>
 <script type="text/javascript" src="js/controller/articleController.js"></script>
-<body ng-app="qcblogs" ng-controller="articleController" ng-init="addNumber();findFlinks()">
+<body ng-app="qcblogs" ng-controller="articleController" ng-init="addNumber();findFlinks();userInfo()">
 <div class="w_header" th:replace="/other/header :: o_header">
 </div>
 <div class="w_container">
     <div class="container">
         <div class="row w_main_row">
             <ol class="breadcrumb w_breadcrumb">
-                <li><a href="/">首页</a></li>
-                <li><a href="/article">文章</a></li>
+                <li><a href="/"><i class="glyphicon glyphicon-home"></i>&nbsp;首页</a></li>
+                <li><a href="/article"><i class="glyphicon glyphicon-file"></i>&nbsp;文章</a></li>
                 <li class="active">作者推荐</li>
                 <span class="w_navbar_tip">喜欢你，像风走了八万里，不问归期。</span>
             </ol>

@@ -14,7 +14,7 @@ public interface UserMapper extends Mapper<User> {
     @Update("update user set view_count = #{viewCount}+1 where id = #{id}")
     public void addViewCount(User user);
 
-    @Update("update user set username = #{username},truename = #{truename},industry = #{industry},utime = #{utime},telephone = #{telephone},sex = #{sex}, email = #{email} where id = #{id}")
+    @Update("update user set username = #{username},truename = #{truename},industry = #{industry},utime = #{utime},telephone = #{telephone},sex = #{sex}, email = #{email},wk_condition = #{wkCondition},intro = #{intro},sch_name = #{schName},education = #{education}  where id = #{id}")
     public void updatePersonal(User user);
 
     @Select("select * from user where id = #{id}")
@@ -31,4 +31,7 @@ public interface UserMapper extends Mapper<User> {
 
     @Update("update user set carticnum = #{carticnum} where username = #{username}")
     public void updateCarticnum(@Param("carticnum") Integer countUserId, @Param("username")String name);
+
+    @Select("select u.* from user u, article a where u.id = a.user_id and a.id = #{id}")
+    public User findArticleOneOuthor(Integer id);
 }

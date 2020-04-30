@@ -2,8 +2,10 @@ package com.qcblog.controller;
 
 import com.qcblog.common.Result;
 import com.qcblog.pojo.User;
+import com.qcblog.service.UserLikeService;
 import com.qcblog.service.UserService;
 import org.apache.ibatis.annotations.Param;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -21,9 +23,14 @@ import java.util.Map;
 @Controller
 @RequestMapping("/User")
 public class UserController {
+    private org.slf4j.Logger logger = LoggerFactory.getLogger(this.getClass());//日志级别
     private final String PREUSER = "user/";
+
     @Autowired
     private UserService userService;
+
+    @Autowired
+    private UserLikeService userLikeService;
 
     @RequestMapping("/signinInfo")
     @ResponseBody
@@ -32,21 +39,32 @@ public class UserController {
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm");
         User user = userService.findUserByName(name);
         Map map = new HashMap<>();
-        if (user.getLimitCount() != null) {
-            map.put("userCount", user.getLimitCount());
+        try {
+            if (user != null) {
+                map.put("userCount", user.getLimitCount());
+                map.put("userName", name);
+                map.put("userEmail", user.getEmail());
+                map.put("userIndus", user.getIndustry());
+                map.put("userTelph", user.getTelephone());
+                map.put("userStatus", user.getStatus());
+                map.put("userImage", user.getImage());
+                map.put("userSex", user.getSex());
+                map.put("userTName", user.getTruename());
+                map.put("userTime", sdf.format(new Date()));
+                map.put("userViewNum", user.getViewCount());
+                map.put("userId", user.getId());
+                map.put("userCarticNum", user.getCarticnum());
+                map.put("userIntro", user.getIntro());
+                map.put("userEducation", user.getEducation());
+                map.put("userSchName", user.getSchName());
+                map.put("userWkCondition", user.getWkCondition());
+                return map;
+
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
         }
-        map.put("signinName", name);
-        map.put("signinEmail", user.getEmail());
-        map.put("signinIndus", user.getIndustry());
-        map.put("signinTelph", user.getTelephone());
-        map.put("signinStatus", user.getStatus());
-        map.put("signinImage", user.getImage());
-        map.put("signinSex", user.getSex());
-        map.put("signinTame", user.getTruename());
-        map.put("signinTime", sdf.format(new Date()));
-        map.put("signinViewNum", user.getViewCount());
-        map.put("signinId", user.getId());
-        map.put("signinCarticNum", user.getCarticnum());
+        logger.warn("警告：当前处于未登录状态！");
         return map;
     }
 
@@ -77,6 +95,7 @@ public class UserController {
             return new Result(false, "修改失败");
         }
     }
+
     /**
      * 修改
      *
@@ -95,6 +114,7 @@ public class UserController {
             return new Result(false, "更换头像失败");
         }
     }
+
     /**
      * 修改密码
      */
@@ -117,4 +137,32 @@ public class UserController {
         }
         return new Result(false, "修改失败，无此用户信息！");
     }
+
+    /**
+     * 查询文章详情作者信息
+     *
+     * @param id
+     * @return
+     */
+    @RequestMapping("/findOuthor")
+    @ResponseBody
+    public Map findArticleOneOuthor(@RequestBody Integer id) {
+        Map map = new HashMap<>();
+        try {
+            if (id != null) {
+                User outhor = userService.findArticleOneOuthor(id);
+                Integer countLike = userLikeService.countByLikeArticle(id);
+                Integer countAllLike = userLikeService.countByAllLikeArticle(outhor.getId());
+                map.put("OuthorInfo", outhor);
+                map.put("CountAllLike", countAllLike);
+                map.put("CountLike", countLike);
+                return map;
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        logger.warn("警告：当前处于未登录状态！暂时查询不到该文章的作者信息！");
+        return null;
+    }
+
 }

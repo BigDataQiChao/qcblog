@@ -12,10 +12,10 @@ app.controller('talkController',function($scope ,$controller,userService,talkSer
     $scope.userInfo = function () {
         userService.userInfo().success(
             function (response) {
-                $scope.signinName = response.signinName;
-                $scope.signinTime = response.signinTime;
+                $scope.userName = response.userName;
+                $scope.userTime = response.userTime;
                 $scope.userCount = response.userCount;
-                $scope.signinImage = response.signinImage;
+                $scope.userImage = response.userImage;
             }
         )
     };

@@ -63,10 +63,10 @@ app.controller('articleController', function ($scope, $controller,$location,arti
     $scope.userInfo = function () {
         userService.userInfo().success(
             function (response) {
-                $scope.signinName = response.signinName;
-                $scope.signinTime = response.signinTime;
+                $scope.userName = response.userName;
+                $scope.userTime = response.userTime;
                 $scope.userCount = response.userCount;
-                $scope.signinImage = response.signinImage;
+                $scope.userImage = response.userImage;
             }
         )
     };
@@ -153,6 +153,13 @@ app.controller('articleController', function ($scope, $controller,$location,arti
                     articleService.getNext($scope.articleOne.atname).success( //后一章
                         function (response) {
                             $scope.nextAticle = response;
+                        }
+                    );
+                    userService.findOuthor($scope.articleOne.id).success( //文章详情页博主信息
+                        function (response) {
+                            $scope.CountLike = response.CountLike;
+                            $scope.CountAllLike = response.CountAllLike;
+                            $scope.OuthorInfo = response.OuthorInfo;
                         }
                     );
                 }

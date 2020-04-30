@@ -31,14 +31,14 @@
 <script type="text/javascript" src="js/service/uploadService.js"></script>
 <script type="text/javascript" src="js/controller/baseController.js"></script>
 <script type="text/javascript" src="js/controller/articleController.js"></script>
-<body ng-app="qcblogs" ng-controller="articleController" ng-init="addNumber();findFlinks();findNames()">
-<div class="w_header" th:replace="/page/header :: header">
+<body ng-app="qcblogs" ng-controller="articleController" ng-init="addNumber();findFlinks();findNames();userInfo()">
+<div class="w_header" th:replace="/page/header :: p_header">
 </div>
 <div class="w_container">
     <div class="container">
         <div class="row w_main_row">
             <ol class="breadcrumb w_breadcrumb">
-                <li><a href="/">首页</a></li>
+                <li><a href="/"><i class="glyphicon glyphicon-home"></i>&nbsp;首页</a></li>
                 <li class="active"><i class="glyphicon glyphicon-file"></i>&nbsp;文章</li>
                 <span class="w_navbar_tip">其实我们可以活得糊涂些，没必要去弄清楚那些为什么。</span>
             </ol>

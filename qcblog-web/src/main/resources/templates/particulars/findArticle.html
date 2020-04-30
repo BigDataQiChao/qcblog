@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org"
-      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <link rel="shortcut icon" href="img/slider/yuan.png"/>
@@ -9,6 +9,7 @@
 
 <link href="//cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="css/common.css"/>
+<link rel="stylesheet" type="text/css" href="css/outhor-info.css"/>
 <link rel="stylesheet" type="text/css" href="css/article_detail.css"/>
 <link rel="stylesheet" type="text/css" href="css/qichao-login.css"/>
 <link rel="stylesheet" href="plugin/adminLTE/AdminLTE.css">
@@ -25,7 +26,7 @@
 <script type="text/javascript" src="js/service/uploadService.js"></script>
 <script type="text/javascript" src="js/controller/baseController.js"></script>
 <script type="text/javascript" src="js/controller/articleController.js"></script>
-<body ng-app="qcblogs" ng-controller="articleController" ng-init="addNumber();findArticleOne();findFlinks()">
+<body ng-app="qcblogs" ng-controller="articleController" ng-init="addNumber();findArticleOne();findFlinks();userInfo()">
 <div class="w_header" th:replace="/other/header :: o_header">
 </div>
 <div class="w_container">
@@ -33,7 +34,7 @@
         <div class="row w_main_row">
 
             <ol class="breadcrumb w_breadcrumb">
-                <li><a href="/">首页</a></li>
+                <li><a href="/"><i class="glyphicon glyphicon-home"></i>&nbsp;首页</a></li>
                 <li><a href="/article"><i class="glyphicon glyphicon-calendar"></i>&nbsp;文章页</a></li>
                 <li class="active"><i class="glyphicon glyphicon-stats"></i>&nbsp;文章详情</li>
                 <span class="w_navbar_tip">愿有人疼你入骨 深情如初 从此不被辜负.</span>
@@ -75,7 +76,7 @@
                         <center>
                             <div id="cyReward" role="cylabs" data-use="reward"></div>
                         </center>
-                        <div id="cyEmoji" role="cylabs" data-use="emoji" ></div>
+                        <div id="cyEmoji" role="cylabs" data-use="emoji"></div>
                         <!--PC版-->
                         <div id="SOHUCS" sid="5eab7e4c363e4cb8bed0efa3604e6b42"></div>
                         <script charset="utf-8" type="text/javascript"
@@ -94,6 +95,33 @@
                 </div>
             </div>
             <div class="col-lg-3 col-md-3 w_main_right">
+                <div class="panel panel-default sitetip">
+                    <strong style="display: inherit;font-size: 18px;text-align: center;">博主信息栏</strong>
+                    <div class="outhorInfo">
+                        <img src="{{OuthorInfo.image}}" >
+                        <p class="outhor_name"><span>{{OuthorInfo.username}}</span></p>
+                        <p class="outhor_age"><span>苑龄&nbsp;&nbsp; 2年</span></p>
+                    </div>
+                    <div class="rank_hr"></div>
+                    <div class="outhor_content">
+                        <div class="content_one">
+                            <span>{{CountLike}}</span>
+                            <span style="padding-left: 110px;">{{CountAllLike}}</span>
+                        </div>
+                        <div class="content_two">
+                            <p>本篇获赞</p>
+                            <p style="padding-left: 65px;">总共获赞</p>
+                        </div>
+                    </div>
+                    <div class="rank_hr"></div>
+                    <div class="outhor_like">
+                        <span>{{OuthorInfo.carticnum}}</span>
+                        <div class="outhor_like_one">
+                            <p>原创文章</p>
+                            <a class="outhor_gz">关注TA</a>
+                        </div>
+                    </div>
+                </div>
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <h3 class="panel-title">博苑推荐</h3>
@@ -123,12 +151,12 @@
                 </div>
             </div>
 
-
         </div>
     </div>
 </div>
 <div class="w_foot" th:replace="/page/footer :: footer">
 </div>
+
 <!--toTop-->
 <script type="text/javascript" src="js/totop.js"></script>
 </body>

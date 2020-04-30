@@ -31,14 +31,14 @@
     <script type="text/javascript" src="js/controller/articleController.js"></script>
 </head>
 <body class="user-select" ng-app="qcblogs" ng-controller="articleController"
-      ng-init="addNumber();findAtPre();findAtPos();findById();findType()">
-<div class="w_header" th:replace="/page/header :: header">
+      ng-init="addNumber();findAtPre();findAtPos();findById();findType();userInfo()">
+<div class="w_header" th:replace="/page/header :: p_header">
 </div>
 <section class="w_container">
     <div class="row w_main_row">
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-lg-10 main" id="main">
             <ol class="breadcrumb w_breadcrumb" style="margin-left: -230px;width: 100%;margin-top: 20px;">
-                <li><a href="/">首页</a></li>
+                <li><a href="/"><i class="glyphicon glyphicon-home"></i>&nbsp;首页</a></li>
                 <li><a href="/article"><i class="glyphicon glyphicon-calendar"></i>&nbsp;文章页</a></li>
                 <li><i href="/addArticle" class="glyphicon glyphicon-save"></i>&nbsp;发表文章</li>
             </ol>
