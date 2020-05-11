@@ -1,23 +1,27 @@
 package com.qcblog.controller;
 
 import com.qcblog.common.Result;
+import com.qcblog.pojo.Article;
+import com.qcblog.pojo.Attention;
 import com.qcblog.pojo.User;
+import com.qcblog.service.ArticleService;
+import com.qcblog.service.AttentionService;
 import com.qcblog.service.UserLikeService;
 import com.qcblog.service.UserService;
-import org.apache.ibatis.annotations.Param;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import javax.servlet.http.HttpServletRequest;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 @Controller
@@ -31,6 +35,12 @@ public class UserController {
 
     @Autowired
     private UserLikeService userLikeService;
+
+    @Autowired
+    private AttentionService attentionService;
+
+    @Autowired
+    private ArticleService articleService;
 
     @RequestMapping("/signinInfo")
     @ResponseBody
@@ -151,8 +161,10 @@ public class UserController {
         try {
             if (id != null) {
                 User outhor = userService.findArticleOneOuthor(id);
+                String age = userService.findAgeById(outhor.getId());
                 Integer countLike = userLikeService.countByLikeArticle(id);
                 Integer countAllLike = userLikeService.countByAllLikeArticle(outhor.getId());
+                map.put("Age", age);
                 map.put("OuthorInfo", outhor);
                 map.put("CountAllLike", countAllLike);
                 map.put("CountLike", countLike);
@@ -163,6 +175,85 @@ public class UserController {
         }
         logger.warn("警告：当前处于未登录状态！暂时查询不到该文章的作者信息！");
         return null;
+    }
+
+    /**
+     * 核查登录用户是否关注该篇文章
+     * @param id
+     * @return
+     */
+    @RequestMapping("/isAttention")
+    @ResponseBody
+    public Map isAttention(@RequestBody Integer id) {
+        String name = SecurityContextHolder.getContext().getAuthentication().getName();
+        Map map = new HashMap<>();
+        try {
+            Article article = articleService.findById(id);
+            User focusUser = userService.findUserByName(name);
+            List<Attention> isAttention=attentionService.checkIsAttention(focusUser.getId(),article.getUserId());
+            if (isAttention.isEmpty()){//表示没关注
+                map.put("isAttention", 0);
+            }else {
+                map.put("isAttention", 1);
+            }
+        }catch (Exception e){
+            logger.error("/User/isAttention方法体异常，原因如→{}",e.getMessage());
+            e.printStackTrace();
+        }
+        return map;
+    }
+
+    /**
+     * 登录用户关注博主
+     * @param id
+     * @return
+     */
+    @RequestMapping("/addAttention")
+    @ResponseBody
+    public Map addAttention(@RequestBody Integer id) {
+        String name = SecurityContextHolder.getContext().getAuthentication().getName();
+        Map map = new HashMap<>();
+        Attention attention = new Attention();
+        try {
+            Article article = articleService.findById(id);
+            User focusUser = userService.findUserByName(name);
+            User focusedUser = userService.selectUserById(article.getUserId());
+            attention.setFocusId(focusUser.getId());
+            attention.setFocusName(focusUser.getUsername());
+            attention.setFocusedId(article.getUserId());
+            attention.setFocusedName(focusedUser.getUsername());
+            attention.setCtime(new Date());
+            attention.setStatus("1");
+            attentionService.insertAttention(attention);
+            map.put("focusStatus", 200);
+        }catch (Exception e){
+            logger.error("/User/addAttention方法体异常，原因如→{}",e.getMessage());
+            map.put("focusStatus", 400);
+            e.printStackTrace();
+        }
+        return map;
+    }
+    /**
+     * 登录用户取消关注博主
+     * @param id
+     * @return
+     */
+    @RequestMapping("/deleAttention")
+    @ResponseBody
+    public Map deleAttention(@RequestBody Integer id) {
+        String name = SecurityContextHolder.getContext().getAuthentication().getName();
+        Map map = new HashMap<>();
+        try {
+            Article article = articleService.findById(id);
+            User focusUser = userService.findUserByName(name);
+            attentionService.deleAttention(focusUser.getId(),article.getUserId());
+            map.put("focusedStatus", 200);
+        }catch (Exception e){
+            logger.error("/User/deleAttention方法体异常，原因如→{}",e.getMessage());
+            map.put("focusedStatus", 400);
+            e.printStackTrace();
+        }
+        return map;
     }
 
 }

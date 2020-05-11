@@ -965,6 +965,76 @@ public class ArticleExample {
             return (Criteria) this;
         }
 
+        public Criteria andSubtypeIsNull() {
+            addCriterion("subtype is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andSubtypeIsNotNull() {
+            addCriterion("subtype is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andSubtypeEqualTo(String value) {
+            addCriterion("subtype =", value, "subtype");
+            return (Criteria) this;
+        }
+
+        public Criteria andSubtypeNotEqualTo(String value) {
+            addCriterion("subtype <>", value, "subtype");
+            return (Criteria) this;
+        }
+
+        public Criteria andSubtypeGreaterThan(String value) {
+            addCriterion("subtype >", value, "subtype");
+            return (Criteria) this;
+        }
+
+        public Criteria andSubtypeGreaterThanOrEqualTo(String value) {
+            addCriterion("subtype >=", value, "subtype");
+            return (Criteria) this;
+        }
+
+        public Criteria andSubtypeLessThan(String value) {
+            addCriterion("subtype <", value, "subtype");
+            return (Criteria) this;
+        }
+
+        public Criteria andSubtypeLessThanOrEqualTo(String value) {
+            addCriterion("subtype <=", value, "subtype");
+            return (Criteria) this;
+        }
+
+        public Criteria andSubtypeLike(String value) {
+            addCriterion("subtype like", value, "subtype");
+            return (Criteria) this;
+        }
+
+        public Criteria andSubtypeNotLike(String value) {
+            addCriterion("subtype not like", value, "subtype");
+            return (Criteria) this;
+        }
+
+        public Criteria andSubtypeIn(List<String> values) {
+            addCriterion("subtype in", values, "subtype");
+            return (Criteria) this;
+        }
+
+        public Criteria andSubtypeNotIn(List<String> values) {
+            addCriterion("subtype not in", values, "subtype");
+            return (Criteria) this;
+        }
+
+        public Criteria andSubtypeBetween(String value1, String value2) {
+            addCriterion("subtype between", value1, value2, "subtype");
+            return (Criteria) this;
+        }
+
+        public Criteria andSubtypeNotBetween(String value1, String value2) {
+            addCriterion("subtype not between", value1, value2, "subtype");
+            return (Criteria) this;
+        }
+
         public Criteria andLikenumberIsNull() {
             addCriterion("likenumber is null");
             return (Criteria) this;

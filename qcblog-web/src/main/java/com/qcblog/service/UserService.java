@@ -54,4 +54,9 @@ public class UserService {
     public User findArticleOneOuthor(Integer id){
         return userMapper.findArticleOneOuthor(id);
     }
+
+    public String findAgeById(Integer id){
+        return userMapper.findAgeById(id);
+    }
+
 }

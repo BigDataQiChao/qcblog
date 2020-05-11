@@ -12,7 +12,10 @@ public interface SubjectMapper extends Mapper<Subject>{
             "FROM article a,subject s \n" +
             "WHERE\n" +
             "\ta.id = s.article_id \n" +
-            "\tAND s.STATUS = 1 \n" +
+            "\tAND s.status = 1 \n" +
             "\tAND s.subname = #{subname}")
     public List<Article> findArticleBySubType(String subname);
+
+    @Select("select DISTINCT subname from subject")
+    public List<String> findSubName();
 }

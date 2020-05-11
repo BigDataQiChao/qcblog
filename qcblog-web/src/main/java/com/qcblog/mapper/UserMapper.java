@@ -34,4 +34,7 @@ public interface UserMapper extends Mapper<User> {
 
     @Select("select u.* from user u, article a where u.id = a.user_id and a.id = #{id}")
     public User findArticleOneOuthor(Integer id);
+
+    @Select("SELECT TIMESTAMPDIFF( DAY, u.utime, CURDATE()) AS age FROM user u where id =#{id}")
+    public String findAgeById(Integer id);
 }

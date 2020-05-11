@@ -37,4 +37,7 @@ public interface ArticleMapper extends Mapper<Article>{
 
     @Select("select distinct atpos from article")
     public List<String> findAtPos();
+
+    @Select("select * from article where atype = '博苑主页'  ORDER BY ctime desc limit 0,6")
+    public List<Article> findIndexArticle();
 }

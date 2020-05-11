@@ -6,10 +6,11 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import java.io.Serializable;
 import java.util.Date;
 
 @Table(name = "article")
-public class Article {
+public class Article implements Serializable{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
@@ -22,6 +23,7 @@ public class Article {
 
     @JsonFormat(pattern="yyyy-MM-dd hh:mm",timezone = "GMT+8")
     private Date ctime;
+
     @JsonFormat(pattern="yyyy-MM-dd hh:mm",timezone = "GMT+8")
     private Date utime;
 
@@ -39,8 +41,12 @@ public class Article {
 
     private String atype;
 
+    private String subtype;
+
     private String atcontent;
+
     private Integer likenumber;
+
     public Integer getId() {
         return id;
     }
@@ -145,6 +151,14 @@ public class Article {
         this.atype = atype == null ? null : atype.trim();
     }
 
+    public String getSubtype() {
+        return subtype;
+    }
+
+    public void setSubtype(String subtype) {
+        this.subtype = subtype;
+    }
+
     public String getAtcontent() {
         return atcontent;
     }
@@ -159,5 +173,28 @@ public class Article {
 
     public void setLikenumber(Integer likenumber) {
         this.likenumber = likenumber;
+    }
+
+
+    @Override
+    public String toString() {
+        return "Article{" +
+                "id=" + id +
+                ", userId=" + userId +
+                ", atname='" + atname + '\'' +
+                ", atnumber=" + atnumber +
+                ", ctime=" + ctime +
+                ", utime=" + utime +
+                ", atpre='" + atpre + '\'' +
+                ", atpos='" + atpos + '\'' +
+                ", atimg='" + atimg + '\'' +
+                ", atlink='" + atlink + '\'' +
+                ", status='" + status + '\'' +
+                ", isDelete='" + isDelete + '\'' +
+                ", atype='" + atype + '\'' +
+                ", subtype='" + subtype + '\'' +
+                ", atcontent='" + atcontent + '\'' +
+                ", likenumber=" + likenumber +
+                '}';
     }
 }

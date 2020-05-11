@@ -4,6 +4,7 @@ import com.qcblog.common.PageResult;
 import com.qcblog.common.Result;
 import com.qcblog.pojo.Talk;
 import com.qcblog.service.TalkService;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -21,6 +22,7 @@ import java.util.UUID;
 @Controller
 @RequestMapping("/Talk")
 public class TalkController {
+    private org.slf4j.Logger logger = LoggerFactory.getLogger(this.getClass());//日志级别
     @Autowired
     private TalkService talkService;
 
@@ -36,6 +38,7 @@ public class TalkController {
                     talkService.add(talk);
                     return new Result(true, "新增成功！");
                 } catch (Exception e) {
+                    logger.error("/Talk/add方法体异常，原因如→{}",e.getMessage());
                     e.printStackTrace();
                 }
         }

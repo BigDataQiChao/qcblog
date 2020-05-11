@@ -27,4 +27,14 @@ public class SubjectController {
         System.out.println("专题分类名称：-------"+subname);
         return subjectService.findArticleBySubType(subname);
     }
+
+    /**
+     * 遍历专题类型
+     * @return
+     */
+    @RequestMapping("/findSubName")
+    @ResponseBody
+    public List<String> findSubName(){
+        return subjectService.findSubName();
+    }
 }

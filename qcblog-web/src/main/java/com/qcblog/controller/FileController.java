@@ -3,6 +3,7 @@ package com.qcblog.controller;
 import com.qcblog.common.FileUtils;
 import com.qcblog.common.Result;
 import com.qcblog.common.UploadUtils;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.io.ResourceLoader;
@@ -14,6 +15,7 @@ import java.io.File;
 import java.util.Map;
 @Controller
 public class FileController {
+    private org.slf4j.Logger logger = LoggerFactory.getLogger(this.getClass());//日志级别
     private final ResourceLoader resourceLoader;
     @Autowired
     public FileController(ResourceLoader resourceLoader){
@@ -44,6 +46,7 @@ public class FileController {
             String url = path + file.getOriginalFilename();
             return new Result(true, url);
         } catch (Exception e) {
+            logger.error("/upload方法体异常，原因如→{}",e.getMessage());
             return new Result(false, "上传失败，请选择上传图片！");
         }
     }

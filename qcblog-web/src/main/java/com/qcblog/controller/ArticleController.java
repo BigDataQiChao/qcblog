@@ -3,15 +3,10 @@ package com.qcblog.controller;
 import ch.qos.logback.core.rolling.helper.IntegerTokenConverter;
 import com.qcblog.common.PageResult;
 import com.qcblog.common.Result;
-import com.qcblog.pojo.Article;
-import com.qcblog.pojo.Talk;
-import com.qcblog.pojo.User;
-import com.qcblog.pojo.UserLike;
-import com.qcblog.service.ArticleService;
-import com.qcblog.service.TalkService;
-import com.qcblog.service.UserLikeService;
-import com.qcblog.service.UserService;
+import com.qcblog.pojo.*;
+import com.qcblog.service.*;
 import org.apache.ibatis.annotations.Param;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
@@ -33,7 +28,7 @@ import java.util.Map;
 @Controller
 @RequestMapping("/Article")
 public class ArticleController {
-
+    private org.slf4j.Logger logger = LoggerFactory.getLogger(this.getClass());//日志级别
     @Autowired
     private ArticleService articleService;
 
@@ -42,6 +37,9 @@ public class ArticleController {
 
     @Autowired
     private UserLikeService userLikeService;
+
+    @Autowired
+    private SubjectService subjectService;
 
     /**
      * 文章结果集
@@ -61,9 +59,15 @@ public class ArticleController {
     @ResponseBody
     public List selectNameByArticle() {
         List list = new ArrayList();
-        List<Map<String, String>> maps = articleService.selectNameByArticle();
-        for (int i = 0; i < maps.size(); i++) {
-            list.add(maps.get(i));
+        try{
+            List<Map<String, String>> maps = articleService.selectNameByArticle();
+            for (int i = 0; i < maps.size(); i++) {
+                list.add(maps.get(i));
+            }
+            logger.info("作者信息查询成功，信息如→{}", list.toString());
+        }catch (Exception e){
+            logger.error("/Article/findNames方法体异常，原因如→{}",e.getMessage());
+            e.printStackTrace();
         }
         return list;
     }
@@ -136,6 +140,14 @@ public class ArticleController {
                 article.setAtnumber(1);
                 article.setUserId(user.getId());
                 articleService.insert(article);
+                int countUserId = userService.countByArticleUserId(name);
+                userService.updateCarticnum(countUserId, name);
+                Subject subject = new Subject();
+                subject.setArticleId(article.getId());
+                subject.setSubname(article.getSubtype());
+                subject.setSubtype(article.getSubtype());
+                subject.setUtime(new Date());
+                subjectService.insertSub(subject);
                 return new Result(true, "恭喜您，发表成功！");
             } catch (Exception e) {
                 e.printStackTrace();
@@ -300,6 +312,16 @@ public class ArticleController {
     @ResponseBody
     public Article findById(@Param("id") Integer id) {
         return articleService.findById(id);
+    }
+
+    /**
+     * 博苑主页推荐文章
+     * @return
+     */
+    @RequestMapping("/findIndexArticle")
+    @ResponseBody
+    public List<Article> findIndexArticle(){
+        return articleService.findIndexArticle();
     }
 }
 

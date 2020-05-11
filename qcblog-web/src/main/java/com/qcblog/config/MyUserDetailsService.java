@@ -51,7 +51,7 @@ public class MyUserDetailsService implements UserDetailsService {
             session.setAttribute("username", username);
             //角色
             authorities.add(new SimpleGrantedAuthority(user.getRole()));
-            //权限（为了测试，硬编码，实际上应该从数据库中读取）
+            //权限（从数据库中读取）
             authorities.add(new SimpleGrantedAuthority("普通用户"));
             logger.info(user.getUsername() + "角色权限为：" + authorities.toString());
             /*返回用户安全数据信息*/

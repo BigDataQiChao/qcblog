@@ -5,6 +5,7 @@ import com.qcblog.common.Result;
 import com.qcblog.pojo.Article;
 import com.qcblog.service.ArticleService;
 import org.apache.ibatis.annotations.Param;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -24,6 +25,7 @@ import java.util.Map;
 @Controller
 @RequestMapping("/Article")
 public class ArticleController {
+    private org.slf4j.Logger logger = LoggerFactory.getLogger(this.getClass());//日志级别
     @Autowired
     private ArticleService articleService;
 
@@ -51,6 +53,7 @@ public class ArticleController {
                     articleService.insert(article);
                     return new Result(true, "修改成功");
                 } catch (Exception e) {
+                    logger.error("/Article/add方法体异常，异常原因{}",e.getMessage());
                     e.printStackTrace();
                 }
             }
@@ -82,6 +85,7 @@ public class ArticleController {
             articleService.update(article);
             return new Result(true, "修改成功");
         } catch (Exception e) {
+            logger.error("/Article/update方法体异常，异常原因{}",e.getMessage());
             e.printStackTrace();
             return new Result(false, "修改失败");
         }
@@ -99,6 +103,7 @@ public class ArticleController {
             articleService.delete(ids);
             return new Result(true, "删除成功");
         } catch (Exception e) {
+            logger.error("/Article/delete方法体异常，异常原因{}",e.getMessage());
             e.printStackTrace();
             return new Result(false, "删除失败");
         }
@@ -117,6 +122,7 @@ public class ArticleController {
             articleService.deleteOne(article);
             return new Result(true, "删除成功");
         } catch (Exception e) {
+
             e.printStackTrace();
             return new Result(false, "删除失败");
         }

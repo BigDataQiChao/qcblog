@@ -54,7 +54,7 @@ public class LogicalController {
      */
     @GetMapping("/")
     public String index() {
-        return PREUSER+"index";
+        return PREUSER + "index";
     }
 
     /**
@@ -75,14 +75,16 @@ public class LogicalController {
             user.setLastIp(host);
             userService.update(user);
             new SecurityContextLogoutHandler().logout(request, response, auth);
+            logger.info("获取退出用户信息成功，信息如→{}", user.toString());
         } else {
             logger.info("获取退出时用户为空!");
         }
-        if(auth.getName() != null){
+        if (auth.getName() != null) {
             Signinlog limitlog = logService.findLimitByName(auth.getName());
             limitlog.setUtime(new Date());
             limitlog.setIsDelete("0");
             logService.update(limitlog);
+            logger.info("更新日志成功，信息如→{}", limitlog.toString());
         }
         return "redirect:/";
     }
@@ -98,9 +100,8 @@ public class LogicalController {
         Signinlog signinlog = new Signinlog();
         int countUserId = userService.countByArticleUserId(name);
         User user = userService.findUserByName(name);
-        System.out.println("获取实时登录用户:"+user.getUsername());
+        System.out.println("获取实时登录用户:" + user.getUsername());
         user.setLastTime(new Date());
-        System.out.println("获取登录时间:"+user.getLastTime());
         String host = request.getHeader("host");
         signinlog.setLogip(host);
         signinlog.setIsDelete("0");
@@ -108,9 +109,15 @@ public class LogicalController {
         signinlog.setLogtime(new Date());
         signinlog.setLogname(name);
         signinlog.setLogtype("平台用户");
-        logService.insert(signinlog);
-        userService.update(user);
-        userService.updateCarticnum(countUserId,name);
+        try {
+            logService.insert(signinlog);
+            userService.update(user);
+            userService.updateCarticnum(countUserId, name);
+            logger.info("获取用户信息成功，信息如→{}", user.toString());
+        } catch (Exception e) {
+            logger.error("/main方法体异常，原因如→{}",e.getMessage());
+             e.printStackTrace();
+        }
         return "redirect:/";
     }
 
@@ -183,13 +190,13 @@ public class LogicalController {
         return PREUSER + "play-gobang";
     }
     /*游戏结束*/
+
     /**
      * 去修改个人资料
-     *
      */
     @GetMapping("/updateUser")
     public String updateUser() {
-        return PREUSER+"developer_edit";
+        return PREUSER + "developer_edit";
     }
 
     /**
@@ -234,12 +241,12 @@ public class LogicalController {
 
     /**
      * 新增文章
-     *
      */
     @GetMapping("/addArticle")
-    public String addArticle(){
+    public String addArticle() {
         return PREUSER + "add-article";
     }
+
     /**
      * 说说
      *
@@ -277,7 +284,7 @@ public class LogicalController {
      */
     @GetMapping("/protocol")
     public String protocol() {
-        return SUPPORT+"protocol";
+        return SUPPORT + "protocol";
     }
 
     /**
@@ -287,8 +294,9 @@ public class LogicalController {
      */
     @GetMapping("/pldoc")
     public String pldoc() {
-        return SUPPORT+"pldoc";
+        return SUPPORT + "pldoc";
     }
+
     /**
      * 个人中心
      *
@@ -296,8 +304,9 @@ public class LogicalController {
      */
     @GetMapping("/personal")
     public String personal() {
-        return PREUSER+"developer";
+        return PREUSER + "developer";
     }
+
     /**
      * 平台介绍
      *
@@ -305,7 +314,7 @@ public class LogicalController {
      */
     @GetMapping("/recommend")
     public String recommend() {
-        return SUPPORT+"recommend";
+        return SUPPORT + "recommend";
     }
 
     /**
@@ -315,7 +324,7 @@ public class LogicalController {
      */
     @GetMapping("/logIn")
     public String logInPage() {
-        return PREUSER+"index";
+        return PREUSER + "index";
     }
 
     /**
@@ -327,14 +336,15 @@ public class LogicalController {
         String name = SecurityContextHolder.getContext().getAuthentication().getName();
         Article articleServiceOne = articleService.findOne(atname);
         User user = userService.findUserByName(name);
-        if (user != null){
+        if (user != null) {
             userService.addViewCount(user);
         }
-        if (articleServiceOne != null){
+        if (articleServiceOne != null) {
             articleService.upateArticles(articleServiceOne);
         }
         return DETAILS + "findArticle";
     }
+
     /**
      * 失败页开始
      */
@@ -366,27 +376,27 @@ public class LogicalController {
         if (user.getUsername() != null && user.getUsername() != "") {
             User userByName = userService.findUserByName(user.getUsername());
             if (userByName == null) {
-                    if (user.getPassword().equals(user.getRepassword())) {
-                        BCryptPasswordEncoder bCryptPasswordEncoder = new BCryptPasswordEncoder();
-                        String pass = bCryptPasswordEncoder.encode(user.getPassword());
-                        user.setRepassword(pass);
-                        user.setPassword(pass);
-                    }
-                    user.setEmail(user.getEmail());
-                    user.setTelephone(user.getTelephone());
-                    user.setLimitCount(1);
-                    user.setLastTime(new Date());
-                    user.setRole("USER");
-                    user.setIsDelete("0");
-                    user.setStatus("1");
-                    try {
-                        userService.insert(user);
-                        Thread.sleep(4000);
-                        return new Result(true, "恭喜您，注册成功！");
-                    } catch (Exception e) {
-                        e.printStackTrace();
-                        return new Result(true, "注册出现异常！");
-                    }
+                if (user.getPassword().equals(user.getRepassword())) {
+                    BCryptPasswordEncoder bCryptPasswordEncoder = new BCryptPasswordEncoder();
+                    String pass = bCryptPasswordEncoder.encode(user.getPassword());
+                    user.setRepassword(pass);
+                    user.setPassword(pass);
+                }
+                user.setEmail(user.getEmail());
+                user.setTelephone(user.getTelephone());
+                user.setLimitCount(1);
+                user.setLastTime(new Date());
+                user.setRole("USER");
+                user.setIsDelete("0");
+                user.setStatus("1");
+                try {
+                    userService.insert(user);
+                    Thread.sleep(4000);
+                    return new Result(true, "恭喜您，注册成功！");
+                } catch (Exception e) {
+                    e.printStackTrace();
+                    return new Result(true, "注册出现异常！");
+                }
             } else {
                 try {
                     return new Result(true, "该用户名已被注册！");
@@ -397,12 +407,12 @@ public class LogicalController {
         }
         return new Result(true, "注册失败，请重试！");
     }
+
     /**
      * 去修改密码
-     *
      */
     @GetMapping("/toUpdatePwd")
-    public String toUpdatePwd(){
+    public String toUpdatePwd() {
         return "forgetpwd";
     }
 
@@ -417,12 +427,14 @@ public class LogicalController {
         map.put("signinReferer", referer);
         return map;
     }
+
     /**
      * 核验成功页面
+     *
      * @return
      */
     @GetMapping("/check")
-    public String check(){
+    public String check() {
         return "check_over";
     }
 }

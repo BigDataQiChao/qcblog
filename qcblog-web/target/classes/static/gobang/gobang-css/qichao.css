@@ -1,0 +1,27 @@
+ canvas {
+                display: block;
+                margin: 50px auto;
+                box-shadow: -2px -2px 2px #efefef, 5px 5px 5px #b9b9b9;
+                cursor: pointer;
+            }
+            .btn-wrap { 
+                display: flex; 
+                flex-direction: row; 
+                justify-content:center;
+            }
+            .btn-wrap div { 
+                margin: 0 10px;
+            }
+            div>span {
+                display: inline-block;
+                padding: 10px 20px;
+                color: #fff;
+                background-color: #000;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+            div.unable span { 
+                background: #D6D6D4; 
+                color: #adacaa;
+            }
+#result-wrap {text-align: center;}

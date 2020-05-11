@@ -41,6 +41,8 @@ public class Article implements Serializable{
 
     private String atype;
 
+    private String subtype;
+
     private String atcontent;
 
     private Integer likenumber;
@@ -149,6 +151,14 @@ public class Article implements Serializable{
         this.atype = atype == null ? null : atype.trim();
     }
 
+    public String getSubtype() {
+        return subtype;
+    }
+
+    public void setSubtype(String subtype) {
+        this.subtype = subtype;
+    }
+
     public String getAtcontent() {
         return atcontent;
     }
@@ -182,6 +192,7 @@ public class Article implements Serializable{
                 ", status='" + status + '\'' +
                 ", isDelete='" + isDelete + '\'' +
                 ", atype='" + atype + '\'' +
+                ", subtype='" + subtype + '\'' +
                 ", atcontent='" + atcontent + '\'' +
                 ", likenumber=" + likenumber +
                 '}';
