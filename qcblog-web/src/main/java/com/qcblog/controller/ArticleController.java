@@ -5,16 +5,23 @@ import com.qcblog.common.PageResult;
 import com.qcblog.common.Result;
 import com.qcblog.pojo.*;
 import com.qcblog.service.*;
+import com.qcblog.utils.FileUtils;
+import com.qcblog.utils.PoiUtils;
 import org.apache.ibatis.annotations.Param;
+import org.apache.poi.hssf.usermodel.*;
+import org.apache.poi.ss.usermodel.*;
+import org.apache.poi.xssf.usermodel.XSSFRichTextString;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpServletResponse;
+import java.io.File;
+import java.io.IOException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -146,6 +153,7 @@ public class ArticleController {
                 subject.setArticleId(article.getId());
                 subject.setSubname(article.getSubtype());
                 subject.setSubtype(article.getSubtype());
+                subject.setStatus("1");
                 subject.setUtime(new Date());
                 subjectService.insertSub(subject);
                 return new Result(true, "恭喜您，发表成功！");
@@ -322,6 +330,48 @@ public class ArticleController {
     @ResponseBody
     public List<Article> findIndexArticle(){
         return articleService.findIndexArticle();
+    }
+
+    /**
+     * 导出单个文章
+     * @param atname
+     * @param response
+     * @throws IOException
+     */
+    @GetMapping("/exportArticleOne")
+    public void exportArticleOne(String atname,HttpServletResponse response){
+        Workbook workbook = new XSSFWorkbook();
+        Sheet sheet = workbook.createSheet("文章详情表");
+        Article article = articleService.findOne(atname);
+        System.out.println("要导出的文章名称："+atname);
+        User outhor = userService.findArticleOneOuthor(article.getUserId());
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        String fileName = "IT_boyuan_article_"+article.getId(); //导出文件名
+        //headers表示excel表中第一行的表头
+        String[] headers = { "序号", "文章名称", "所属用户", "文章内容","前置标签","后置标签","专题类型","点赞数","发表时间","访问量","文章来源"};
+        //在excel表中添加表头
+        Row row = sheet.createRow(0);
+        for(int i=0;i<headers.length;i++){
+            Cell cell = row.createCell(i);
+            RichTextString text = new XSSFRichTextString(headers[i]);
+            cell.setCellValue(text);
+        }
+        //在表中存放查询到的数据放入对应的列
+        Row row1 = sheet.createRow(1);
+        row1.createCell(0).setCellValue(article.getId());
+        row1.createCell(1).setCellValue(article.getAtname());
+        row1.createCell(2).setCellValue(outhor.getUsername());
+        row1.createCell(3).setCellValue(article.getAtcontent());
+        row1.createCell(4).setCellValue(article.getAtpre());
+        row1.createCell(5).setCellValue(article.getAtpos());
+        row1.createCell(6).setCellValue(article.getSubtype());
+        row1.createCell(7).setCellValue(article.getLikenumber());
+        row1.createCell(8).setCellValue(sdf.format(article.getCtime()));
+        row1.createCell(9).setCellValue(article.getAtnumber());
+        row1.createCell(10).setCellValue(article.getAtlink());
+
+        File file = PoiUtils.createExcelFile(workbook, fileName);
+        FileUtils.downloadFile(response, file, file.getName());
     }
 }
 

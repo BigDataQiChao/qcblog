@@ -21,4 +21,8 @@ public interface UserMapper extends Mapper<User>{
     public void updateForbidden(User user);
     @Update("update user set is_delete = #{isDelete} where id = #{id}")
     public void deleteOne(User user);
+    @Select("select count(*) from article a,user u where a.user_id = u.id and u.id=1")
+    public int countByArticleUserId();
+    @Update("update user set carticnum = #{carticnum} where id=1")
+    public void updateCarticnum(Integer carticnum);
 }

@@ -171,6 +171,7 @@ public class ArticleController {
             articleService.update(article);
             return new Result(true, "发布成功");
         }catch (Exception e){
+            logger.error("/Article/up方法体异常，异常原因{}",e.getMessage());
             return new Result(false, "发布失败");
         }
     }
@@ -185,13 +186,13 @@ public class ArticleController {
     public Result downArticle(@Param("atname") String atname){
         Article article = articleService.findOne(atname);
         try{
-            System.out.println("需要撤回的文章："+article.getAtname());
             article.setStatus("0");
             article.setIsDelete("0");
             article.setUtime(new Date());
             articleService.update(article);
             return new Result(true, "撤回成功");
         }catch (Exception e){
+            logger.error("/Article/down方法体异常，异常原因{}",e.getMessage());
             return new Result(false, "撤回失败");
         }
     }

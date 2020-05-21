@@ -1,0 +1,35 @@
+08:41:07.931 [main] INFO  c.q.QcblogApplication - [logStarting,50] - Starting QcblogApplication on PC-20180928WXPZ with PID 7904 (D:\IDEA\qcblog\qcblog-web\target\classes started by Administrator in D:\IDEA\qcblog)
+08:41:07.970 [main] INFO  c.q.QcblogApplication - [logStartupProfileInfo,659] - No active profile set, falling back to default profiles: default
+08:41:16.312 [main] INFO  o.a.c.h.Http11NioProtocol - [log,180] - Initializing ProtocolHandler ["http-nio-80"]
+08:41:16.338 [main] INFO  o.a.c.c.StandardService - [log,180] - Starting service [Tomcat]
+08:41:16.338 [main] INFO  o.a.c.c.StandardEngine - [log,180] - Starting Servlet Engine: Apache Tomcat/8.5.29
+08:41:16.354 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - [log,180] - Loaded APR based Apache Tomcat Native library [1.2.17] using APR version [1.6.3].
+08:41:16.354 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - [log,180] - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+08:41:16.354 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - [log,180] - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+08:41:17.432 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - [log,180] - OpenSSL successfully initialized [OpenSSL 1.0.2o  27 Mar 2018]
+08:41:17.631 [localhost-startStop-1] INFO  o.a.c.c.C.[.[.[/] - [log,180] - Initializing Spring embedded WebApplicationContext
+08:41:23.630 [main] INFO  o.a.c.h.Http11NioProtocol - [log,180] - Starting ProtocolHandler ["http-nio-80"]
+08:41:23.681 [main] INFO  o.a.t.u.n.NioSelectorPool - [log,180] - Using a shared selector for servlet write/read
+08:41:23.769 [main] INFO  c.q.QcblogApplication - [logStarted,59] - Started QcblogApplication in 17.563 seconds (JVM running for 20.162)
+08:41:48.915 [http-nio-80-exec-10] INFO  o.a.c.c.C.[.[.[/] - [log,180] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+08:41:52.101 [http-nio-80-exec-9] INFO  c.z.h.HikariDataSource - [getConnection,110] - HikariPool-1 - Starting...
+08:41:52.809 [http-nio-80-exec-9] INFO  c.z.h.HikariDataSource - [getConnection,123] - HikariPool-1 - Start completed.
+08:41:53.243 [http-nio-80-exec-9] INFO  c.q.c.ArticleController - [selectNameByArticle,67] - 作者信息查询成功，信息如→[{id=1, username=qichao}, {id=2, username=qichao}, {id=3, username=王杰}, {id=4, username=朱莹}, {id=5, username=qichao}, {id=6, username=qichao}, {id=7, username=qichao}, {id=8, username=qichao}, {id=9, username=qichao}, {id=10, username=qichao}, {id=11, username=王杰}, {id=12, username=王杰}, {id=13, username=qichao}, {id=14, username=王杰}, {id=15, username=qichao}, {id=16, username=朱莹}, {id=17, username=朱莹}, {id=18, username=王杰}, {id=19, username=王杰}, {id=20, username=qichao}, {id=21, username=qichao}, {id=22, username=qichao}, {id=23, username=qichao}, {id=24, username=qichao}, {id=25, username=qichao}, {id=26, username=qichao}, {id=27, username=qichao}, {id=28, username=qichao}, {id=29, username=qichao}, {id=30, username=qichao}, {id=48, username=qichao}]
+08:47:38.508 [main] INFO  c.q.QcblogApplication - [logStarting,50] - Starting QcblogApplication on PC-20180928WXPZ with PID 9432 (D:\IDEA\qcblog\qcblog-web\target\classes started by Administrator in D:\IDEA\qcblog)
+08:47:38.516 [main] INFO  c.q.QcblogApplication - [logStartupProfileInfo,659] - No active profile set, falling back to default profiles: default
+08:47:49.815 [main] INFO  o.a.c.h.Http11NioProtocol - [log,180] - Initializing ProtocolHandler ["http-nio-80"]
+08:47:49.832 [main] INFO  o.a.c.c.StandardService - [log,180] - Starting service [Tomcat]
+08:47:49.833 [main] INFO  o.a.c.c.StandardEngine - [log,180] - Starting Servlet Engine: Apache Tomcat/8.5.29
+08:47:49.851 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - [log,180] - Loaded APR based Apache Tomcat Native library [1.2.17] using APR version [1.6.3].
+08:47:49.852 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - [log,180] - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+08:47:49.852 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - [log,180] - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+08:47:50.934 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - [log,180] - OpenSSL successfully initialized [OpenSSL 1.0.2o  27 Mar 2018]
+08:47:51.144 [localhost-startStop-1] INFO  o.a.c.c.C.[.[.[/] - [log,180] - Initializing Spring embedded WebApplicationContext
+08:47:57.821 [main] INFO  o.a.c.h.Http11NioProtocol - [log,180] - Starting ProtocolHandler ["http-nio-80"]
+08:47:57.862 [main] INFO  o.a.t.u.n.NioSelectorPool - [log,180] - Using a shared selector for servlet write/read
+08:47:57.934 [main] INFO  c.q.QcblogApplication - [logStarted,59] - Started QcblogApplication in 21.53 seconds (JVM running for 23.084)
+08:47:59.753 [http-nio-80-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,180] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+08:48:02.139 [http-nio-80-exec-4] INFO  c.z.h.HikariDataSource - [getConnection,110] - HikariPool-1 - Starting...
+08:48:02.884 [http-nio-80-exec-4] INFO  c.z.h.HikariDataSource - [getConnection,123] - HikariPool-1 - Start completed.
+08:48:03.229 [http-nio-80-exec-4] INFO  c.q.c.ArticleController - [selectNameByArticle,67] - 作者信息查询成功，信息如→[{id=1, username=qichao}, {id=2, username=qichao}, {id=3, username=王杰}, {id=4, username=朱莹}, {id=5, username=qichao}, {id=6, username=qichao}, {id=7, username=qichao}, {id=8, username=qichao}, {id=9, username=qichao}, {id=10, username=qichao}, {id=11, username=王杰}, {id=12, username=王杰}, {id=13, username=qichao}, {id=14, username=王杰}, {id=15, username=qichao}, {id=16, username=朱莹}, {id=17, username=朱莹}, {id=18, username=王杰}, {id=19, username=王杰}, {id=20, username=qichao}, {id=21, username=qichao}, {id=22, username=qichao}, {id=23, username=qichao}, {id=24, username=qichao}, {id=25, username=qichao}, {id=26, username=qichao}, {id=27, username=qichao}, {id=28, username=qichao}, {id=29, username=qichao}, {id=30, username=qichao}, {id=48, username=qichao}]
+08:48:46.681 [http-nio-80-exec-9] INFO  c.q.c.ArticleController - [selectNameByArticle,67] - 作者信息查询成功，信息如→[{id=1, username=qichao}, {id=2, username=qichao}, {id=3, username=王杰}, {id=4, username=朱莹}, {id=5, username=qichao}, {id=6, username=qichao}, {id=7, username=qichao}, {id=8, username=qichao}, {id=9, username=qichao}, {id=10, username=qichao}, {id=11, username=王杰}, {id=12, username=王杰}, {id=13, username=qichao}, {id=14, username=王杰}, {id=15, username=qichao}, {id=16, username=朱莹}, {id=17, username=朱莹}, {id=18, username=王杰}, {id=19, username=王杰}, {id=20, username=qichao}, {id=21, username=qichao}, {id=22, username=qichao}, {id=23, username=qichao}, {id=24, username=qichao}, {id=25, username=qichao}, {id=26, username=qichao}, {id=27, username=qichao}, {id=28, username=qichao}, {id=29, username=qichao}, {id=30, username=qichao}, {id=48, username=qichao}]

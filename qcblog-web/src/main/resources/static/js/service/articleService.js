@@ -88,4 +88,8 @@ app.service('articleService',function($http){
     this.findSub = function () {
         return $http.get('/Subject/findSub');
     }
+    //导出文章
+    this.exportArticleOne = function (atname) {
+        return $http.get('/Article/exportArticleOne?atname='+atname);
+    }
 });

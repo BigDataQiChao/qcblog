@@ -1,9 +1,9 @@
-app.controller('logController',function($scope,$controller,adminService,noticeService,logService){
-    $controller('baseController',{$scope:$scope});
+app.controller('cmsController',function($scope,$controller,$location,flinkService,noticeService,adminService,cmsService) {
+    $controller('baseController', {$scope: $scope});
     //显示当前用户名
-    $scope.showLoginName = function(){
+    $scope.showLoginName = function () {
         adminService.loginName().success(
-            function(response){
+            function (response) {
                 $scope.signinTime = response.signinTime;
                 $scope.signinName = response.signinName;
                 $scope.signinRole = response.signinRole;
@@ -11,14 +11,6 @@ app.controller('logController',function($scope,$controller,adminService,noticeSe
                 $scope.signinNumbers = response.signinNumbers;
             }
         );
-    };
-    //遍历公告列表
-    $scope.findNotices = function () {
-        noticeService.findNotices().success(
-            function (response) {
-                $scope.notices = response;
-            }
-        )
     };
     //获取统计量信息
     $scope.showStatics = function () {
@@ -29,28 +21,37 @@ app.controller('logController',function($scope,$controller,adminService,noticeSe
             }
         )
     };
-    //遍历日志列表
-    $scope.findLogsAll = function () {
-        logService.findLogsAll().success(
+    //遍历公告列表
+    $scope.findNotices = function () {
+        noticeService.findNotices().success(
             function (response) {
-                $scope.logs = response;
+                $scope.notices = response;
             }
         )
     };
-    //保存
-    $scope.save=function(){
-        logService.update( $scope.logOne ).success(
+
+    //遍历爬取数据
+    $scope.findCmsAll = function () {
+        cmsService.findCmsAll().success(
+            function (response) {
+                $scope.cmsall = response;
+            }
+        )
+    };
+    $scope.findPage=function(page,rows){
+        cmsService.findPage(page,rows).success(
             function(response){
-                    //重新查询
-                    $scope.reloadList();//重新加载
-                }
+                $scope.cmsall=response.rows;
+                $scope.paginationConf.totalItems=response.total;//更新总记录数
+            }
         );
     };
-    //分页
-    $scope.findPage=function(page,rows){
-        logService.findPage(page,rows).success(
+    $scope.searchEntity={};//定义搜索对象
+    //搜索
+    $scope.search=function(page,rows){
+        cmsService.search(page,rows,$scope.searchEntity).success(
             function(response){
-                $scope.logs=response.rows;
+                $scope.cmsall=response.rows;
                 $scope.paginationConf.totalItems=response.total;//更新总记录数
             }
         );
@@ -58,49 +59,12 @@ app.controller('logController',function($scope,$controller,adminService,noticeSe
     //批量删除
     $scope.dele=function(){
         //获取选中的复选框
-        logService.dele( $scope.selectIds ).success(
+        cmsService.dele( $scope.selectIds ).success(
             function(response){
                 if(response.success){
                     window.location.reload();//刷新列表
                     $scope.selectIds=[];
                 }
-            }
-        );
-    };
-    //单体删除
-    $scope.deleOne=function(id){
-        logService.deleOne(id).success(
-            function(response){
-                if(response.success){
-                    alert(response.message);
-                    window.location.reload();//刷新列表
-                }
-            }
-        );
-    };
-    $scope.searchEntity={};//定义搜索对象
-    //搜索
-    $scope.search=function(page,rows){
-        logService.search(page,rows,$scope.searchEntity).success(
-            function(response){
-                $scope.logs=response.rows;
-                $scope.paginationConf.totalItems=response.total;//更新总记录数
-            }
-        );
-    };
-    //统计
-    $scope.countLog = function () {
-        logService.count().success(
-            function (response) {
-                $scope.countSigninlog = response.countSigninlog;
-            }
-        )
-    };
-    //详情页
-    $scope.findLogOne = function(name){
-        logService.findLogOne(name).success(
-            function(response){
-                $scope.logOne = response;
             }
         );
     };
@@ -120,6 +84,32 @@ app.controller('logController',function($scope,$controller,adminService,noticeSe
             }
         );
     };
+    //文章审核详情页
+    $scope.findCmsOne = function (id) {
+        cmsService.findCmsOne(id).success(
+            function (response) {
+                $scope.cmsOne =response;
+            }
+        )
+    };
+    //文章去审核
+    $scope.checkCms = function (id) {
+        cmsService.checkCms(id).success(
+            function (response) {
+                alert(response.message);
+                $scope.reloadList();//重新加载
+            }
+        )
+    }
+    //文章去驳回
+    $scope.checkDownCms = function (id) {
+        cmsService.checkDownCms(id).success(
+            function (response) {
+                alert(response.message);
+                $scope.reloadList();//重新加载
+            }
+        )
+    }
 
 });
 app.filter('cut',function () {
@@ -144,3 +134,8 @@ app.filter('cut',function () {
         return value + (tail || '...');
     };
 });
+app.filter('trustHtml',['$sce', function ($sce) {
+    return function (input) {
+        return $sce.trustAsHtml(input);
+    }
+}]);

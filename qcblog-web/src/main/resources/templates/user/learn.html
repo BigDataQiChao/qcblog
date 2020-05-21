@@ -42,9 +42,11 @@
                 <div class="panel panel-default">
                     <div class="panel-heading" style="text-align: center;">
                         <button class="panel-title" style="border: none;background: none;outline: 0ch;">Java专题</button>
-                        <button class="panel-title" style="border: none;background: none;outline: 0ch;">Python专题</button>
+                        <button class="panel-title" style="border: none;background: none;outline: 0ch;">Python专题
+                        </button>
                         <button class="panel-title" style="border: none;background: none;outline: 0ch;">区块链专题</button>
-                        <button class="panel-title" style="border: none;background: none;outline: 0ch;">Spring专题</button>
+                        <button class="panel-title" style="border: none;background: none;outline: 0ch;">Spring专题
+                        </button>
                         <button class="panel-title" style="border: none;background: none;outline: 0ch;">教育专题</button>
                         <button class="panel-title" style="border: none;background: none;outline: 0ch;">论坛专题</button>
                         <button class="panel-title" style="border: none;background: none;outline: 0ch;">中台专题</button>
@@ -57,19 +59,23 @@
                         <div class="panel panel-default w_article_item" sec:authorize="isAuthenticated()">
                             <div class="panel-body">
                                 <div class="row" ng-repeat="entity in subCutDetail">
-                      <h4 class="media-heading" style="margin-left: 35px;">
+                                    <h4 class="media-heading" style="margin-left: 35px;">
                                         <a class="title" href="#">{{entity.name}}</a>
                                     </h4>
                                     <hr style="margin-left: 30px;">
                                     <div class="col-xs-6 col-md-3">
                                         <a href="#" class="thumbnail w_thumbnail"
                                            style="width: 170px;height: 185px;border: 1px solid;">
-                                            <img src="{{entity.atimg}}" onerror="{this.src='../img/errorbg_lucency.png'}"
+                                            <img src="{{entity.atimg}}"
+                                                 onerror="{this.src='../img/errorbg_lucency.png'}"
                                                  alt="...">
                                         </a>
                                     </div>
                                     <h4 class="media-heading">
                                         <a class="title" href="/articles?atname={{entity.atname}}">{{entity.atname}}</a>
+                                        <button style="border: 1px solid #dcdfe6;outline: 0;border-radius: 4px;background-color: #409eff;margin-left: 10px">
+                                            <a style="color: #fff;text-align: center;text-decoration:none;font-family: monospace;" href="/Article/exportArticleOne?atname={{entity.atname}}">文章导出</a>
+                                        </button>
                                     </h4>
                                     <p><a class="label label-default">{{entity.atpre}}</a><a
                                             class="label label-default">{{entity.atpos}}</a></p>

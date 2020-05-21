@@ -211,12 +211,20 @@ public class LogicalController {
     /*------------结束----------------------*/
 
     /**
-     * 文章管理跳转逻辑
+     * 文章列表跳转逻辑
      * @return
      */
     @GetMapping("/article")
     public String article(){
         return PREFIX+"article";
+    }
+    /**
+     * 爬取审核跳转逻辑
+     * @return
+     */
+    @GetMapping("/checkArticle")
+    public String checkArticle(){
+        return PREFIX+"check-article";
     }
     /**
      * 导航栏管理跳转逻辑

@@ -109,9 +109,10 @@ public class UserService {
         Page<User> page=   (Page<User>) userMapper.selectByExample(null);
         return new PageResult(page.getTotal(), page.getResult());
     }
-   /* public void subtractNumber(User user){
-        User user1 = userMapper.selectByPrimaryKey(user.getId());
-        user.setUserUuId(user1.getUserUuId()-1);
-        userMapper.updateNumber(user);
-    }*/
+    public int countByArticleUserId(){
+        return userMapper.countByArticleUserId();
+    }
+    public void updateCarticnum(Integer carticnum){
+        userMapper.updateCarticnum(carticnum);
+    }
 }

@@ -1,6 +1,7 @@
 package com.qcblog.mapper;
 
 import com.qcblog.pojo.Article;
+import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.Update;
 import tk.mybatis.mapper.common.Mapper;
@@ -16,4 +17,6 @@ public interface ArticleMapper extends Mapper<Article> {
     public void updateStatus(Article article);
     @Update("update article set is_delete = #{isDelete} where id = #{id}")
     public void deleteOne(Article article);
+    @Delete("delete from article where id = #{id}")
+    public void checkDelete(Article article);
 }

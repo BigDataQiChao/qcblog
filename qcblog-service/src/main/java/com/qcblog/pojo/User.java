@@ -53,6 +53,7 @@ public class User {
 
     private String status;
 
+    @JsonFormat(pattern="yyyy-MM-dd hh:mm",timezone = "GMT+8")
     private Date utime;
 
     @JsonFormat(pattern="yyyy-MM-dd hh:mm",timezone = "GMT+8")

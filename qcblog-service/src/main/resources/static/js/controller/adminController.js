@@ -1,4 +1,4 @@
-app.controller('adminController' ,function($scope,$controller   ,adminService){
+app.controller('adminController' ,function($scope,$controller,adminService){
 	$controller('baseController',{$scope:$scope});//继承
 	
     //读取列表数据绑定到表单中  

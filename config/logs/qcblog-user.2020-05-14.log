@@ -1,0 +1,110 @@
+08:41:07.931 [main] INFO  c.q.QcblogApplication - [logStarting,50] - Starting QcblogApplication on PC-20180928WXPZ with PID 7904 (D:\IDEA\qcblog\qcblog-web\target\classes started by Administrator in D:\IDEA\qcblog)
+08:41:07.966 [main] DEBUG c.q.QcblogApplication - [logStarting,53] - Running with Spring Boot v2.0.1.RELEASE, Spring v5.0.5.RELEASE
+08:41:07.970 [main] INFO  c.q.QcblogApplication - [logStartupProfileInfo,659] - No active profile set, falling back to default profiles: default
+08:41:11.577 [main] WARN  t.m.s.m.ClassPathMapperScanner - [doScan,142] - No MyBatis mapper was found in '[com.qcblog]' package. Please check your configuration.
+08:41:11.602 [main] WARN  o.m.s.m.ClassPathMapperScanner - [doScan,166] - No MyBatis mapper was found in '[com.qcblog]' package. Please check your configuration.
+08:41:16.312 [main] INFO  o.a.c.h.Http11NioProtocol - [log,180] - Initializing ProtocolHandler ["http-nio-80"]
+08:41:16.338 [main] INFO  o.a.c.c.StandardService - [log,180] - Starting service [Tomcat]
+08:41:16.338 [main] INFO  o.a.c.c.StandardEngine - [log,180] - Starting Servlet Engine: Apache Tomcat/8.5.29
+08:41:16.354 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - [log,180] - Loaded APR based Apache Tomcat Native library [1.2.17] using APR version [1.6.3].
+08:41:16.354 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - [log,180] - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+08:41:16.354 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - [log,180] - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+08:41:17.432 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - [log,180] - OpenSSL successfully initialized [OpenSSL 1.0.2o  27 Mar 2018]
+08:41:17.631 [localhost-startStop-1] INFO  o.a.c.c.C.[.[.[/] - [log,180] - Initializing Spring embedded WebApplicationContext
+08:41:18.066 [localhost-startStop-1] DEBUG c.q.c.SimpleCORSFilter - [init,213] - Initializing filter 'simpleCORSFilter'
+08:41:18.066 [localhost-startStop-1] DEBUG c.q.c.SimpleCORSFilter - [init,244] - Filter 'simpleCORSFilter' configured successfully
+08:41:23.630 [main] INFO  o.a.c.h.Http11NioProtocol - [log,180] - Starting ProtocolHandler ["http-nio-80"]
+08:41:23.681 [main] INFO  o.a.t.u.n.NioSelectorPool - [log,180] - Using a shared selector for servlet write/read
+08:41:23.769 [main] INFO  c.q.QcblogApplication - [logStarted,59] - Started QcblogApplication in 17.563 seconds (JVM running for 20.162)
+08:41:48.915 [http-nio-80-exec-10] INFO  o.a.c.c.C.[.[.[/] - [log,180] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+08:41:52.101 [http-nio-80-exec-9] INFO  c.z.h.HikariDataSource - [getConnection,110] - HikariPool-1 - Starting...
+08:41:52.809 [http-nio-80-exec-9] INFO  c.z.h.HikariDataSource - [getConnection,123] - HikariPool-1 - Start completed.
+08:41:52.821 [http-nio-80-exec-5] DEBUG c.q.m.N.selectByExample - [debug,159] - ==>  Preparing: SELECT id,ntname,ntstatus,is_delete,ctime,utime,nttype,ntcontent FROM notice 
+08:41:52.855 [http-nio-80-exec-5] DEBUG c.q.m.N.selectByExample - [debug,159] - ==> Parameters: 
+08:41:53.126 [http-nio-80-exec-5] DEBUG c.q.m.N.selectByExample - [debug,159] - <==      Total: 2
+08:41:53.131 [http-nio-80-exec-10] DEBUG c.q.m.F.selectByExample - [debug,159] - ==>  Preparing: SELECT id,flname,flink,flstatus,is_delete,flcontent,ctime,utime,fltype FROM flink 
+08:41:53.135 [http-nio-80-exec-10] DEBUG c.q.m.F.selectByExample - [debug,159] - ==> Parameters: 
+08:41:53.136 [http-nio-80-exec-6] DEBUG c.q.m.U.selectOne - [debug,159] - ==>  Preparing: SELECT id,limit_count,username,truename,sex,password,repassword,email,industry,education,sch_name,intro,wk_condition,telephone,role,image,last_ip,last_time,is_delete,status,utime,view_count,carticnum FROM user WHERE username = ? 
+08:41:53.138 [http-nio-80-exec-6] DEBUG c.q.m.U.selectOne - [debug,159] - ==> Parameters: anonymousUser(String)
+08:41:53.208 [http-nio-80-exec-6] DEBUG c.q.m.U.selectOne - [debug,159] - <==      Total: 0
+08:41:53.210 [http-nio-80-exec-1] DEBUG c.q.m.A.findIndexArticle - [debug,159] - ==>  Preparing: select * from article where atype = '博苑主页' ORDER BY ctime desc limit 0,6 
+08:41:53.212 [http-nio-80-exec-1] DEBUG c.q.m.A.findIndexArticle - [debug,159] - ==> Parameters: 
+08:41:53.226 [http-nio-80-exec-10] DEBUG c.q.m.F.selectByExample - [debug,159] - <==      Total: 53
+08:41:53.227 [http-nio-80-exec-9] DEBUG c.q.m.A.selectNameByArticle - [debug,159] - ==>  Preparing: select a.id,u.username from article a,user u where a.user_id = u.id 
+08:41:53.228 [http-nio-80-exec-9] DEBUG c.q.m.A.selectNameByArticle - [debug,159] - ==> Parameters: 
+08:41:53.242 [http-nio-80-exec-9] DEBUG c.q.m.A.selectNameByArticle - [debug,159] - <==      Total: 31
+08:41:53.243 [http-nio-80-exec-9] INFO  c.q.c.ArticleController - [selectNameByArticle,67] - 作者信息查询成功，信息如→[{id=1, username=qichao}, {id=2, username=qichao}, {id=3, username=王杰}, {id=4, username=朱莹}, {id=5, username=qichao}, {id=6, username=qichao}, {id=7, username=qichao}, {id=8, username=qichao}, {id=9, username=qichao}, {id=10, username=qichao}, {id=11, username=王杰}, {id=12, username=王杰}, {id=13, username=qichao}, {id=14, username=王杰}, {id=15, username=qichao}, {id=16, username=朱莹}, {id=17, username=朱莹}, {id=18, username=王杰}, {id=19, username=王杰}, {id=20, username=qichao}, {id=21, username=qichao}, {id=22, username=qichao}, {id=23, username=qichao}, {id=24, username=qichao}, {id=25, username=qichao}, {id=26, username=qichao}, {id=27, username=qichao}, {id=28, username=qichao}, {id=29, username=qichao}, {id=30, username=qichao}, {id=48, username=qichao}]
+08:41:53.243 [http-nio-80-exec-2] DEBUG c.q.m.U.selectOne - [debug,159] - ==>  Preparing: SELECT id,limit_count,username,truename,sex,password,repassword,email,industry,education,sch_name,intro,wk_condition,telephone,role,image,last_ip,last_time,is_delete,status,utime,view_count,carticnum FROM user WHERE username = ? 
+08:41:53.250 [http-nio-80-exec-2] DEBUG c.q.m.U.selectOne - [debug,159] - ==> Parameters: anonymousUser(String)
+08:41:53.254 [http-nio-80-exec-1] DEBUG c.q.m.A.findIndexArticle - [debug,159] - <==      Total: 5
+08:41:53.263 [http-nio-80-exec-5] DEBUG c.q.m.N.selectByExample - [debug,159] - ==>  Preparing: SELECT id,ntname,ntstatus,is_delete,ctime,utime,nttype,ntcontent FROM notice 
+08:41:53.264 [http-nio-80-exec-5] DEBUG c.q.m.N.selectByExample - [debug,159] - ==> Parameters: 
+08:41:53.269 [http-nio-80-exec-2] DEBUG c.q.m.U.selectOne - [debug,159] - <==      Total: 0
+08:41:53.270 [http-nio-80-exec-2] WARN  c.q.c.UserController - [map,77] - 警告：当前处于未登录状态！
+08:41:53.272 [http-nio-80-exec-6] DEBUG c.q.m.N.selectByPrimaryKey - [debug,159] - ==>  Preparing: SELECT id,tnumber,wnumber,ctime,utime,status FROM numbers WHERE id = ? 
+08:41:53.273 [http-nio-80-exec-6] DEBUG c.q.m.N.selectByPrimaryKey - [debug,159] - ==> Parameters: 1(Integer)
+08:41:53.275 [http-nio-80-exec-5] DEBUG c.q.m.N.selectByExample - [debug,159] - <==      Total: 2
+08:41:53.290 [http-nio-80-exec-6] DEBUG c.q.m.N.selectByPrimaryKey - [debug,159] - <==      Total: 1
+08:47:38.508 [main] INFO  c.q.QcblogApplication - [logStarting,50] - Starting QcblogApplication on PC-20180928WXPZ with PID 9432 (D:\IDEA\qcblog\qcblog-web\target\classes started by Administrator in D:\IDEA\qcblog)
+08:47:38.513 [main] DEBUG c.q.QcblogApplication - [logStarting,53] - Running with Spring Boot v2.0.1.RELEASE, Spring v5.0.5.RELEASE
+08:47:38.516 [main] INFO  c.q.QcblogApplication - [logStartupProfileInfo,659] - No active profile set, falling back to default profiles: default
+08:47:44.695 [main] WARN  t.m.s.m.ClassPathMapperScanner - [doScan,142] - No MyBatis mapper was found in '[com.qcblog]' package. Please check your configuration.
+08:47:44.732 [main] WARN  o.m.s.m.ClassPathMapperScanner - [doScan,166] - No MyBatis mapper was found in '[com.qcblog]' package. Please check your configuration.
+08:47:49.815 [main] INFO  o.a.c.h.Http11NioProtocol - [log,180] - Initializing ProtocolHandler ["http-nio-80"]
+08:47:49.832 [main] INFO  o.a.c.c.StandardService - [log,180] - Starting service [Tomcat]
+08:47:49.833 [main] INFO  o.a.c.c.StandardEngine - [log,180] - Starting Servlet Engine: Apache Tomcat/8.5.29
+08:47:49.851 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - [log,180] - Loaded APR based Apache Tomcat Native library [1.2.17] using APR version [1.6.3].
+08:47:49.852 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - [log,180] - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+08:47:49.852 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - [log,180] - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+08:47:50.934 [localhost-startStop-1] INFO  o.a.c.c.AprLifecycleListener - [log,180] - OpenSSL successfully initialized [OpenSSL 1.0.2o  27 Mar 2018]
+08:47:51.144 [localhost-startStop-1] INFO  o.a.c.c.C.[.[.[/] - [log,180] - Initializing Spring embedded WebApplicationContext
+08:47:51.531 [localhost-startStop-1] DEBUG c.q.c.SimpleCORSFilter - [init,213] - Initializing filter 'simpleCORSFilter'
+08:47:51.531 [localhost-startStop-1] DEBUG c.q.c.SimpleCORSFilter - [init,244] - Filter 'simpleCORSFilter' configured successfully
+08:47:57.821 [main] INFO  o.a.c.h.Http11NioProtocol - [log,180] - Starting ProtocolHandler ["http-nio-80"]
+08:47:57.862 [main] INFO  o.a.t.u.n.NioSelectorPool - [log,180] - Using a shared selector for servlet write/read
+08:47:57.934 [main] INFO  c.q.QcblogApplication - [logStarted,59] - Started QcblogApplication in 21.53 seconds (JVM running for 23.084)
+08:47:59.753 [http-nio-80-exec-1] INFO  o.a.c.c.C.[.[.[/] - [log,180] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+08:48:02.139 [http-nio-80-exec-4] INFO  c.z.h.HikariDataSource - [getConnection,110] - HikariPool-1 - Starting...
+08:48:02.884 [http-nio-80-exec-4] INFO  c.z.h.HikariDataSource - [getConnection,123] - HikariPool-1 - Start completed.
+08:48:02.900 [http-nio-80-exec-1] DEBUG c.q.m.U.selectOne - [debug,159] - ==>  Preparing: SELECT id,limit_count,username,truename,sex,password,repassword,email,industry,education,sch_name,intro,wk_condition,telephone,role,image,last_ip,last_time,is_delete,status,utime,view_count,carticnum FROM user WHERE username = ? 
+08:48:02.936 [http-nio-80-exec-1] DEBUG c.q.m.U.selectOne - [debug,159] - ==> Parameters: anonymousUser(String)
+08:48:02.963 [http-nio-80-exec-1] DEBUG c.q.m.U.selectOne - [debug,159] - <==      Total: 0
+08:48:02.969 [http-nio-80-exec-6] DEBUG c.q.m.F.selectByExample - [debug,159] - ==>  Preparing: SELECT id,flname,flink,flstatus,is_delete,flcontent,ctime,utime,fltype FROM flink 
+08:48:02.970 [http-nio-80-exec-6] DEBUG c.q.m.F.selectByExample - [debug,159] - ==> Parameters: 
+08:48:02.994 [http-nio-80-exec-4] DEBUG c.q.m.A.selectNameByArticle - [debug,159] - ==>  Preparing: select a.id,u.username from article a,user u where a.user_id = u.id 
+08:48:02.997 [http-nio-80-exec-4] DEBUG c.q.m.A.selectNameByArticle - [debug,159] - ==> Parameters: 
+08:48:03.227 [http-nio-80-exec-6] DEBUG c.q.m.F.selectByExample - [debug,159] - <==      Total: 53
+08:48:03.227 [http-nio-80-exec-4] DEBUG c.q.m.A.selectNameByArticle - [debug,159] - <==      Total: 31
+08:48:03.228 [http-nio-80-exec-2] DEBUG c.q.m.N.selectByExample - [debug,159] - ==>  Preparing: SELECT id,ntname,ntstatus,is_delete,ctime,utime,nttype,ntcontent FROM notice 
+08:48:03.229 [http-nio-80-exec-2] DEBUG c.q.m.N.selectByExample - [debug,159] - ==> Parameters: 
+08:48:03.228 [http-nio-80-exec-3] DEBUG c.q.m.U.selectOne - [debug,159] - ==>  Preparing: SELECT id,limit_count,username,truename,sex,password,repassword,email,industry,education,sch_name,intro,wk_condition,telephone,role,image,last_ip,last_time,is_delete,status,utime,view_count,carticnum FROM user WHERE username = ? 
+08:48:03.229 [http-nio-80-exec-4] INFO  c.q.c.ArticleController - [selectNameByArticle,67] - 作者信息查询成功，信息如→[{id=1, username=qichao}, {id=2, username=qichao}, {id=3, username=王杰}, {id=4, username=朱莹}, {id=5, username=qichao}, {id=6, username=qichao}, {id=7, username=qichao}, {id=8, username=qichao}, {id=9, username=qichao}, {id=10, username=qichao}, {id=11, username=王杰}, {id=12, username=王杰}, {id=13, username=qichao}, {id=14, username=王杰}, {id=15, username=qichao}, {id=16, username=朱莹}, {id=17, username=朱莹}, {id=18, username=王杰}, {id=19, username=王杰}, {id=20, username=qichao}, {id=21, username=qichao}, {id=22, username=qichao}, {id=23, username=qichao}, {id=24, username=qichao}, {id=25, username=qichao}, {id=26, username=qichao}, {id=27, username=qichao}, {id=28, username=qichao}, {id=29, username=qichao}, {id=30, username=qichao}, {id=48, username=qichao}]
+08:48:03.230 [http-nio-80-exec-3] DEBUG c.q.m.U.selectOne - [debug,159] - ==> Parameters: anonymousUser(String)
+08:48:03.243 [http-nio-80-exec-3] DEBUG c.q.m.U.selectOne - [debug,159] - <==      Total: 0
+08:48:03.243 [http-nio-80-exec-2] DEBUG c.q.m.N.selectByExample - [debug,159] - <==      Total: 2
+08:48:03.244 [http-nio-80-exec-3] WARN  c.q.c.UserController - [map,77] - 警告：当前处于未登录状态！
+08:48:03.245 [http-nio-80-exec-2] DEBUG c.q.m.N.selectByExample - [debug,159] - ==>  Preparing: SELECT id,ntname,ntstatus,is_delete,ctime,utime,nttype,ntcontent FROM notice 
+08:48:03.245 [http-nio-80-exec-2] DEBUG c.q.m.N.selectByExample - [debug,159] - ==> Parameters: 
+08:48:03.247 [http-nio-80-exec-1] DEBUG c.q.m.N.selectByPrimaryKey - [debug,159] - ==>  Preparing: SELECT id,tnumber,wnumber,ctime,utime,status FROM numbers WHERE id = ? 
+08:48:03.248 [http-nio-80-exec-1] DEBUG c.q.m.N.selectByPrimaryKey - [debug,159] - ==> Parameters: 1(Integer)
+08:48:03.257 [http-nio-80-exec-2] DEBUG c.q.m.N.selectByExample - [debug,159] - <==      Total: 2
+08:48:03.260 [http-nio-80-exec-1] DEBUG c.q.m.N.selectByPrimaryKey - [debug,159] - <==      Total: 1
+08:48:03.261 [http-nio-80-exec-9] DEBUG c.q.m.A.findIndexArticle - [debug,159] - ==>  Preparing: select * from article where atype = '博苑主页' ORDER BY ctime desc limit 0,6 
+08:48:03.263 [http-nio-80-exec-9] DEBUG c.q.m.A.findIndexArticle - [debug,159] - ==> Parameters: 
+08:48:03.307 [http-nio-80-exec-9] DEBUG c.q.m.A.findIndexArticle - [debug,159] - <==      Total: 5
+08:48:46.468 [http-nio-80-exec-1] DEBUG c.q.m.S.findArticleBySubType - [debug,159] - ==>  Preparing: SELECT a.id,a.atimg,a.atname,a.atpre,a.atpos,a.atcontent,a.atnumber,a.ctime FROM article a,subject s WHERE a.id = s.article_id AND s.status = 1 AND s.subname = ? 
+08:48:46.470 [http-nio-80-exec-1] DEBUG c.q.m.S.findArticleBySubType - [debug,159] - ==> Parameters: Java专题(String)
+08:48:46.589 [http-nio-80-exec-1] DEBUG c.q.m.S.findArticleBySubType - [debug,159] - <==      Total: 9
+08:48:46.642 [http-nio-80-exec-4] DEBUG c.q.m.F.selectByExample - [debug,159] - ==>  Preparing: SELECT id,flname,flink,flstatus,is_delete,flcontent,ctime,utime,fltype FROM flink 
+08:48:46.642 [http-nio-80-exec-4] DEBUG c.q.m.F.selectByExample - [debug,159] - ==> Parameters: 
+08:48:46.654 [http-nio-80-exec-2] DEBUG c.q.m.U.selectOne - [debug,159] - ==>  Preparing: SELECT id,limit_count,username,truename,sex,password,repassword,email,industry,education,sch_name,intro,wk_condition,telephone,role,image,last_ip,last_time,is_delete,status,utime,view_count,carticnum FROM user WHERE username = ? 
+08:48:46.655 [http-nio-80-exec-2] DEBUG c.q.m.U.selectOne - [debug,159] - ==> Parameters: anonymousUser(String)
+08:48:46.662 [http-nio-80-exec-9] DEBUG c.q.m.A.selectNameByArticle - [debug,159] - ==>  Preparing: select a.id,u.username from article a,user u where a.user_id = u.id 
+08:48:46.663 [http-nio-80-exec-4] DEBUG c.q.m.F.selectByExample - [debug,159] - <==      Total: 53
+08:48:46.665 [http-nio-80-exec-9] DEBUG c.q.m.A.selectNameByArticle - [debug,159] - ==> Parameters: 
+08:48:46.671 [http-nio-80-exec-2] DEBUG c.q.m.U.selectOne - [debug,159] - <==      Total: 0
+08:48:46.672 [http-nio-80-exec-2] DEBUG c.q.m.N.selectByPrimaryKey - [debug,159] - ==>  Preparing: SELECT id,tnumber,wnumber,ctime,utime,status FROM numbers WHERE id = ? 
+08:48:46.673 [http-nio-80-exec-2] DEBUG c.q.m.N.selectByPrimaryKey - [debug,159] - ==> Parameters: 1(Integer)
+08:48:46.677 [http-nio-80-exec-9] DEBUG c.q.m.A.selectNameByArticle - [debug,159] - <==      Total: 31
+08:48:46.681 [http-nio-80-exec-9] INFO  c.q.c.ArticleController - [selectNameByArticle,67] - 作者信息查询成功，信息如→[{id=1, username=qichao}, {id=2, username=qichao}, {id=3, username=王杰}, {id=4, username=朱莹}, {id=5, username=qichao}, {id=6, username=qichao}, {id=7, username=qichao}, {id=8, username=qichao}, {id=9, username=qichao}, {id=10, username=qichao}, {id=11, username=王杰}, {id=12, username=王杰}, {id=13, username=qichao}, {id=14, username=王杰}, {id=15, username=qichao}, {id=16, username=朱莹}, {id=17, username=朱莹}, {id=18, username=王杰}, {id=19, username=王杰}, {id=20, username=qichao}, {id=21, username=qichao}, {id=22, username=qichao}, {id=23, username=qichao}, {id=24, username=qichao}, {id=25, username=qichao}, {id=26, username=qichao}, {id=27, username=qichao}, {id=28, username=qichao}, {id=29, username=qichao}, {id=30, username=qichao}, {id=48, username=qichao}]
+08:48:46.684 [http-nio-80-exec-2] DEBUG c.q.m.N.selectByPrimaryKey - [debug,159] - <==      Total: 1

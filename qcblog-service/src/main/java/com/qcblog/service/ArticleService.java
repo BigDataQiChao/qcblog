@@ -98,4 +98,7 @@ public class ArticleService {
         return new PageResult(page.getTotal(), page.getResult());
     }
 
+    public void checkDelete(Article article){
+        articleMapper.checkDelete(article);
+    }
 }

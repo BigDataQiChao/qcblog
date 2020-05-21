@@ -15,7 +15,14 @@ app.controller('qcblogController', function ($scope, $controller, userService, q
                 $scope.userArticles = response;
             }
         )
-    }
+    };
+    /*//导出文章
+    $scope.exportArticleOne = function (atname) {
+      articleService.exportArticleOne(atname).success(
+          function () {
+          }
+      )
+    };*/
     //通知公告
     $scope.listAll = function () {
         qcblogService.listAll().success(
@@ -23,7 +30,7 @@ app.controller('qcblogController', function ($scope, $controller, userService, q
                 $scope.noticelist = response;
             }
         )
-    }
+    };
     //用户登录信息
     $scope.userInfo = function () {
         userService.userInfo().success(

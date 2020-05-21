@@ -54,17 +54,18 @@
                             <div class="panel-body">
                                 <div class="row" ng-repeat="entity in articles" ng-if="entity.status==1"
                                      style="margin-bottom: 30px;">
+                                    <hr style="margin-left: 30px;">
                                     <div class="col-xs-6 col-md-3">
                                         <a href="/articles?atname={{entity.atname}}" class="thumbnail w_thumbnail">
                                             <img src="{{entity.atimg}}" alt="...">
                                         </a>
                                     </div>
-
                                     <h4 class="media-heading">
                                         <a class="title" href="/articles?atname={{entity.atname}}">{{entity.atname}}</a>
                                         <button data-toggle="modal" data-target="#editModal"
                                                 ng-click="findOne(entity.atname)"
-                                                style="border-radius: 10px;font-family: monospace;">查看详情
+                                                style="margin-left: 10px;border: 1px solid #dcdfe6;outline: 0;border-radius: 4px;background-color: #67c23a;">
+                                            <span style="color: #fff;text-align: center;font-family: monospace;">文章详情</span>
                                         </button>
                                     </h4>
                                     <p><a class="label label-default">{{entity.atpre}}</a><a

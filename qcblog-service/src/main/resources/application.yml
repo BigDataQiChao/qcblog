@@ -18,6 +18,11 @@ spring:
   banner:
     charset: utf-8
     location: classpath:static/plugins/banner.txt
+##驼峰命名规则配置
+mybatis:
+   configuration:
+     map-underscore-to-camel-case: true
 server:
   port: 8001
-
+webmagic:
+  cron: 0 15 11 * * ?
